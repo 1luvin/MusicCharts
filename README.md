@@ -35,6 +35,7 @@ Artist:
 - Price of albums                   - **Line**
 
 API:
+
 - https://developer.spotify.com/documentation/web-api/reference/#/
 - https://www.discogs.com/developers/#
 - https://musicbrainz.org/doc/MusicBrainz_Database
@@ -45,5 +46,5 @@ Plan:
 1. Check chart libraries
 2. Create project
 3. Create initial implementation
-    1. Getting and parsing data
-    2. Visualizing data
+   1. Getting and parsing data
+   2. Visualizing data

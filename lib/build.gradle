@@ -3,6 +3,36 @@ plugins {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_1_7
-    targetCompatibility = JavaVersion.VERSION_1_7
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
 }
+
+dependencies {
+    // Logging deps
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.19.0'
+    annotationProcessor group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.19.0'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.19.0'
+
+    // JSON parsing deps
+    implementation group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.14.2'
+
+    // HTTP deps
+    implementation group: 'org.apache.httpcomponents.client5', name: 'httpclient5', version: '5.2.1'
+    implementation group: 'org.apache.httpcomponents.client5', name: 'httpclient5-fluent', version: '5.2.1'
+
+    // Other deps
+    implementation group: 'org.jetbrains', name: 'annotations', version: '23.0.0'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.11.0'
+    //noinspection AnnotationProcessorOnCompilePath
+    implementation 'org.projectlombok:lombok:1.18.26'
+
+    // Testing deps
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.9.1'
+    testImplementation 'org.junit.platform:junit-platform-suite:1.9.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.1'
+    testImplementation 'org.mockito:mockito-junit-jupiter:4.8.0'
+    testImplementation 'org.mockito:mockito-core:4.8.0'
+    testImplementation 'org.hamcrest:hamcrest-all:1.3'
+}
+

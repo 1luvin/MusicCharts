@@ -1,9 +1,9 @@
-package com.vance.lib.service.web;
+package com.vance.lib.service.web.http;
 
 import org.apache.hc.client5.http.classic.methods.HttpGet;
 import org.apache.hc.client5.http.classic.methods.HttpPost;
 import org.apache.hc.core5.http.ClassicHttpRequest;
-import org.apache.hc.core5.http.HttpEntity;
+import org.apache.hc.core5.http.io.entity.HttpEntities;
 import org.jetbrains.annotations.NotNull;
 
 import java.net.URI;
@@ -42,12 +42,12 @@ public class HttpRequestBuilder {
         return this;
     }
 
-    public HttpRequestBuilder body(@NotNull HttpEntity body) {
+    public HttpRequestBuilder body(@NotNull String body) {
         Optional.ofNullable(request).orElseThrow(() -> new IllegalStateException("Adding body to uninitialized request"));
         if (request instanceof HttpGet) {
             throw new IllegalStateException("Adding body to GET Http request");
         }
-        request.setEntity(body);
+        request.setEntity(HttpEntities.create(body));
         return this;
     }
 }

@@ -14,8 +14,17 @@ public class HttpRequestBuilder {
 
     private ClassicHttpRequest request = null;
 
-    public ClassicHttpRequest build() {
-        return request;
+    public ClassicHttpRequest build() throws URISyntaxException {
+        ClassicHttpRequest result = Optional.ofNullable(request).orElseThrow(() -> {
+            request = null;
+            return new IllegalStateException("Building uninitialized request");
+        });
+        if ("/".equals(result.getUri().toString())) {
+            request = null;
+            throw new IllegalStateException("Request url is not set");
+        }
+        request = null;
+        return result;
     }
 
     public HttpRequestBuilder get() {
@@ -45,7 +54,7 @@ public class HttpRequestBuilder {
     public HttpRequestBuilder body(@NotNull String body) {
         Optional.ofNullable(request).orElseThrow(() -> new IllegalStateException("Adding body to uninitialized request"));
         if (request instanceof HttpGet) {
-            throw new IllegalStateException("Adding body to GET Http request");
+            throw new IllegalStateException("Adding body to GET Http request is not allowed");
         }
         request.setEntity(HttpEntities.create(body));
         return this;

@@ -34,6 +34,6 @@ public class RequestService {
         } catch (IOException | URISyntaxException e) {
             log.error(e.getMessage());
         }
-        throw new IllegalStateException("Request sending failure");
+        throw new IllegalStateException(String.format("Error with proceeding request to %s", request.getRequestUri()));
     }
 }

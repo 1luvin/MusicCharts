@@ -6,15 +6,19 @@
 
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}} %highlight{${LOG_LEVEL_PATTERN:-%5p}}{FATAL=red blink, ERROR=red, WARN=yellow bold, INFO=green, DEBUG=green bold, TRACE=blue} [%10.15t] %style{%pid}{magenta} %style{%-20.40C{1.}}{cyan} : %m%n"/>
+            <PatternLayout
+                    pattern="%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd HH:mm:ss.SSS}} %highlight{${LOG_LEVEL_PATTERN:-%5p}}{FATAL=red blink, ERROR=red, WARN=yellow bold, INFO=green, DEBUG=green bold, TRACE=blue} [%10.15t] %style{%pid}{magenta} %style{%-20.40C{1.}}{cyan} : %m%n" disableAnsi="false"/>
         </Console>
         <File name="File" fileName="${filename}">
             <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
         </File>
     </Appenders>
     <Loggers>
-        <Root level="INFO">
-<!--            <AppenderRef ref="File"/>-->
+        <Logger name="com.vance" level="DEBUG" additivity="false">
+            <AppenderRef ref="Console"/>
+            <!--            <AppenderRef ref="File"/>-->
+        </Logger>
+        <Root level="ERROR">
             <AppenderRef ref="Console"/>
         </Root>
     </Loggers>

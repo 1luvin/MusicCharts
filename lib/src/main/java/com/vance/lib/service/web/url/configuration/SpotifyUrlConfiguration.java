@@ -10,7 +10,7 @@ public class SpotifyUrlConfiguration extends UrlConfiguration {
     }
 
     public SpotifyUrlConfiguration search(@NotNull String query, @NotNull SpotifySearchTypes type) {
-        resultUrl.append(String.format("/search?q=%s&type=%s", query, type.name().toLowerCase()));
+        resultUrl.append(String.format("/search?q=%s&type=%s", encodeQuery(query), type.name().toLowerCase()));
         return this;
     }
 
@@ -19,8 +19,11 @@ public class SpotifyUrlConfiguration extends UrlConfiguration {
         return this;
     }
 
-    public SpotifyUrlConfiguration albumsOfArtist(@NotNull String artistsID) {
+    public SpotifyUrlConfiguration albumsOfArtist(@NotNull String artistsID, boolean onlyAlbums) {
         resultUrl.append(String.format("/artists/%s/albums", artistsID));
+        if (onlyAlbums) {
+            resultUrl.append("?include_groups=album");
+        }
         return this;
     }
 
@@ -30,7 +33,7 @@ public class SpotifyUrlConfiguration extends UrlConfiguration {
     }
 
     public SpotifyUrlConfiguration albumTracks(@NotNull String albumID) {
-        resultUrl.append(String.format("/album/%s/tracks", albumID));
+        resultUrl.append(String.format("/albums/%s/tracks", albumID));
         return this;
     }
 

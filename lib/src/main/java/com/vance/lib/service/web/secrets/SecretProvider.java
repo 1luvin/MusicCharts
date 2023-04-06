@@ -76,8 +76,7 @@ public class SecretProvider {
     private void updateSpotifyToken() {
         try {
             final String response = requestService.sendRequest(createSpotifyTokenRequest());
-            final JsonNode node = objectMapper.readTree(response);
-            spotifyToken = node.get("access_token").asText();
+            spotifyToken = objectMapper.readTree(response).get("access_token").asText();
             resetLastUpdatedDateAndHour();
         } catch (JsonProcessingException e) {
             log.error(e.getMessage());

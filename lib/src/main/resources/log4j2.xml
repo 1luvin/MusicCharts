@@ -14,7 +14,7 @@
         </File>
     </Appenders>
     <Loggers>
-        <Logger name="com.vance" level="DEBUG" additivity="false">
+        <Logger name="com.vance" level="INFO" additivity="false">
             <AppenderRef ref="Console"/>
             <!--            <AppenderRef ref="File"/>-->
         </Logger>

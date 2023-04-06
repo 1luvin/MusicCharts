@@ -4,21 +4,17 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vance.lib.service.web.url.configuration.SpotifySearchTypes;
-import org.apache.commons.lang3.tuple.Pair;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.List;
-import java.util.Spliterator;
-import java.util.Spliterators;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 public class SpotifyParser {
 
     private final Logger log = LoggerFactory.getLogger(SpotifyParser.class);
-
     private final ObjectMapper objectMapper = new ObjectMapper();
 
     public String parseIdOfItem(@NotNull String item, SpotifySearchTypes type) throws JsonProcessingException {
@@ -38,25 +34,24 @@ public class SpotifyParser {
                 .collect(Collectors.joining(","));
     }
 
-    public List<Pair<String, Long>> parseDurationOfTracksFromAlbum(@NotNull String albumTracks) throws JsonProcessingException {
+    public Map<String, Long> parseDurationOfTracksFromAlbum(@NotNull String albumTracks) throws JsonProcessingException {
         final JsonNode tracks = objectMapper.readTree(albumTracks).get("items");
         if (!tracks.isArray())
             throw new RuntimeException("Cannot parse tracks of album as it is not an array of nodes");
 
         return StreamSupport.stream(Spliterators.spliteratorUnknownSize(tracks.iterator(), Spliterator.ORDERED), true)
-                .map(node ->
-                        Pair.of(node.get("name").asText(), node.get("duration_ms").asLong()))
-                .collect(Collectors.toList());
+                .map(node -> Map.entry(node.get("name").asText(), node.get("duration_ms").asLong()))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
-    public List<Pair<String, Integer>> parsePopularityOfAlbums(@NotNull String albums) throws JsonProcessingException {
+    public Map<String, Integer> parsePopularityOfAlbums(@NotNull String albums) throws JsonProcessingException {
         final JsonNode parsedAlbums = objectMapper.readTree(albums).get("albums");
         if (!parsedAlbums.isArray())
             throw new RuntimeException("Cannot parse albums as it is not an array of nodes");
-
-        return StreamSupport.stream(Spliterators.spliteratorUnknownSize(parsedAlbums.iterator(), Spliterator.ORDERED), true)
-                .map(node ->
-                        Pair.of(node.get("name").asText(), node.get("popularity").asInt()))
-                .collect(Collectors.toList());
+        Map<String, Integer> result = new HashMap<>();
+        StreamSupport.stream(Spliterators.spliteratorUnknownSize(parsedAlbums.iterator(), Spliterator.ORDERED), true)
+                .map(node -> Map.entry(node.get("name").asText(), node.get("popularity").asInt()))
+                .forEach(entry -> result.put(entry.getKey(), entry.getValue()));
+        return result;
     }
 }

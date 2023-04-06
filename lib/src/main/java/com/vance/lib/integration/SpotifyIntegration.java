@@ -7,13 +7,12 @@ import com.vance.lib.service.web.http.RequestService;
 import com.vance.lib.service.web.secrets.SecretProvider;
 import com.vance.lib.service.web.url.UrlBuilder;
 import com.vance.lib.service.web.url.configuration.SpotifySearchTypes;
-import org.apache.commons.lang3.tuple.Pair;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.net.URISyntaxException;
-import java.util.List;
+import java.util.Map;
 
 public class SpotifyIntegration {
     private final Logger log = LoggerFactory.getLogger(SpotifyIntegration.class);
@@ -27,7 +26,7 @@ public class SpotifyIntegration {
         return searchItem(artistName, SpotifySearchTypes.ARTIST);
     }
 
-    public List<Pair<String, Integer>> getPopularityOfAlbums(@NotNull String artistName) {
+    public Map<String, Integer> getPopularityOfAlbums(@NotNull String artistName) {
         try {
             final String searchResponse = searchItem("artist:" + artistName, SpotifySearchTypes.ALBUM);
             final String albumIds = parser.parseIdOfItems(searchResponse, SpotifySearchTypes.ALBUM);
@@ -43,7 +42,7 @@ public class SpotifyIntegration {
         }
     }
 
-    public List<Pair<String, Long>> getDurationOfTracksInAlbum(@NotNull String albumName) {
+    public Map<String, Long> getDurationOfTracksInAlbum(@NotNull String albumName) {
         try {
             final String searchResponse = searchItem(albumName, SpotifySearchTypes.ALBUM);
             final String albumId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ALBUM);

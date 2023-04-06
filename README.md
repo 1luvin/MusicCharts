@@ -30,7 +30,6 @@ Artist:
 
 - Popularity of artists - **Bar**
 - Number of artists of genres - **Bar**
-- Popularity of albums of an artist - **Bar**
 - Popularity of tracks of an artist - **Bar**
 - Price of albums - **Line**
 

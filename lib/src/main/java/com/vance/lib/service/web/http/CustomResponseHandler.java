@@ -18,9 +18,16 @@ public class CustomResponseHandler implements HttpClientResponseHandler<String> 
     public String handleResponse(ClassicHttpResponse response) throws HttpException, IOException {
         final int responseCode = response.getCode();
         log.debug(String.format("Got response with code - %s", responseCode));
+
+        final String responseBody = IOUtils.toString(response.getEntity().getContent(), Charset.defaultCharset());
+
         if (responseCode != HttpStatus.SC_OK) {
+            log.error(String.format("Response code - %s, Response body:\n%s", responseCode, responseBody));
             throw new HttpException(String.format("Bad response code: %s", responseCode));
+        } else {
+            log.debug(String.format("Response body:\n%s", responseBody));
         }
-        return IOUtils.toString(response.getEntity().getContent(), Charset.defaultCharset());
+
+        return responseBody;
     }
 }

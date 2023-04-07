@@ -22,22 +22,27 @@ public class SpotifyIntegration {
     private final SpotifyParser parser = new SpotifyParser();
     private final UrlBuilder urlBuilder = new UrlBuilder();
 
-    public String getInfoAboutArtist(@NotNull String artistName) {
-        return searchItem(artistName, SpotifySearchTypes.ARTIST);
-    }
 
     public Map<String, Integer> getPopularityOfAlbums(@NotNull String artistName) {
         try {
             final String searchResponse = searchItem("artist:" + artistName, SpotifySearchTypes.ALBUM);
             final String albumIds = parser.parseIdOfItems(searchResponse, SpotifySearchTypes.ALBUM);
-            final String albumsResponse = requestService.sendRequest(requestBuilder.get()
-                    .url(urlBuilder.spotify()
-                            .album("?ids=" + albumIds)
-                            .build())
-                    .addHeader("Authorization", "Bearer " + secretProvider.getSpotifyToken())
-                    .build());
+
+            final String albumsResponse = sendRequestToSpotify(urlBuilder.spotify().album("?ids=" + albumIds).build());
             return parser.parsePopularityOfAlbums(albumsResponse);
-        } catch (JsonProcessingException | URISyntaxException e) {
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException("Error occurred", e);
+        }
+    }
+
+    public Map<String, Integer> getPopularityOfTracksOfArtist(@NotNull String artistName) {
+        try {
+            final String searchResponse = searchItem(artistName, SpotifySearchTypes.ARTIST);
+            final String artistId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ARTIST);
+
+            final String tracksResponse = sendRequestToSpotify(urlBuilder.spotify().topTracksOfArtist(artistId).build());
+            return parser.parsePopularityOfTracks(tracksResponse);
+        } catch (JsonProcessingException e) {
             throw new RuntimeException("Error occurred", e);
         }
     }
@@ -46,29 +51,43 @@ public class SpotifyIntegration {
         try {
             final String searchResponse = searchItem(albumName, SpotifySearchTypes.ALBUM);
             final String albumId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ALBUM);
-            final String tracksOfAlbumResponse = requestService.sendRequest(requestBuilder.get()
-                    .url(urlBuilder.spotify()
-                            .albumTracks(albumId)
-                            .build())
-                    .addHeader("Authorization", "Bearer " + secretProvider.getSpotifyToken())
-                    .build());
+
+            final String tracksOfAlbumResponse = sendRequestToSpotify(urlBuilder.spotify().albumTracks(albumId).build());
             return parser.parseDurationOfTracksFromAlbum(tracksOfAlbumResponse);
-        } catch (JsonProcessingException | URISyntaxException e) {
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException("Error occurred", e);
+        }
+    }
+
+    public Map<String, Integer> getPopularityOfTracksInAlbum(@NotNull String albumName) {
+        try {
+            final String searchResponse = searchItem(albumName, SpotifySearchTypes.ALBUM);
+            final String albumId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ALBUM);
+
+            final String tracksOfAlbumResponse = sendRequestToSpotify(urlBuilder.spotify().albumTracks(albumId).build());
+            final String parsedIdOfTracks = parser.parseIdOfTracks(tracksOfAlbumResponse);
+
+            final String tracksResponse = sendRequestToSpotify(urlBuilder.spotify().track("?ids=" + parsedIdOfTracks).build());
+            return parser.parsePopularityOfTracksFromAlbum(tracksResponse);
+        } catch (JsonProcessingException e) {
             throw new RuntimeException("Error occurred", e);
         }
     }
 
     private String searchItem(@NotNull String itemName, @NotNull SpotifySearchTypes itemType) {
+        return sendRequestToSpotify(urlBuilder.spotify()
+                .search(itemName, itemType)
+                .build());
+    }
+
+    private String sendRequestToSpotify(String url) {
         try {
             return requestService.sendRequest(requestBuilder.get()
-                    .url(urlBuilder.spotify()
-                            .search(itemName, itemType)
-                            .build())
+                    .url(url)
                     .addHeader("Authorization", "Bearer " + secretProvider.getSpotifyToken())
                     .build());
         } catch (URISyntaxException e) {
-            log.error(e.getMessage());
+            throw new IllegalArgumentException(String.format("Bad url given: %s", url));
         }
-        throw new IllegalStateException(String.format("Failed to search item: %s", itemName));
     }
 }

@@ -27,6 +27,11 @@ public class SpotifyUrlConfiguration extends UrlConfiguration {
         return this;
     }
 
+    public SpotifyUrlConfiguration topTracksOfArtist(@NotNull String artistId) {
+        resultUrl.append(String.format("/artists/%s/top-tracks?market=ES", artistId));
+        return this;
+    }
+
     public SpotifyUrlConfiguration album(@NotNull String albumID) {
         resultUrl.append(String.format("/albums/%s", albumID));
         return this;
@@ -34,6 +39,11 @@ public class SpotifyUrlConfiguration extends UrlConfiguration {
 
     public SpotifyUrlConfiguration albumTracks(@NotNull String albumID) {
         resultUrl.append(String.format("/albums/%s/tracks", albumID));
+        return this;
+    }
+
+    public SpotifyUrlConfiguration track(@NotNull String trackID) {
+        resultUrl.append(String.format("/tracks/%s", trackID));
         return this;
     }
 

@@ -13,25 +13,25 @@ Visualizations:
 
 Albums:
 
-- Activity of artist - **Line**
-- Popularity of albums - **Bar**
-- Popularity of specific track - **Bar**
-- Popularity of tracks from album - **Bar**
-- Time of each track - **Pie**
+- [ ] Activity of artist - **Line**
+- [X] Popularity of albums - **Bar**
+- [ ] Popularity of specific track - **Bar**
+- [X] Popularity of tracks from album - **Bar**
+- [X] Time of each track - **Pie**
 
 Genres:
 
-- Albums of specific genre released in a specific year - **Bar**
-- Popularity of genres - **Bar**
-- Popularity of artists - **Bar**
-- Number of releases in a year - **Line**
+- [ ] Albums of specific genre released in a specific year - **Bar**
+- [ ] Popularity of genres - **Bar**
+- [ ] Popularity of artists - **Bar**
+- [ ] Number of releases in a year - **Line**
 
 Artist:
 
-- Popularity of artists - **Bar**
-- Number of artists of genres - **Bar**
-- Popularity of tracks of an artist - **Bar**
-- Price of albums - **Line**
+- [ ] Popularity of artists - **Bar**
+- [ ] Number of artists of genres - **Bar**
+- [X] Popularity of tracks of an artist - **Bar**
+- [ ] Price of album - **Line**
 
 API:
 

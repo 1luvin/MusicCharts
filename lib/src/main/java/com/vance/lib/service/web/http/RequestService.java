@@ -28,9 +28,7 @@ public class RequestService {
         final CloseableHttpClient httpClient = HttpClients.createDefault();
         try (httpClient) {
             log.debug(String.format("Sending %s request to %s", request.getMethod(), request.getUri().toString()));
-            final String response = httpClient.execute(request, new CustomResponseHandler());
-            log.debug(String.format("Response from %s: %s", request.getUri(), response));
-            return response;
+            return httpClient.execute(request, new CustomResponseHandler());
         } catch (IOException | URISyntaxException e) {
             log.error(e.getMessage());
         }

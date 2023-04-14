@@ -13,25 +13,22 @@ Visualizations:
 
 Albums:
 
-- [ ] Activity of artist - **Line**
-- [X] Popularity of albums - **Bar**
-- [ ] Popularity of specific track - **Bar**
-- [X] Popularity of tracks from album - **Bar**
-- [X] Time of each track - **Pie**
+- [X] Popularity of albums (Spotify) - **Bar**
+- [X] Activity of artist (Spotify) - **Line**
+- [X] Popularity of tracks from album (Spotify) - **Bar**
+- [X] Time of each track (Spotify) - **Pie**
+- [X] Number of releases (Musicbrainz) - **Bar**
 
 Genres:
 
-- [ ] Albums of specific genre released in a specific year - **Bar**
-- [ ] Popularity of genres - **Bar**
-- [ ] Popularity of artists - **Bar**
-- [ ] Number of releases in a year - **Line**
+- [X] Popularity of genres (LastFM) - **Bar**
+- [X] Popularity of artists (Spotify) - **Bar**
+- [X] Number of artists in genres (Musicbrainz) - **Bar**
+- [X] Number of releases in a decade (Musicbrainz) - **Line**
 
 Artist:
 
-- [ ] Popularity of artists - **Bar**
-- [ ] Number of artists of genres - **Bar**
-- [X] Popularity of tracks of an artist - **Bar**
-- [ ] Price of album - **Line**
+- [X] Popularity of tracks of an artist (Spotify) - **Bar**
 
 API:
 

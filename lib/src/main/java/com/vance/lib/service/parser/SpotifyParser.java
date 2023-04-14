@@ -8,10 +8,7 @@ import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Spliterator;
-import java.util.Spliterators;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -63,8 +60,7 @@ public class SpotifyParser {
         Map<String, Integer> result = new HashMap<>();
         StreamSupport.stream(Spliterators.spliteratorUnknownSize(
                         parseJsonArray(albums, ALBUMS_ARRAY_NAME).iterator(), Spliterator.ORDERED), true)
-                .map(NAME_POPULARITY_EXTRACTOR)
-                .forEach(entry -> result.put(entry.getKey(), entry.getValue()));
+                .forEach(node -> result.put(node.get("name").asText(), node.get("popularity").asInt()));
         return result;
     }
 
@@ -90,16 +86,45 @@ public class SpotifyParser {
 
     }
 
+    public Map<Integer, List<String>> parseActivityOfArtist(String albums) throws JsonProcessingException {
+        final Map<Integer, List<String>> result = new LinkedHashMap<>();
+        StreamSupport.stream(Spliterators.spliteratorUnknownSize(
+                        parseJsonArray(albums, ITEMS_ARRAY_NAME).iterator(), Spliterator.ORDERED), true)
+                .forEach(node -> setArtistActivity(node, result));
+        return result;
+    }
+
+    public Map<String, Long> parsePopularityOfArtistsOfGenre(String artists) throws JsonProcessingException {
+        String parsedArtists = objectMapper.readTree(artists).get("artists").toString();
+        return StreamSupport.stream(Spliterators.spliteratorUnknownSize(
+                        parseJsonArray(parsedArtists, ITEMS_ARRAY_NAME).iterator(), Spliterator.ORDERED), true)
+                .map(node -> Map.entry(node.get("name").asText(), node.get("followers").get("total").asLong()))
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
+    }
+
     private JsonNode parseJsonArray(String json, String arrayName) throws JsonProcessingException {
         final JsonNode parsedArray = objectMapper.readTree(json).get(arrayName);
         if (!parsedArray.isArray())
             throw new RuntimeException(String.format("Cannot parse %s as it is not an array of nodes", arrayName));
-        log.debug(String.format("Parsed array of %s : %s", arrayName, parsedArray.asText()));
         return parsedArray;
     }
 
     @FunctionalInterface
     private interface ElementExtractor<T extends JsonNode, R> extends Function<T, R> {
         R apply(T t);
+    }
+
+    private void setArtistActivity(JsonNode node, Map<Integer, List<String>> result) {
+        Integer year = Integer.parseInt(node.get("release_date").asText().split("-")[0]);
+        String releaseNameAndType = String.format("%s : %s", node.get("name").asText(), node.get("album_type").asText());
+        if (result.containsKey(year)) {
+            if (!result.get(year).contains(releaseNameAndType)) {
+                result.get(year).add(releaseNameAndType);
+            }
+        } else {
+            List<String> list = new ArrayList<>();
+            list.add(releaseNameAndType);
+            result.put(year, list);
+        }
     }
 }

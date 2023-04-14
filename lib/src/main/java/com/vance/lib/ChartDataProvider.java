@@ -1,35 +1,55 @@
 package com.vance.lib;
 
+import com.vance.lib.integration.LastFmIntegration;
+import com.vance.lib.integration.MusicbrainzIntegration;
 import com.vance.lib.integration.SpotifyIntegration;
+import org.jetbrains.annotations.NotNull;
 
+import java.util.List;
 import java.util.Map;
 
 public class ChartDataProvider {
+    private final SpotifyIntegration spotify = new SpotifyIntegration();
+    private final MusicbrainzIntegration musicbrainz = new MusicbrainzIntegration();
+    private final LastFmIntegration lastFM = new LastFmIntegration();
 
-    //todo: Currently is used for tests!!!
-    public static void main(String[] args) {
-        SpotifyIntegration spotifyIntegration = new SpotifyIntegration();
+    public Map<String, Long> numberOfArtistsOfGenres(@NotNull List<String> genres) {
+        return musicbrainz.getNumberOfArtistsOfGenres(genres);
+    }
 
-        final Map<String, Long> durationOfTracksInAlbum = spotifyIntegration.getDurationOfTracksInAlbum("White Pony");
-        durationOfTracksInAlbum.forEach((entry, value) ->
-                System.out.printf("Track name: %s,\t\t track duration: %s\n", entry, value));
+    public Map<String, Long> numberOfReleasesOfGenres(@NotNull List<String> genres) {
+        return musicbrainz.getNumberOfReleasesOfGenres(genres);
+    }
 
-        System.out.println();
-        final Map<String, Integer> popularityOfAlbums = spotifyIntegration.getPopularityOfAlbums("Deftones");
-        popularityOfAlbums.entrySet().stream()
-                .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
-                .forEach(entry -> System.out.printf("Album: %s,\t\t popularity: %s\n", entry.getKey(), entry.getValue()));
+    public Map<String, Long> numberOfReleasesOfGenreInYears(int years, @NotNull String genre) {
+        return musicbrainz.getNumberOfReleasesOfGenreInYears(years, genre);
+    }
 
-        System.out.println();
-        final Map<String, Integer> tracksPopularityOfArtist = spotifyIntegration.getPopularityOfTracksOfArtist("Deftones");
-        tracksPopularityOfArtist.entrySet().stream()
-                .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
-                .forEach(entry -> System.out.printf("Track: %s,\t\t\t\t popularity: %s\n", entry.getKey(), entry.getValue()));
+    public Map<String, Long> popularityOfGenres() {
+        return lastFM.getPopularityOfGenres();
+    }
 
-        System.out.println();
-        final Map<String, Integer> tracksPopularityOfTracksFromAlbum = spotifyIntegration.getPopularityOfTracksInAlbum("White Pony");
-        tracksPopularityOfTracksFromAlbum.entrySet().stream()
-                .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
-                .forEach(entry -> System.out.printf("Track: %s,\t\t\t\t popularity: %s\n", entry.getKey(), entry.getValue()));
+    public Map<String, Integer> popularityOfAlbums(@NotNull String artist) {
+        return spotify.getPopularityOfAlbums(artist);
+    }
+
+    public Map<String, Integer> popularityOfTracksOfArtist(@NotNull String artist) {
+        return spotify.getPopularityOfTracksOfArtist(artist);
+    }
+
+    public Map<String, Long> durationOfTracksInAlbum(@NotNull String album) {
+        return spotify.getDurationOfTracksInAlbum(album);
+    }
+
+    public Map<String, Integer> popularityOfTracksInAlbum(@NotNull String album) {
+        return spotify.getPopularityOfTracksInAlbum(album);
+    }
+
+    public Map<Integer, List<String>> activityOfArtist(@NotNull String artist) {
+        return spotify.getActivityOfArtist(artist);
+    }
+
+    public Map<String, Long> popularArtistsOfGenre(@NotNull String genre) {
+        return spotify.getPopularArtistsOfGenre(genre);
     }
 }

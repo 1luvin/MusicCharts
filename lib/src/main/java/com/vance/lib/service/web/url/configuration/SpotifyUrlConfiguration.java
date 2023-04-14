@@ -22,7 +22,9 @@ public class SpotifyUrlConfiguration extends UrlConfiguration {
     public SpotifyUrlConfiguration albumsOfArtist(@NotNull String artistsID, boolean onlyAlbums) {
         resultUrl.append(String.format("/artists/%s/albums", artistsID));
         if (onlyAlbums) {
-            resultUrl.append("?include_groups=album");
+            resultUrl.append("?include_groups=album&limit=50");
+        } else {
+            resultUrl.append("?include_groups=album,single,appears_on,compilation&limit=50");
         }
         return this;
     }

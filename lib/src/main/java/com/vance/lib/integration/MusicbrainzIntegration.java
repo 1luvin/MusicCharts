@@ -55,9 +55,20 @@ public class MusicbrainzIntegration {
         return result;
     }
 
+    public String getYearsFormatted(int years) {
+        if (years == YEARS_00_TO_09) {
+            return "2000 - 2009";
+        } else if (years == YEARS_90_TO_99) {
+            return "1990 - 1999";
+        } else if (years == YEARS_10_TO_19) {
+            return "2010 - 2019";
+        }
+        throw new IllegalArgumentException("Unsupported years");
+    }
+
     private void addParsedCountToMap(Map<String, Long> map, String item, String url) {
         try {
-            Thread.sleep(1500);
+            Thread.sleep(1500); // we need this for not to be banned :)
             final String response = sendRequestToMusicbrainz(url);
             map.put(item, parser.parseCountOfItems(response));
         } catch (JsonProcessingException | InterruptedException e) {

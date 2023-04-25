@@ -56,7 +56,7 @@ class UrlBuilderTest {
     void shouldBuildSpotifyUrlForAlbumsOfArtist() {
         // given
         final String artistId = "TEST_ARTIST_ID";
-        final String expectedUrl = SPOTIFY_BASE_URL + "/artists/" + artistId + "/albums";
+        final String expectedUrl = SPOTIFY_BASE_URL + "/artists/" + artistId + "/albums?include_groups=album,single,appears_on,compilation&limit=50";
 
         // when
         final String actualUrl = builder.spotify()
@@ -107,7 +107,7 @@ class UrlBuilderTest {
 
         // when
         final String actualUrl = builder.spotify()
-                .search(query, SpotifySearchTypes.ARTIST)
+                .search(query, SpotifySearchTypes.ARTIST, false)
                 .build();
 
         // then

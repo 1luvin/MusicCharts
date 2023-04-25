@@ -26,7 +26,7 @@ public class SpotifyIntegration {
 
     public Map<String, Integer> getPopularityOfAlbums(@NotNull String artistName) {
         try {
-            final String searchResponse = searchItem("artist:" + artistName, SpotifySearchTypes.ALBUM);
+            final String searchResponse = searchItem("artist:" + artistName, SpotifySearchTypes.ALBUM, false);
             final String albumIds = parser.parseIdOfItems(searchResponse, SpotifySearchTypes.ALBUM);
 
             final String albumsResponse = sendRequestToSpotify(urlBuilder.spotify().album("?ids=" + albumIds).build());
@@ -42,7 +42,7 @@ public class SpotifyIntegration {
 
     public Map<String, Integer> getPopularityOfTracksOfArtist(@NotNull String artistName) {
         try {
-            final String searchResponse = searchItem(artistName, SpotifySearchTypes.ARTIST);
+            final String searchResponse = searchItem(artistName, SpotifySearchTypes.ARTIST, true);
             final String artistId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ARTIST);
 
             final String tracksResponse = sendRequestToSpotify(urlBuilder.spotify().topTracksOfArtist(artistId).build());
@@ -58,7 +58,7 @@ public class SpotifyIntegration {
 
     public Map<String, Long> getDurationOfTracksInAlbum(@NotNull String albumName) {
         try {
-            final String searchResponse = searchItem(albumName, SpotifySearchTypes.ALBUM);
+            final String searchResponse = searchItem(albumName, SpotifySearchTypes.ALBUM, false);
             final String albumId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ALBUM);
 
             final String tracksOfAlbumResponse = sendRequestToSpotify(urlBuilder.spotify().albumTracks(albumId).build());
@@ -74,7 +74,7 @@ public class SpotifyIntegration {
 
     public Map<String, Integer> getPopularityOfTracksInAlbum(@NotNull String albumName) {
         try {
-            final String searchResponse = searchItem(albumName, SpotifySearchTypes.ALBUM);
+            final String searchResponse = searchItem(albumName, SpotifySearchTypes.ALBUM, false);
             final String albumId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ALBUM);
 
             final String tracksOfAlbumResponse = sendRequestToSpotify(urlBuilder.spotify().albumTracks(albumId).build());
@@ -93,7 +93,7 @@ public class SpotifyIntegration {
 
     public Map<Integer, List<String>> getActivityOfArtist(@NotNull String artistName) {
         try {
-            final String searchResponse = searchItem(artistName, SpotifySearchTypes.ARTIST);
+            final String searchResponse = searchItem(artistName, SpotifySearchTypes.ARTIST, false);
             final String artistId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ARTIST);
 
             final String albumsOfArist = sendRequestToSpotify(urlBuilder.spotify()
@@ -111,7 +111,7 @@ public class SpotifyIntegration {
 
     public Map<String, Long> getPopularArtistsOfGenre(@NotNull String genreName) {
         try {
-            final String searchResponse = searchItem(String.format("genre:%s", genreName), SpotifySearchTypes.ARTIST);
+            final String searchResponse = searchItem(String.format("genre:%s", genreName), SpotifySearchTypes.ARTIST, true);
             final Map<String, Long> result = parser.parsePopularityOfArtistsOfGenre(searchResponse);
 
             log.debug(String.format("Popularity of %s artists: %s", genreName, result.toString()));
@@ -122,8 +122,8 @@ public class SpotifyIntegration {
         }
     }
 
-    private String searchItem(@NotNull String itemName, @NotNull SpotifySearchTypes itemType) {
-        return sendRequestToSpotify(urlBuilder.spotify().search(itemName, itemType).build());
+    private String searchItem(@NotNull String itemName, @NotNull SpotifySearchTypes itemType, boolean limit) {
+        return sendRequestToSpotify(urlBuilder.spotify().search(itemName, itemType, limit).build());
     }
 
     private String sendRequestToSpotify(String url) {

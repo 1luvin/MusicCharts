@@ -28,7 +28,13 @@ public class SpotifyParser {
 
     public String parseIdOfItem(@NotNull String item, SpotifySearchTypes type) throws JsonProcessingException {
         final String searchType = type.name().toLowerCase();
-        final String id = objectMapper.readTree(item).get(searchType + "s")
+        final JsonNode parsedSearch = objectMapper.readTree(item);
+
+        final int total = parsedSearch.get(searchType + "s").get("total").asInt();
+        if (total == 0)
+            throw new IllegalStateException(String.format("No %s to parse", searchType + "s"));
+
+        final String id = parsedSearch.get(searchType + "s")
                 .get(ITEMS_ARRAY_NAME)
                 .get(0)
                 .get("id").asText();
@@ -43,6 +49,7 @@ public class SpotifyParser {
 
         if (!parsedItems.isArray())
             throw new RuntimeException("Cannot parse ids of " + type);
+
         log.debug("Parsing id of items");
         return StreamSupport.stream(Spliterators.spliteratorUnknownSize(parsedItems.iterator(), Spliterator.ORDERED), true)
                 .map(ID_EXTRACTOR)
@@ -103,7 +110,8 @@ public class SpotifyParser {
     }
 
     private JsonNode parseJsonArray(String json, String arrayName) throws JsonProcessingException {
-        final JsonNode parsedArray = objectMapper.readTree(json).get(arrayName);
+        final JsonNode parsedArray = Optional.ofNullable(objectMapper.readTree(json).get(arrayName)).orElseThrow(
+                () -> new RuntimeException(String.format("Cannot parse %s as it is not an array of nodes", arrayName)));
         if (!parsedArray.isArray())
             throw new RuntimeException(String.format("Cannot parse %s as it is not an array of nodes", arrayName));
         return parsedArray;

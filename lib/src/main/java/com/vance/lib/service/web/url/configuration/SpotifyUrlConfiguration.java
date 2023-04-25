@@ -9,8 +9,10 @@ public class SpotifyUrlConfiguration extends UrlConfiguration {
         resultUrl.append("https://api.spotify.com/v1");
     }
 
-    public SpotifyUrlConfiguration search(@NotNull String query, @NotNull SpotifySearchTypes type) {
+    public SpotifyUrlConfiguration search(@NotNull String query, @NotNull SpotifySearchTypes type, boolean limit) {
         resultUrl.append(String.format("/search?q=%s&type=%s", encodeQuery(query), type.name().toLowerCase()));
+        if (limit)
+            resultUrl.append("&limit=10");
         return this;
     }
 

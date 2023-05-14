@@ -11,18 +11,17 @@ import java.net.URISyntaxException;
 
 public class RequestService {
     private static final Logger log = LoggerFactory.getLogger(RequestService.class);
-
     private static RequestService instance = null;
 
     public static RequestService getInstance() {
         if (instance == null) {
             instance = new RequestService();
         }
-        log.info("RequestService instance is created");
         return instance;
     }
 
     private RequestService() {
+        log.info("RequestService instance is created");
     }
 
     public String sendRequest(ClassicHttpRequest request) {

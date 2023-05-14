@@ -34,12 +34,12 @@ public class SecretProvider {
     private SecretProvider(RequestService requestService) {
         this.requestService = requestService;
         setSecrets();
+        log.info("SecretProvider Instance is created");
     }
 
     public static SecretProvider getInstance(RequestService requestService) {
         if (secretProviderInstance == null)
             secretProviderInstance = new SecretProvider(requestService);
-        log.info("SecretProvider Instance is created");
         return secretProviderInstance;
     }
 

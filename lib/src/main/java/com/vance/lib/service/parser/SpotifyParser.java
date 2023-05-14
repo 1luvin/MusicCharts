@@ -17,7 +17,6 @@ public class SpotifyParser {
     private final Logger log = LoggerFactory.getLogger(SpotifyParser.class);
     private final String ITEMS_ARRAY_NAME = "items";
     private final String TRACKS_ARRAY_NAME = "tracks";
-    private final String ALBUMS_ARRAY_NAME = "albums";
     private final ElementExtractor<JsonNode, String> ID_EXTRACTOR =
             node -> node.get("id").asText();
     private final ElementExtractor<JsonNode, Map.Entry<String, Long>> NAME_DURATION_EXTRACTOR =
@@ -38,7 +37,7 @@ public class SpotifyParser {
                 .get(ITEMS_ARRAY_NAME)
                 .get(0)
                 .get("id").asText();
-        log.debug(String.format("Parsed %s : %s", searchType, id));
+        log.debug("Parsed {} : {}", searchType, id);
         return id;
     }
 
@@ -66,7 +65,7 @@ public class SpotifyParser {
     public Map<String, Integer> parsePopularityOfAlbums(@NotNull String albums) throws JsonProcessingException {
         Map<String, Integer> result = new HashMap<>();
         StreamSupport.stream(Spliterators.spliteratorUnknownSize(
-                        parseJsonArray(albums, ALBUMS_ARRAY_NAME).iterator(), Spliterator.ORDERED), true)
+                        parseJsonArray(albums, "albums").iterator(), Spliterator.ORDERED), true)
                 .forEach(node -> result.put(node.get("name").asText(), node.get("popularity").asInt()));
         return result;
     }
@@ -90,7 +89,6 @@ public class SpotifyParser {
                         parseJsonArray(tracks, ITEMS_ARRAY_NAME).iterator(), Spliterator.ORDERED), true)
                 .map(ID_EXTRACTOR)
                 .collect(Collectors.joining(","));
-
     }
 
     public Map<Integer, List<String>> parseActivityOfArtist(String albums) throws JsonProcessingException {
@@ -126,9 +124,8 @@ public class SpotifyParser {
         Integer year = Integer.parseInt(node.get("release_date").asText().split("-")[0]);
         String releaseNameAndType = String.format("%s : %s", node.get("name").asText(), node.get("album_type").asText());
         if (result.containsKey(year)) {
-            if (!result.get(year).contains(releaseNameAndType)) {
+            if (!result.get(year).contains(releaseNameAndType))
                 result.get(year).add(releaseNameAndType);
-            }
         } else {
             List<String> list = new ArrayList<>();
             list.add(releaseNameAndType);

@@ -17,15 +17,15 @@ public class CustomResponseHandler implements HttpClientResponseHandler<String> 
     @Override
     public String handleResponse(ClassicHttpResponse response) throws HttpException, IOException {
         final int responseCode = response.getCode();
-        log.debug(String.format("Got response with code - %s", responseCode));
+        log.debug("Got response with code - {}", responseCode);
 
         final String responseBody = IOUtils.toString(response.getEntity().getContent(), Charset.defaultCharset());
 
         if (responseCode != HttpStatus.SC_OK) {
-            log.error(String.format("Response code - %s, Response body:\n%s", responseCode, responseBody));
-            throw new HttpException(String.format("Bad response code: %s", responseCode));
+            log.error("Response code - {}, Response body:\n{}", responseCode, responseBody);
+            throw new HttpException("Bad response code: {}", responseCode);
         } else {
-            log.debug(String.format("Response body:\n%s", responseBody));
+            log.debug("Response body:\n{}", responseBody);
         }
 
         return responseBody;

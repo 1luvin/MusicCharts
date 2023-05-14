@@ -13,13 +13,14 @@ import java.util.Optional;
 public class HttpRequestBuilder {
 
     private ClassicHttpRequest request = null;
+    private final String EMPTY_ENDPOINT = "/";
 
     public ClassicHttpRequest build() throws URISyntaxException {
         ClassicHttpRequest result = Optional.ofNullable(request).orElseThrow(() -> {
             request = null;
             return new IllegalStateException("Building uninitialized request");
         });
-        if ("/".equals(result.getUri().toString())) {
+        if (EMPTY_ENDPOINT.equals(result.getUri().toString())) {
             request = null;
             throw new IllegalStateException("Request url is not set");
         }

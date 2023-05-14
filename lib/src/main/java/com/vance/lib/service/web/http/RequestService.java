@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 
 public class RequestService {
-    private final Logger log = LoggerFactory.getLogger(RequestService.class);
+    private static final Logger log = LoggerFactory.getLogger(RequestService.class);
 
     private static RequestService instance = null;
 
@@ -18,6 +18,7 @@ public class RequestService {
         if (instance == null) {
             instance = new RequestService();
         }
+        log.info("RequestService instance is created");
         return instance;
     }
 
@@ -27,7 +28,7 @@ public class RequestService {
     public String sendRequest(ClassicHttpRequest request) {
         final CloseableHttpClient httpClient = HttpClients.createDefault();
         try (httpClient) {
-            log.debug(String.format("Sending %s request to %s", request.getMethod(), request.getUri().toString()));
+            log.debug("Sending {} request to {}", request.getMethod(), request.getUri().toString());
             return httpClient.execute(request, new CustomResponseHandler());
         } catch (IOException | URISyntaxException e) {
             log.error(e.getMessage());

@@ -14,25 +14,26 @@ public class LastFmIntegration {
 
     private final UrlBuilder urlBuilder = new UrlBuilder();
     private final LastFmParser parser = new LastFmParser();
-    private final RequestService requestService = RequestService.getInstance();
     private final HttpRequestBuilder requestBuilder = new HttpRequestBuilder();
+    private final RequestService requestService = RequestService.getInstance();
     private final SecretProvider secretProvider = SecretProvider.getInstance(requestService);
 
     public Map<String, Long> getPopularityOfGenres() {
+        final String url = String.format(urlBuilder.lastfm().getTopGenres().build()
+                + "&api_key=%s&format=json", secretProvider.getLastFMToken());
+
         try {
-            final String popularityOfGenresResponse = sendRequestToLastFm(urlBuilder.lastfm().getTopGenres().build());
-            return parser.parsePopularityOfGenres(popularityOfGenresResponse);
+            return parser.parsePopularityOfGenres(requestService.sendRequest(requestBuilder.get().url(url).build()));
         } catch (JsonProcessingException e) {
-            throw new RuntimeException("Error occurred", e);
+            throw new LastFmIntegrationException("Error occurred", e);
+        } catch (URISyntaxException e) {
+            throw new IllegalArgumentException(String.format("Bad url created: %s", url));
         }
     }
 
-    private String sendRequestToLastFm(String url) {
-        final String finalUrl = String.format(url + "&api_key=%s&format=json", secretProvider.getLastFMToken());
-        try {
-            return requestService.sendRequest(requestBuilder.get().url(finalUrl).build());
-        } catch (URISyntaxException e) {
-            throw new IllegalArgumentException(String.format("Bad url given: %s", url));
+    static class LastFmIntegrationException extends RuntimeException {
+        public LastFmIntegrationException(String message, Throwable throwable) {
+            super(message, throwable);
         }
     }
 }

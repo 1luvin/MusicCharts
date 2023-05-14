@@ -23,11 +23,10 @@ public class SpotifyUrlConfiguration extends UrlConfiguration {
 
     public SpotifyUrlConfiguration albumsOfArtist(@NotNull String artistsID, boolean onlyAlbums) {
         resultUrl.append(String.format("/artists/%s/albums", artistsID));
-        if (onlyAlbums) {
+        if (onlyAlbums)
             resultUrl.append("?include_groups=album&limit=50");
-        } else {
+        else
             resultUrl.append("?include_groups=album,single,appears_on,compilation&limit=50");
-        }
         return this;
     }
 
@@ -50,6 +49,4 @@ public class SpotifyUrlConfiguration extends UrlConfiguration {
         resultUrl.append(String.format("/tracks/%s", trackID));
         return this;
     }
-
-    //todo: Add url that we need
 }

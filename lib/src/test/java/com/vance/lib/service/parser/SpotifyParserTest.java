@@ -15,11 +15,11 @@ class SpotifyParserTest {
     @Test
     void shouldParseIdOfItem() throws JsonProcessingException {
         // given
-        final String json = "{ \"artists\": { \"items\" : [{ \"id\" : \"TEST_ID\" }], \"total\" : \"1\" } }";
+        final String json = "{ \"artists\": { \"items\" : [{ \"id\":\"TEST_ID\", \"name\":\"TEST_NAME\" }], \"total\" : \"1\" } }";
         final String expectedID = "TEST_ID";
 
         // when
-        final String actualID = parser.parseIdOfItem(json, SpotifySearchTypes.ARTIST);
+        final String actualID = parser.parseIdOfItem(json, SpotifySearchTypes.ARTIST, "TEST_NAME");
 
         // then
         assertEquals(expectedID, actualID);
@@ -152,18 +152,34 @@ class SpotifyParserTest {
     }
 
     @Test
+    void shouldNotParseAnythingFromEmptyString() {
+        // given
+        final String emptyString = "";
+
+        // when & then
+        assertThrows(RuntimeException.class, () -> parser.parseIdOfTracks(emptyString));
+        assertThrows(RuntimeException.class, () -> parser.parseActivityOfArtist(emptyString));
+        assertThrows(RuntimeException.class, () -> parser.parsePopularityOfAlbums(emptyString));
+        assertThrows(RuntimeException.class, () -> parser.parsePopularityOfTracksOfArtist(emptyString));
+        assertThrows(RuntimeException.class, () -> parser.parsePopularityOfTracksFromAlbum(emptyString));
+        assertThrows(RuntimeException.class, () -> parser.parseIdOfItem(emptyString, SpotifySearchTypes.ALBUM, "TEST"));
+        assertThrows(RuntimeException.class, () -> parser.parseIdOfItems(emptyString, SpotifySearchTypes.ALBUM));
+        assertThrows(RuntimeException.class, () -> parser.parsePopularityOfArtistsOfGenre(emptyString));
+    }
+
+    @Test
     void shouldNotParseAnythingFromEmptyJSON() {
         // given
-        final String emptyJSON = "";
+        final String emptyJSON = "{}";
 
         // when & then
         assertThrows(RuntimeException.class, () -> parser.parseIdOfTracks(emptyJSON));
         assertThrows(RuntimeException.class, () -> parser.parseActivityOfArtist(emptyJSON));
         assertThrows(RuntimeException.class, () -> parser.parsePopularityOfAlbums(emptyJSON));
-        assertThrows(RuntimeException.class, () -> parser.parsePopularityOfTracks(emptyJSON));
+        assertThrows(RuntimeException.class, () -> parser.parsePopularityOfTracksOfArtist(emptyJSON));
         assertThrows(RuntimeException.class, () -> parser.parsePopularityOfTracksFromAlbum(emptyJSON));
-        assertThrows(NullPointerException.class, () -> parser.parseIdOfItem(emptyJSON, SpotifySearchTypes.ALBUM));
-        assertThrows(NullPointerException.class, () -> parser.parseIdOfItems(emptyJSON, SpotifySearchTypes.ALBUM));
-        assertThrows(NullPointerException.class, () -> parser.parsePopularityOfArtistsOfGenre(emptyJSON));
+        assertThrows(RuntimeException.class, () -> parser.parseIdOfItem(emptyJSON, SpotifySearchTypes.ALBUM, "test"));
+        assertThrows(RuntimeException.class, () -> parser.parseIdOfItems(emptyJSON, SpotifySearchTypes.ALBUM));
+        assertThrows(RuntimeException.class, () -> parser.parsePopularityOfArtistsOfGenre(emptyJSON));
     }
 }

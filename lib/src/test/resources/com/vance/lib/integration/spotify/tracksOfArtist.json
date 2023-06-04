@@ -1,0 +1,774 @@
+{
+  "tracks": [
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+            },
+            "href": "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+            "id": "6Ghvu1VvMGScGpOUJBAHNH",
+            "name": "Deftones",
+            "type": "artist",
+            "uri": "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/5LEXck3kfixFaA3CqVE7bC"
+        },
+        "href": "https://api.spotify.com/v1/albums/5LEXck3kfixFaA3CqVE7bC",
+        "id": "5LEXck3kfixFaA3CqVE7bC",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2735c53799f473fa3e1a48c00ed",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e025c53799f473fa3e1a48c00ed",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048515c53799f473fa3e1a48c00ed",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "White Pony",
+        "release_date": "2000-05-16",
+        "release_date_precision": "day",
+        "total_tracks": 12,
+        "type": "album",
+        "uri": "spotify:album:5LEXck3kfixFaA3CqVE7bC"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+          },
+          "href": "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+          "id": "6Ghvu1VvMGScGpOUJBAHNH",
+          "name": "Deftones",
+          "type": "artist",
+          "uri": "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 299533,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USMV20000039"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/51c94ac31swyDQj9B3Lzs3"
+      },
+      "href": "https://api.spotify.com/v1/tracks/51c94ac31swyDQj9B3Lzs3",
+      "id": "51c94ac31swyDQj9B3Lzs3",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Change (In the House of Flies)",
+      "popularity": 80,
+      "preview_url": "https://p.scdn.co/mp3-preview/d0fca1a516d07cea609f8f259faf940af456cdfa?cid=4683d0eee1ac4d9e8de35804e13c141a",
+      "track_number": 11,
+      "type": "track",
+      "uri": "spotify:track:51c94ac31swyDQj9B3Lzs3"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+            },
+            "href": "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+            "id": "6Ghvu1VvMGScGpOUJBAHNH",
+            "name": "Deftones",
+            "type": "artist",
+            "uri": "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/7o4UsmV37Sg5It2Eb7vHzu"
+        },
+        "href": "https://api.spotify.com/v1/albums/7o4UsmV37Sg5It2Eb7vHzu",
+        "id": "7o4UsmV37Sg5It2Eb7vHzu",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2730b1129853982ea17845d4eb6",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e020b1129853982ea17845d4eb6",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048510b1129853982ea17845d4eb6",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Around the Fur",
+        "release_date": "1997-10-27",
+        "release_date_precision": "day",
+        "total_tracks": 10,
+        "type": "album",
+        "uri": "spotify:album:7o4UsmV37Sg5It2Eb7vHzu"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+          },
+          "href": "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+          "id": "6Ghvu1VvMGScGpOUJBAHNH",
+          "name": "Deftones",
+          "type": "artist",
+          "uri": "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 214760,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USMV29700142"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1158ckiB5S4cpsdYHDB9IF"
+      },
+      "href": "https://api.spotify.com/v1/tracks/1158ckiB5S4cpsdYHDB9IF",
+      "id": "1158ckiB5S4cpsdYHDB9IF",
+      "is_local": false,
+      "is_playable": true,
+      "name": "My Own Summer (Shove It)",
+      "popularity": 79,
+      "preview_url": "https://p.scdn.co/mp3-preview/369351855a3f60831f17edb8ae86bd201c51619c?cid=4683d0eee1ac4d9e8de35804e13c141a",
+      "track_number": 1,
+      "type": "track",
+      "uri": "spotify:track:1158ckiB5S4cpsdYHDB9IF"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+            },
+            "href": "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+            "id": "6Ghvu1VvMGScGpOUJBAHNH",
+            "name": "Deftones",
+            "type": "artist",
+            "uri": "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/7o4UsmV37Sg5It2Eb7vHzu"
+        },
+        "href": "https://api.spotify.com/v1/albums/7o4UsmV37Sg5It2Eb7vHzu",
+        "id": "7o4UsmV37Sg5It2Eb7vHzu",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2730b1129853982ea17845d4eb6",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e020b1129853982ea17845d4eb6",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048510b1129853982ea17845d4eb6",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Around the Fur",
+        "release_date": "1997-10-27",
+        "release_date_precision": "day",
+        "total_tracks": 10,
+        "type": "album",
+        "uri": "spotify:album:7o4UsmV37Sg5It2Eb7vHzu"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+          },
+          "href": "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+          "id": "6Ghvu1VvMGScGpOUJBAHNH",
+          "name": "Deftones",
+          "type": "artist",
+          "uri": "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 299866,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USMV29700147"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4Uiw0Sl9yskBaC6P4DcdVD"
+      },
+      "href": "https://api.spotify.com/v1/tracks/4Uiw0Sl9yskBaC6P4DcdVD",
+      "id": "4Uiw0Sl9yskBaC6P4DcdVD",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Be Quiet and Drive (Far Away)",
+      "popularity": 79,
+      "preview_url": "https://p.scdn.co/mp3-preview/6f38e4008337f1daec8f1fd97b302be79b3d2951?cid=4683d0eee1ac4d9e8de35804e13c141a",
+      "track_number": 6,
+      "type": "track",
+      "uri": "spotify:track:4Uiw0Sl9yskBaC6P4DcdVD"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+            },
+            "href": "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+            "id": "6Ghvu1VvMGScGpOUJBAHNH",
+            "name": "Deftones",
+            "type": "artist",
+            "uri": "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4ilqDlqD37nilewk9x8tyZ"
+        },
+        "href": "https://api.spotify.com/v1/albums/4ilqDlqD37nilewk9x8tyZ",
+        "id": "4ilqDlqD37nilewk9x8tyZ",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273c869fa3b4e0ce4dd9818a40e",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02c869fa3b4e0ce4dd9818a40e",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851c869fa3b4e0ce4dd9818a40e",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Saturday Night Wrist",
+        "release_date": "2006-10-25",
+        "release_date_precision": "day",
+        "total_tracks": 12,
+        "type": "album",
+        "uri": "spotify:album:4ilqDlqD37nilewk9x8tyZ"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+          },
+          "href": "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+          "id": "6Ghvu1VvMGScGpOUJBAHNH",
+          "name": "Deftones",
+          "type": "artist",
+          "uri": "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 317706,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USMV20600284"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/70L6nHORQsblY813yNqUR3"
+      },
+      "href": "https://api.spotify.com/v1/tracks/70L6nHORQsblY813yNqUR3",
+      "id": "70L6nHORQsblY813yNqUR3",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Cherry Waves",
+      "popularity": 77,
+      "preview_url": "https://p.scdn.co/mp3-preview/ed94820c05017133cdc4ffc653aacb7da1e18f56?cid=4683d0eee1ac4d9e8de35804e13c141a",
+      "track_number": 4,
+      "type": "track",
+      "uri": "spotify:track:70L6nHORQsblY813yNqUR3"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+            },
+            "href": "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+            "id": "6Ghvu1VvMGScGpOUJBAHNH",
+            "name": "Deftones",
+            "type": "artist",
+            "uri": "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/1GjjBpY2iDwSQs5bykQI5e"
+        },
+        "href": "https://api.spotify.com/v1/albums/1GjjBpY2iDwSQs5bykQI5e",
+        "id": "1GjjBpY2iDwSQs5bykQI5e",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27372c2145d48f68917a7361b15",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0272c2145d48f68917a7361b15",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485172c2145d48f68917a7361b15",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Diamond Eyes",
+        "release_date": "2008",
+        "release_date_precision": "year",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:1GjjBpY2iDwSQs5bykQI5e"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+          },
+          "href": "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+          "id": "6Ghvu1VvMGScGpOUJBAHNH",
+          "name": "Deftones",
+          "type": "artist",
+          "uri": "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 241533,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USRE11000115"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/1EryAkZ0VHstC6haIxVBiE"
+      },
+      "href": "https://api.spotify.com/v1/tracks/1EryAkZ0VHstC6haIxVBiE",
+      "id": "1EryAkZ0VHstC6haIxVBiE",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Sextape",
+      "popularity": 77,
+      "preview_url": "https://p.scdn.co/mp3-preview/0f585fc23d6f7f4354d6ff252d9eeab3066179ca?cid=4683d0eee1ac4d9e8de35804e13c141a",
+      "track_number": 8,
+      "type": "track",
+      "uri": "spotify:track:1EryAkZ0VHstC6haIxVBiE"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+            },
+            "href": "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+            "id": "6Ghvu1VvMGScGpOUJBAHNH",
+            "name": "Deftones",
+            "type": "artist",
+            "uri": "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4PIVdqvL1Rc7T7Vfsr8n8Q"
+        },
+        "href": "https://api.spotify.com/v1/albums/4PIVdqvL1Rc7T7Vfsr8n8Q",
+        "id": "4PIVdqvL1Rc7T7Vfsr8n8Q",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b27373652b7a0dc388dd1d044b69",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e0273652b7a0dc388dd1d044b69",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d0000485173652b7a0dc388dd1d044b69",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Koi No Yokan",
+        "release_date": "2012-11-09",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:4PIVdqvL1Rc7T7Vfsr8n8Q"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+          },
+          "href": "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+          "id": "6Ghvu1VvMGScGpOUJBAHNH",
+          "name": "Deftones",
+          "type": "artist",
+          "uri": "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 413346,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USRE11200415"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4FEr6dIdH6EqLKR0jB560J"
+      },
+      "href": "https://api.spotify.com/v1/tracks/4FEr6dIdH6EqLKR0jB560J",
+      "id": "4FEr6dIdH6EqLKR0jB560J",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Rosemary",
+      "popularity": 75,
+      "preview_url": "https://p.scdn.co/mp3-preview/d77fc3540dbdcf919087801e8aeb36fc102df4ea?cid=4683d0eee1ac4d9e8de35804e13c141a",
+      "track_number": 9,
+      "type": "track",
+      "uri": "spotify:track:4FEr6dIdH6EqLKR0jB560J"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+            },
+            "href": "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+            "id": "6Ghvu1VvMGScGpOUJBAHNH",
+            "name": "Deftones",
+            "type": "artist",
+            "uri": "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/7o4UsmV37Sg5It2Eb7vHzu"
+        },
+        "href": "https://api.spotify.com/v1/albums/7o4UsmV37Sg5It2Eb7vHzu",
+        "id": "7o4UsmV37Sg5It2Eb7vHzu",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2730b1129853982ea17845d4eb6",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e020b1129853982ea17845d4eb6",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048510b1129853982ea17845d4eb6",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Around the Fur",
+        "release_date": "1997-10-27",
+        "release_date_precision": "day",
+        "total_tracks": 10,
+        "type": "album",
+        "uri": "spotify:album:7o4UsmV37Sg5It2Eb7vHzu"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+          },
+          "href": "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+          "id": "6Ghvu1VvMGScGpOUJBAHNH",
+          "name": "Deftones",
+          "type": "artist",
+          "uri": "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 225293,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USMV29700144"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/4cLdpErILMO8Db8pQVAVcZ"
+      },
+      "href": "https://api.spotify.com/v1/tracks/4cLdpErILMO8Db8pQVAVcZ",
+      "id": "4cLdpErILMO8Db8pQVAVcZ",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Mascara",
+      "popularity": 73,
+      "preview_url": "https://p.scdn.co/mp3-preview/fead1e47b862effcf514edf418bb8b239ca82fdc?cid=4683d0eee1ac4d9e8de35804e13c141a",
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:4cLdpErILMO8Db8pQVAVcZ"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+            },
+            "href": "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+            "id": "6Ghvu1VvMGScGpOUJBAHNH",
+            "name": "Deftones",
+            "type": "artist",
+            "uri": "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4ilqDlqD37nilewk9x8tyZ"
+        },
+        "href": "https://api.spotify.com/v1/albums/4ilqDlqD37nilewk9x8tyZ",
+        "id": "4ilqDlqD37nilewk9x8tyZ",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273c869fa3b4e0ce4dd9818a40e",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02c869fa3b4e0ce4dd9818a40e",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851c869fa3b4e0ce4dd9818a40e",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Saturday Night Wrist",
+        "release_date": "2006-10-25",
+        "release_date_precision": "day",
+        "total_tracks": 12,
+        "type": "album",
+        "uri": "spotify:album:4ilqDlqD37nilewk9x8tyZ"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+          },
+          "href": "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+          "id": "6Ghvu1VvMGScGpOUJBAHNH",
+          "name": "Deftones",
+          "type": "artist",
+          "uri": "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 360666,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USMV20600283"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2ASygm7048ssav4ekbehPS"
+      },
+      "href": "https://api.spotify.com/v1/tracks/2ASygm7048ssav4ekbehPS",
+      "id": "2ASygm7048ssav4ekbehPS",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Beware",
+      "popularity": 69,
+      "preview_url": "https://p.scdn.co/mp3-preview/80ed10e3eec7f9879fc9bb45d37c47b514dfe190?cid=4683d0eee1ac4d9e8de35804e13c141a",
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:2ASygm7048ssav4ekbehPS"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+            },
+            "href": "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+            "id": "6Ghvu1VvMGScGpOUJBAHNH",
+            "name": "Deftones",
+            "type": "artist",
+            "uri": "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/5LEXck3kfixFaA3CqVE7bC"
+        },
+        "href": "https://api.spotify.com/v1/albums/5LEXck3kfixFaA3CqVE7bC",
+        "id": "5LEXck3kfixFaA3CqVE7bC",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b2735c53799f473fa3e1a48c00ed",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e025c53799f473fa3e1a48c00ed",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d000048515c53799f473fa3e1a48c00ed",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "White Pony",
+        "release_date": "2000-05-16",
+        "release_date_precision": "day",
+        "total_tracks": 12,
+        "type": "album",
+        "uri": "spotify:album:5LEXck3kfixFaA3CqVE7bC"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+          },
+          "href": "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+          "id": "6Ghvu1VvMGScGpOUJBAHNH",
+          "name": "Deftones",
+          "type": "artist",
+          "uri": "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 255373,
+      "explicit": false,
+      "external_ids": {
+        "isrc": "USMV20000031"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/2jSJm3Gv6GLxduWLenmjKS"
+      },
+      "href": "https://api.spotify.com/v1/tracks/2jSJm3Gv6GLxduWLenmjKS",
+      "id": "2jSJm3Gv6GLxduWLenmjKS",
+      "is_local": false,
+      "is_playable": true,
+      "name": "Digital Bath",
+      "popularity": 70,
+      "preview_url": "https://p.scdn.co/mp3-preview/5f676e631918443c1ed0ee45f69e6ee9b0a475f5?cid=4683d0eee1ac4d9e8de35804e13c141a",
+      "track_number": 3,
+      "type": "track",
+      "uri": "spotify:track:2jSJm3Gv6GLxduWLenmjKS"
+    },
+    {
+      "album": {
+        "album_type": "album",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+            },
+            "href": "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+            "id": "6Ghvu1VvMGScGpOUJBAHNH",
+            "name": "Deftones",
+            "type": "artist",
+            "uri": "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/30YN03R4Bjl8Qwz8wPRoXG"
+        },
+        "href": "https://api.spotify.com/v1/albums/30YN03R4Bjl8Qwz8wPRoXG",
+        "id": "30YN03R4Bjl8Qwz8wPRoXG",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ab67616d0000b273e0aa988082afc4ea586ab8dc",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/ab67616d00001e02e0aa988082afc4ea586ab8dc",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/ab67616d00004851e0aa988082afc4ea586ab8dc",
+            "width": 64
+          }
+        ],
+        "is_playable": true,
+        "name": "Adrenaline",
+        "release_date": "1995-09-29",
+        "release_date_precision": "day",
+        "total_tracks": 11,
+        "type": "album",
+        "uri": "spotify:album:30YN03R4Bjl8Qwz8wPRoXG"
+      },
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/6Ghvu1VvMGScGpOUJBAHNH"
+          },
+          "href": "https://api.spotify.com/v1/artists/6Ghvu1VvMGScGpOUJBAHNH",
+          "id": "6Ghvu1VvMGScGpOUJBAHNH",
+          "name": "Deftones",
+          "type": "artist",
+          "uri": "spotify:artist:6Ghvu1VvMGScGpOUJBAHNH"
+        }
+      ],
+      "disc_number": 1,
+      "duration_ms": 223893,
+      "explicit": true,
+      "external_ids": {
+        "isrc": "USMV20000029"
+      },
+      "external_urls": {
+        "spotify": "https://open.spotify.com/track/6DoXuH326aAYEN8CnlLmhP"
+      },
+      "href": "https://api.spotify.com/v1/tracks/6DoXuH326aAYEN8CnlLmhP",
+      "id": "6DoXuH326aAYEN8CnlLmhP",
+      "is_local": false,
+      "is_playable": true,
+      "name": "7 Words",
+      "popularity": 70,
+      "preview_url": "https://p.scdn.co/mp3-preview/b4fd4dcaf2997eb05a8706dd9fc14fbf2c126013?cid=4683d0eee1ac4d9e8de35804e13c141a",
+      "track_number": 7,
+      "type": "track",
+      "uri": "spotify:track:6DoXuH326aAYEN8CnlLmhP"
+    }
+  ]
+}

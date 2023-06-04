@@ -6,10 +6,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vance.lib.service.web.http.HttpRequestBuilder;
 import com.vance.lib.service.web.http.RequestService;
 import com.vance.lib.service.web.url.UrlBuilder;
-import com.vance.lib.util.FileUtil;
 import org.apache.hc.core5.http.ClassicHttpRequest;
 import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
@@ -17,6 +15,10 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Optional;
+
+import static com.vance.lib.util.FileUtil.readFile;
+import static java.lang.String.format;
+import static org.slf4j.LoggerFactory.getLogger;
 
 public class SecretProvider {
     private String lastFMToken;
@@ -28,7 +30,7 @@ public class SecretProvider {
     private final RequestService requestService;
     private final Calendar calendar = new GregorianCalendar();
     private final ObjectMapper objectMapper = new ObjectMapper();
-    private static final Logger log = LoggerFactory.getLogger(SecretProvider.class);
+    private static final Logger log = getLogger(SecretProvider.class);
     private static SecretProvider secretProviderInstance = null;
 
     private SecretProvider(RequestService requestService) {
@@ -45,9 +47,9 @@ public class SecretProvider {
 
     private void setSecrets() {
         try {
-            final String secrets = FileUtil.readFile("secrets.json");
-            JsonNode node = objectMapper.readTree(secrets);
-            JsonNode spotifyNode = node.get("spotify_credentials");
+            final String secrets = readFile("secrets.json");
+            final JsonNode node = objectMapper.readTree(secrets);
+            final JsonNode spotifyNode = node.get("spotify_credentials");
             lastFMToken = node.get("lastFM_token").asText();
             spotifyClientID = spotifyNode.get("client_id").asText();
             spotifyClientSecret = spotifyNode.get("client_secret").asText();
@@ -96,8 +98,7 @@ public class SecretProvider {
             return Optional.of(new HttpRequestBuilder()
                     .post()
                     .url(new UrlBuilder().spotifyToken())
-                    .body(String.format("grant_type=client_credentials&client_id=%s&client_secret=%s",
-                            spotifyClientID, spotifyClientSecret))
+                    .body(format("grant_type=client_credentials&client_id=%s&client_secret=%s", spotifyClientID, spotifyClientSecret))
                     .addHeader("Content-Type", "application/x-www-form-urlencoded")
                     .build());
         } catch (URISyntaxException e) {

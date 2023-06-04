@@ -15,17 +15,22 @@ public class LastFmIntegration {
     private final UrlBuilder urlBuilder = new UrlBuilder();
     private final LastFmParser parser = new LastFmParser();
     private final HttpRequestBuilder requestBuilder = new HttpRequestBuilder();
-    private final RequestService requestService = RequestService.getInstance();
-    private final SecretProvider secretProvider = SecretProvider.getInstance(requestService);
+    private final RequestService requestService;
+    private final SecretProvider secretProvider;
+
+    public LastFmIntegration(RequestService requestService, SecretProvider secretProvider) {
+        this.requestService = requestService;
+        this.secretProvider = secretProvider;
+    }
 
     public Map<String, Long> getPopularityOfGenres() {
-        final String url = String.format(urlBuilder.lastfm().getTopGenres().build()
-                + "&api_key=%s&format=json", secretProvider.getLastFMToken());
+        final String baseUrl = urlBuilder.lastfm().getTopGenres().build() + "&api_key=%s&format=json";
+        final String url = String.format(baseUrl, secretProvider.getLastFMToken());
 
         try {
             return parser.parsePopularityOfGenres(requestService.sendRequest(requestBuilder.get().url(url).build()));
         } catch (JsonProcessingException e) {
-            throw new LastFmIntegrationException("Error occurred", e);
+            throw new LastFmIntegrationException("Error occurred: " + e.getMessage(), e);
         } catch (URISyntaxException e) {
             throw new IllegalArgumentException(String.format("Bad url created: %s", url));
         }

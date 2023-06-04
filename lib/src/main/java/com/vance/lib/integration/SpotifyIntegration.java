@@ -17,13 +17,18 @@ import java.util.Map;
 
 public class SpotifyIntegration {
     private final Logger log = LoggerFactory.getLogger(SpotifyIntegration.class);
-    private final RequestService requestService = RequestService.getInstance();
-    private final SecretProvider secretProvider = SecretProvider.getInstance(requestService);
+    private final RequestService requestService;
+    private final SecretProvider secretProvider;
     private final HttpRequestBuilder requestBuilder = new HttpRequestBuilder();
     private final SpotifyParser parser = new SpotifyParser();
     private final UrlBuilder urlBuilder = new UrlBuilder();
     private final boolean WITH_LIMIT = true;
     private final boolean WITHOUT_LIMIT = false;
+
+    public SpotifyIntegration(RequestService requestService, SecretProvider secretProvider) {
+        this.requestService = requestService;
+        this.secretProvider = secretProvider;
+    }
 
     public Map<String, Integer> getPopularityOfAlbums(@NotNull String artistName) {
         try {
@@ -37,30 +42,30 @@ public class SpotifyIntegration {
 
             return result;
         } catch (JsonProcessingException e) {
-            throw new SpotifyIntegrationException("Error occurred", e);
+            throw new SpotifyIntegrationException("Error occurred: " + e.getMessage(), e);
         }
     }
 
     public Map<String, Integer> getPopularityOfTracksOfArtist(@NotNull String artistName) {
         try {
             final String searchResponse = searchItem(artistName, SpotifySearchTypes.ARTIST, WITH_LIMIT);
-            final String artistId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ARTIST);
+            final String artistId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ARTIST, artistName);
 
             final String tracks = sendRequestToSpotify(urlBuilder.spotify().topTracksOfArtist(artistId).build());
-            final Map<String, Integer> result = parser.parsePopularityOfTracks(tracks);
+            final Map<String, Integer> result = parser.parsePopularityOfTracksOfArtist(tracks);
 
             log.debug("Result of getting popularity of tracks of artist: {}", result.toString());
 
             return result;
         } catch (JsonProcessingException e) {
-            throw new SpotifyIntegrationException("Error occurred", e);
+            throw new SpotifyIntegrationException("Error occurred: " + e.getMessage(), e);
         }
     }
 
     public Map<String, Long> getDurationOfTracksInAlbum(@NotNull String albumName) {
         try {
             final String searchResponse = searchItem(albumName, SpotifySearchTypes.ALBUM, WITHOUT_LIMIT);
-            final String albumId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ALBUM);
+            final String albumId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ALBUM, albumName);
 
             final String tracksOfAlbum = sendRequestToSpotify(urlBuilder.spotify().albumTracks(albumId).build());
             final Map<String, Long> result = parser.parseDurationOfTracksFromAlbum(tracksOfAlbum);
@@ -69,14 +74,14 @@ public class SpotifyIntegration {
 
             return result;
         } catch (JsonProcessingException e) {
-            throw new SpotifyIntegrationException("Error occurred", e);
+            throw new SpotifyIntegrationException("Error occurred: " + e.getMessage(), e);
         }
     }
 
     public Map<String, Integer> getPopularityOfTracksInAlbum(@NotNull String albumName) {
         try {
             final String searchResponse = searchItem(albumName, SpotifySearchTypes.ALBUM, WITHOUT_LIMIT);
-            final String albumId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ALBUM);
+            final String albumId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ALBUM, albumName);
 
             final String tracksOfAlbum = sendRequestToSpotify(urlBuilder.spotify().albumTracks(albumId).build());
             final String parsedIdOfTracks = parser.parseIdOfTracks(tracksOfAlbum);
@@ -88,14 +93,14 @@ public class SpotifyIntegration {
 
             return result;
         } catch (JsonProcessingException e) {
-            throw new SpotifyIntegrationException("Error occurred", e);
+            throw new SpotifyIntegrationException("Error occurred: " + e.getMessage(), e);
         }
     }
 
     public Map<Integer, List<String>> getActivityOfArtist(@NotNull String artistName) {
         try {
             final String searchResponse = searchItem(artistName, SpotifySearchTypes.ARTIST, WITHOUT_LIMIT);
-            final String artistId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ARTIST);
+            final String artistId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ARTIST, artistName);
 
             final String albums = sendRequestToSpotify(urlBuilder.spotify().albumsOfArtist(artistId, false).build());
             final Map<Integer, List<String>> result = parser.parseActivityOfArtist(albums);
@@ -104,7 +109,7 @@ public class SpotifyIntegration {
 
             return result;
         } catch (JsonProcessingException e) {
-            throw new SpotifyIntegrationException("Error occurred", e);
+            throw new SpotifyIntegrationException("Error occurred: " + e.getMessage(), e);
         }
     }
 
@@ -117,7 +122,7 @@ public class SpotifyIntegration {
 
             return result;
         } catch (JsonProcessingException e) {
-            throw new SpotifyIntegrationException("Error occurred", e);
+            throw new SpotifyIntegrationException("Error occurred: " + e.getMessage(), e);
         }
     }
 

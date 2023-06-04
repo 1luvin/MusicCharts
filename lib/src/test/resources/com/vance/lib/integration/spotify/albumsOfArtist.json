@@ -1,0 +1,25 @@
+{
+  "items": [
+    {
+      "album_type": "album",
+      "name": "White Pony (20th Anniversary Deluxe Edition)",
+      "release_date": "2020-12-11"
+    },
+    {
+      "album_type": "album",
+      "name": "Ohms",
+      "release_date": "2020-09-25"
+    },
+    {
+      "album_type": "album",
+      "name": "Gore",
+      "release_date": "2016-04-08"
+    },
+    {
+      "album_type": "album",
+      "name": "Koi No Yokan",
+      "release_date": "2012-11-09"
+    }
+  ],
+  "total": 4
+}

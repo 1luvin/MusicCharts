@@ -1,0 +1,27 @@
+{
+  "artists": {
+    "items": [
+      {
+        "id": "6Ghvu1VvMGScGpOUJBAHNH",
+        "name": "Deftones"
+      },
+      {
+        "id": "5nM5pj6cEIkzCkwBJZibHK",
+        "name": "The Dead Tongues"
+      },
+      {
+        "id": "35oSripZ2Is4GENoBJC8sL",
+        "name": "The Deftones"
+      },
+      {
+        "id": "2yEwvVSSSUkcLeSTNyHKh8",
+        "name": "qwerty"
+      },
+      {
+        "id": "4HlA04lM6Dcfn8BfHsKoI5",
+        "name": "The Defiants"
+      }
+    ],
+    "total": 5
+  }
+}

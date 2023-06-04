@@ -1,0 +1,4630 @@
+{
+  "created": "2023-05-19T12:43:19.546Z",
+  "count": 17928,
+  "offset": 0,
+  "artists": [
+    {
+      "id": "65f4f0c5-ef9e-490c-aee3-909e7ae6b2ab",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 100,
+      "name": "Metallica",
+      "sort-name": "Metallica",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "1f40c6e1-47ba-4e35-996f-fe6ee5840e62",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Los Angeles",
+        "sort-name": "Los Angeles",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000122939631"
+      ],
+      "life-span": {
+        "begin": "1981-10-28",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Metalica",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Metalica",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "????",
+          "locale": "ja",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "????",
+          "name": "????",
+          "locale": "ko_KR",
+          "type": null,
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Metallica",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Metallica",
+          "locale": "en",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 0,
+          "name": "political"
+        },
+        {
+          "count": -1,
+          "name": "rock"
+        },
+        {
+          "count": -2,
+          "name": "80s"
+        },
+        {
+          "count": 24,
+          "name": "heavy metal"
+        },
+        {
+          "count": -2,
+          "name": "90s"
+        },
+        {
+          "count": 1,
+          "name": "progressive metal"
+        },
+        {
+          "count": 45,
+          "name": "thrash metal"
+        },
+        {
+          "count": 22,
+          "name": "metal"
+        },
+        {
+          "count": 8,
+          "name": "american"
+        },
+        {
+          "count": -2,
+          "name": "seen live"
+        },
+        {
+          "count": -1,
+          "name": "band"
+        },
+        {
+          "count": 10,
+          "name": "hard rock"
+        },
+        {
+          "count": 0,
+          "name": "usa"
+        },
+        {
+          "count": -2,
+          "name": "trash"
+        },
+        {
+          "count": 0,
+          "name": "am�ricain"
+        },
+        {
+          "count": -1,
+          "name": "thrash"
+        },
+        {
+          "count": 0,
+          "name": "symphonic metal"
+        },
+        {
+          "count": 1,
+          "name": "alternative metal"
+        },
+        {
+          "count": 2,
+          "name": "speed metal"
+        },
+        {
+          "count": 0,
+          "name": "california"
+        },
+        {
+          "count": -1,
+          "name": "los angeles"
+        },
+        {
+          "count": 1,
+          "name": "virtuoso"
+        },
+        {
+          "count": -2,
+          "name": "crap"
+        },
+        {
+          "count": -1,
+          "name": "bay area"
+        },
+        {
+          "count": -1,
+          "name": "trash metal"
+        },
+        {
+          "count": -1,
+          "name": "80s thrash metal"
+        },
+        {
+          "count": -4,
+          "name": "douchebag metal"
+        },
+        {
+          "count": -1,
+          "name": "american thrash metal"
+        },
+        {
+          "count": -3,
+          "name": "rock and indie"
+        },
+        {
+          "count": 1,
+          "name": "united states"
+        },
+        {
+          "count": 1,
+          "name": "angry"
+        },
+        {
+          "count": 1,
+          "name": "energetic"
+        },
+        {
+          "count": -2,
+          "name": "metallica"
+        },
+        {
+          "count": -2,
+          "name": "classic metal"
+        },
+        {
+          "count": -1,
+          "name": "80s metal"
+        },
+        {
+          "count": -3,
+          "name": "classic thrash metal"
+        },
+        {
+          "count": -1,
+          "name": "90s metal"
+        },
+        {
+          "count": 0,
+          "name": "80's"
+        },
+        {
+          "count": 0,
+          "name": "90's"
+        },
+        {
+          "count": -1,
+          "name": "destroyer"
+        },
+        {
+          "count": -1,
+          "name": "hard'n'heavy"
+        },
+        {
+          "count": -2,
+          "name": "lame"
+        },
+        {
+          "count": -1,
+          "name": "a filk artist"
+        },
+        {
+          "count": -2,
+          "name": "the unforgiving"
+        },
+        {
+          "count": -2,
+          "name": "stopped being good after '97"
+        },
+        {
+          "count": -2,
+          "name": "stopped being good after '88"
+        },
+        {
+          "count": -2,
+          "name": "pompous asses"
+        },
+        {
+          "count": 1,
+          "name": "pessimistic"
+        },
+        {
+          "count": -1,
+          "name": "teen metal"
+        },
+        {
+          "count": -1,
+          "name": "a bit overrated"
+        },
+        {
+          "count": 0,
+          "name": "amerikansk"
+        }
+      ]
+    },
+    {
+      "id": "b10bbbfc-cf9e-42e0-be17-e2c3e1d2600d",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 97,
+      "name": "The Beatles",
+      "sort-name": "Beatles, The",
+      "area": {
+        "id": "9d5dd675-3cf4-4296-9e39-67865ebee758",
+        "type": "Subdivision",
+        "type-id": "fd3d44c5-80a1-3842-9745-2c4972d35afa",
+        "name": "England",
+        "sort-name": "England",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "c249c30e-88ab-4b2f-a745-96a25bd7afee",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Liverpool",
+        "sort-name": "Liverpool",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000121707484"
+      ],
+      "life-span": {
+        "begin": "1960",
+        "end": "1970-04-10",
+        "ended": true
+      },
+      "aliases": [
+        {
+          "sort-name": "?????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "?????",
+          "locale": "hy",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "????????????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "????????????",
+          "locale": "my",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "? ??????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "? ??????",
+          "locale": "ne",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "?? ??????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "?? ??????",
+          "locale": "sat",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "?? ?????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "?? ?????",
+          "locale": "yi",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "?????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "?????",
+          "locale": "zh_Hans",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "?????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "?????",
+          "locale": "uk",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Savage Young Beatles, The",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "The Savage Young Beatles",
+          "locale": "en",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "?????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "?????",
+          "locale": "ru",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "?????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "?????",
+          "locale": "zh_Hant",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "?????",
+          "name": "?????",
+          "locale": "zh_Hant",
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "???",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "???",
+          "locale": "zh_Hans",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "???",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "???",
+          "locale": "zh_Hant",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Silver Beatles, The",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "The Silver Beatles",
+          "locale": "en",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Beatles, I",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "I Beatles",
+          "locale": "it",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Beatles, Die",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Die Beatles",
+          "locale": "de",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "??????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "??????",
+          "locale": "ka",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "?????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "?????",
+          "locale": "ur",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "????????????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "????????????",
+          "locale": "th",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "? ????????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "? ????????",
+          "locale": "te",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "??????????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "??????????",
+          "locale": "ta",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "? ??????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "? ??????",
+          "locale": "pa",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "??????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "??????",
+          "locale": "mk",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "?? ?????????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "?? ?????????",
+          "locale": "ml",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "?? ???????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "?? ???????",
+          "locale": "kn",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "B�tlarnir",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "B�tlarnir",
+          "locale": "is",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "? ??????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "? ??????",
+          "locale": "hi",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "? ???",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "? ???",
+          "locale": "ko",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "??????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "??????",
+          "locale": "he",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "? ??????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "? ??????",
+          "locale": "gu",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "?????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "?????",
+          "locale": "fa",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "??? ???????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "??? ???????",
+          "locale": "bn",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "???????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "???????",
+          "locale": "ar",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Beatles, Los",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Los Beatles",
+          "locale": "es",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "? ????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "? ????",
+          "locale": "am",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "????????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "???????",
+          "locale": "ja",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Beatles, Les",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Les Beatles",
+          "locale": "fr",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "B",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "B",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "fab four",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "fab four",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Beatles, The",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "The Beatles",
+          "locale": "en",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Beetles",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Beetles",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Be",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Be",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Beat",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Beat",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Beatles",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Beatles",
+          "locale": "en",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 31,
+          "name": "rock"
+        },
+        {
+          "count": 17,
+          "name": "pop"
+        },
+        {
+          "count": -2,
+          "name": "progressive rock"
+        },
+        {
+          "count": -2,
+          "name": "80s"
+        },
+        {
+          "count": -4,
+          "name": "heavy metal"
+        },
+        {
+          "count": -2,
+          "name": "pop-rock"
+        },
+        {
+          "count": -3,
+          "name": "orchestral"
+        },
+        {
+          "count": -2,
+          "name": "experimental"
+        },
+        {
+          "count": 15,
+          "name": "british"
+        },
+        {
+          "count": 0,
+          "name": "uk"
+        },
+        {
+          "count": 4,
+          "name": "60s"
+        },
+        {
+          "count": -2,
+          "name": "hard rock"
+        },
+        {
+          "count": -3,
+          "name": "indie rock"
+        },
+        {
+          "count": 0,
+          "name": "folk rock"
+        },
+        {
+          "count": 4,
+          "name": "psychedelic rock"
+        },
+        {
+          "count": -2,
+          "name": "psychedelic"
+        },
+        {
+          "count": -2,
+          "name": "blues rock"
+        },
+        {
+          "count": 0,
+          "name": "britpop"
+        },
+        {
+          "count": -2,
+          "name": "art rock"
+        },
+        {
+          "count": -1,
+          "name": "folk-rock"
+        },
+        {
+          "count": 0,
+          "name": "baroque pop"
+        },
+        {
+          "count": 1,
+          "name": "classic rock"
+        },
+        {
+          "count": 8,
+          "name": "psychedelic pop"
+        },
+        {
+          "count": 1,
+          "name": "experimental rock"
+        },
+        {
+          "count": 12,
+          "name": "pop rock"
+        },
+        {
+          "count": -1,
+          "name": "europop"
+        },
+        {
+          "count": 5,
+          "name": "british invasion"
+        },
+        {
+          "count": 0,
+          "name": "rock and roll"
+        },
+        {
+          "count": -2,
+          "name": "rock roll"
+        },
+        {
+          "count": 0,
+          "name": "english"
+        },
+        {
+          "count": -2,
+          "name": "sunshine pop"
+        },
+        {
+          "count": -2,
+          "name": "folk pop"
+        },
+        {
+          "count": 0,
+          "name": "liverpool"
+        },
+        {
+          "count": -2,
+          "name": "parlophone"
+        },
+        {
+          "count": 0,
+          "name": "united kingdom"
+        },
+        {
+          "count": -3,
+          "name": "hair metal"
+        },
+        {
+          "count": 2,
+          "name": "europe"
+        },
+        {
+          "count": 0,
+          "name": "1"
+        },
+        {
+          "count": 0,
+          "name": "bbc"
+        },
+        {
+          "count": 0,
+          "name": "classic pop and rock"
+        },
+        {
+          "count": 0,
+          "name": "singer songwriter"
+        },
+        {
+          "count": -1,
+          "name": "classical pop"
+        },
+        {
+          "count": 0,
+          "name": "instrumental pop"
+        },
+        {
+          "count": 4,
+          "name": "merseybeat"
+        },
+        {
+          "count": 0,
+          "name": "adult alternative pop rock"
+        },
+        {
+          "count": -2,
+          "name": "tribute albums"
+        },
+        {
+          "count": 0,
+          "name": "british psychedelia"
+        },
+        {
+          "count": 0,
+          "name": "orchestral pop"
+        },
+        {
+          "count": -2,
+          "name": "pop-metal"
+        },
+        {
+          "count": 0,
+          "name": "male vocalists"
+        },
+        {
+          "count": -2,
+          "name": "the-beatles"
+        },
+        {
+          "count": 0,
+          "name": "boys band"
+        },
+        {
+          "count": 1,
+          "name": "abbey road"
+        },
+        {
+          "count": 0,
+          "name": "rock & roll"
+        },
+        {
+          "count": 0,
+          "name": "pop/rock"
+        },
+        {
+          "count": -2,
+          "name": "rhythm & blues"
+        },
+        {
+          "count": -1,
+          "name": "overrated"
+        },
+        {
+          "count": 1,
+          "name": "psychedelic/garage"
+        },
+        {
+          "count": -2,
+          "name": "art pop"
+        },
+        {
+          "count": 0,
+          "name": "one beatles"
+        },
+        {
+          "count": -2,
+          "name": "a filk artist"
+        },
+        {
+          "count": 0,
+          "name": "british rhythm & blues"
+        },
+        {
+          "count": -2,
+          "name": "beat music"
+        },
+        {
+          "count": 0,
+          "name": "get back"
+        },
+        {
+          "count": 1,
+          "name": "favoritos"
+        }
+      ]
+    },
+    {
+      "id": "e1f1e33e-2e4c-4d43-b91b-7064068d3283",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 93,
+      "name": "KISS",
+      "sort-name": "KISS",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "431a085b-9f4c-4fbb-82de-2ca7ce735da8",
+        "type": "District",
+        "type-id": "84039871-5e47-38ca-a66a-45e512c8290f",
+        "name": "Queens",
+        "sort-name": "Queens",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "US rock band",
+      "isnis": [
+        "0000000123153016"
+      ],
+      "life-span": {
+        "begin": "1973-01",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Kizz",
+          "name": "Kizz",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Kiss - WorldWide Kiss Convention 1995",
+          "name": "Kiss - WorldWide Kiss Convention 1995",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "???",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "???",
+          "locale": "ja",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "KISS",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "KISS",
+          "locale": "en",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 4,
+          "name": "rock"
+        },
+        {
+          "count": 3,
+          "name": "heavy metal"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "american"
+        },
+        {
+          "count": 11,
+          "name": "hard rock"
+        },
+        {
+          "count": 7,
+          "name": "glam rock"
+        },
+        {
+          "count": 0,
+          "name": "classic rock"
+        },
+        {
+          "count": 0,
+          "name": "acoustic rock"
+        },
+        {
+          "count": 1,
+          "name": "pop rock"
+        },
+        {
+          "count": 5,
+          "name": "glam metal"
+        },
+        {
+          "count": 1,
+          "name": "glam"
+        },
+        {
+          "count": 0,
+          "name": "classic pop and rock"
+        },
+        {
+          "count": 0,
+          "name": "super"
+        },
+        {
+          "count": 0,
+          "name": "3a46633b-26ed-4418-a029-ab77de3ccfae"
+        },
+        {
+          "count": 1,
+          "name": "server name"
+        }
+      ]
+    },
+    {
+      "id": "ca891d65-d9b0-4258-89f7-e6ba29d83767",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 91,
+      "name": "Iron Maiden",
+      "sort-name": "Iron Maiden",
+      "country": "GB",
+      "area": {
+        "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United Kingdom",
+        "sort-name": "United Kingdom",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "f999fe3f-b2e5-4a2a-8f5b-eed90aae23d9",
+        "type": "District",
+        "type-id": "84039871-5e47-38ca-a66a-45e512c8290f",
+        "name": "Leyton",
+        "sort-name": "Leyton",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "English heavy metal band",
+      "isnis": [
+        "0000000123245420"
+      ],
+      "life-span": {
+        "begin": "1975-12-25",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "????",
+          "name": "????",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Ironmaiden",
+          "name": "Ironmaiden",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Maiden",
+          "name": "Maiden",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 0,
+          "name": "rock"
+        },
+        {
+          "count": 34,
+          "name": "heavy metal"
+        },
+        {
+          "count": 0,
+          "name": "progressive metal"
+        },
+        {
+          "count": 7,
+          "name": "metal"
+        },
+        {
+          "count": 5,
+          "name": "british"
+        },
+        {
+          "count": 0,
+          "name": "uk"
+        },
+        {
+          "count": 0,
+          "name": "hard rock"
+        },
+        {
+          "count": 0,
+          "name": "power metal"
+        },
+        {
+          "count": 9,
+          "name": "nwobhm"
+        },
+        {
+          "count": 0,
+          "name": "english"
+        },
+        {
+          "count": 0,
+          "name": "awesome"
+        },
+        {
+          "count": 0,
+          "name": "rock and indie"
+        },
+        {
+          "count": 5,
+          "name": "new wave of british heavy metal"
+        },
+        {
+          "count": 0,
+          "name": "825646222902"
+        },
+        {
+          "count": 0,
+          "name": "awe?some"
+        }
+      ]
+    },
+    {
+      "id": "57961a97-3796-4bf7-9f02-a985a8979ae9",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 91,
+      "name": "Mot�rhead",
+      "sort-name": "Mot�rhead",
+      "country": "GB",
+      "area": {
+        "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United Kingdom",
+        "sort-name": "United Kingdom",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "f03d09b3-39dc-4083-afd6-159e3f0d462f",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "London",
+        "sort-name": "London",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000109410653"
+      ],
+      "life-span": {
+        "begin": "1975-06",
+        "end": "2015-12-28",
+        "ended": true
+      },
+      "aliases": [
+        {
+          "sort-name": "???????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "???????",
+          "locale": "ja",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Moterhead",
+          "name": "Moterhead",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Motorhead",
+          "name": "Motorhead",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 6,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "70s"
+        },
+        {
+          "count": 1,
+          "name": "80s"
+        },
+        {
+          "count": 11,
+          "name": "heavy metal"
+        },
+        {
+          "count": 1,
+          "name": "90s"
+        },
+        {
+          "count": 6,
+          "name": "metal"
+        },
+        {
+          "count": 3,
+          "name": "british"
+        },
+        {
+          "count": 1,
+          "name": "uk"
+        },
+        {
+          "count": 9,
+          "name": "hard rock"
+        },
+        {
+          "count": 2,
+          "name": "nwobhm"
+        },
+        {
+          "count": 3,
+          "name": "speed metal"
+        },
+        {
+          "count": 1,
+          "name": "rock and roll"
+        },
+        {
+          "count": 1,
+          "name": "england"
+        },
+        {
+          "count": 1,
+          "name": "00s"
+        },
+        {
+          "count": 1,
+          "name": "classic pop and rock"
+        },
+        {
+          "count": 1,
+          "name": "british metal"
+        },
+        {
+          "count": 2,
+          "name": "gratuitous heavy metal umlaut"
+        },
+        {
+          "count": 1,
+          "name": "classic metal"
+        },
+        {
+          "count": 1,
+          "name": "10s"
+        },
+        {
+          "count": 2,
+          "name": "classic heavy metal"
+        },
+        {
+          "count": 3,
+          "name": "rock'n roll"
+        },
+        {
+          "count": 1,
+          "name": "cotm candidate"
+        }
+      ]
+    },
+    {
+      "id": "4a2e0104-e6ea-42ec-9399-1f670418c134",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 91,
+      "name": "Agathocles",
+      "sort-name": "Agathocles",
+      "country": "BE",
+      "area": {
+        "id": "5b8a5ee5-0bb3-34cf-9a75-c27c44e341fc",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "Belgium",
+        "sort-name": "Belgium",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "eb9b595b-a5b9-4e98-8b9e-ca5712040b70",
+        "type": "Municipality",
+        "type-id": "17246454-5ac4-36a1-b81a-4753eb2dab20",
+        "name": "Geel",
+        "sort-name": "Geel",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "Belgian grindcore",
+      "isnis": [
+        "000000009930176X"
+      ],
+      "life-span": {
+        "begin": "1985",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Agothocles",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Agothocles",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Agathacles",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Agathacles",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Agothacles",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Agothacles",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "political"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "death metal"
+        },
+        {
+          "count": 2,
+          "name": "belgium"
+        },
+        {
+          "count": 3,
+          "name": "grindcore"
+        },
+        {
+          "count": 3,
+          "name": "mincecore"
+        },
+        {
+          "count": 1,
+          "name": "deathgrind"
+        },
+        {
+          "count": 1,
+          "name": "_tidy"
+        }
+      ]
+    },
+    {
+      "id": "6b335658-22c8-485d-93de-0bc29a1d0349",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 90,
+      "name": "Judas Priest",
+      "sort-name": "Judas Priest",
+      "country": "GB",
+      "area": {
+        "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United Kingdom",
+        "sort-name": "United Kingdom",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "226c4dca-ef2a-4d4b-ba25-4118d116557a",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Birmingham",
+        "sort-name": "Birmingham",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000122430413"
+      ],
+      "life-span": {
+        "begin": "1969",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Iudas Sacerdos (latin)",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Iudas Sacerdos",
+          "locale": null,
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "D�udas Prist",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "????? ?????",
+          "locale": "sr",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Ju??s Pr?s",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "?????? ??????",
+          "locale": "te",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Jud?s Pr?s??",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "?????? ?????????",
+          "locale": "kn",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Judas Frist",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "??????? ?????",
+          "locale": "yi",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "G'uds Frist",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "?'??? ?????",
+          "locale": "he",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "C? d? s? Phr?s?t?",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "???????????",
+          "locale": "th",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Y�ut�i J�s?",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "????",
+          "locale": "zh",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Judaas Preest",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "????? ???????",
+          "locale": "hi",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Ju??sa Pris?a",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "????? ???????",
+          "locale": "bn",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Dzhudas Pri?st",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "?????? ??????",
+          "locale": "bg",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Judas Barisat",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "????? ?????",
+          "locale": "ar",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Ju??sa Pris?a",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "????? ???????",
+          "locale": "gu",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Judus Prist",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Judus Prist",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "J?dasu Pur?suto",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "???????????",
+          "locale": "ja",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Judaseu Peuliseuteu",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "??? ????",
+          "locale": "ko",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 21,
+          "name": "heavy metal"
+        },
+        {
+          "count": 2,
+          "name": "metal"
+        },
+        {
+          "count": 4,
+          "name": "british"
+        },
+        {
+          "count": 1,
+          "name": "hard rock"
+        },
+        {
+          "count": 4,
+          "name": "nwobhm"
+        },
+        {
+          "count": 0,
+          "name": "groove metal"
+        },
+        {
+          "count": -1,
+          "name": "classic pop and rock"
+        }
+      ]
+    },
+    {
+      "id": "678d88b2-87b0-403b-b63d-5da7465aecc3",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 90,
+      "name": "Led Zeppelin",
+      "sort-name": "Led Zeppelin",
+      "country": "GB",
+      "area": {
+        "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United Kingdom",
+        "sort-name": "United Kingdom",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "f03d09b3-39dc-4083-afd6-159e3f0d462f",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "London",
+        "sort-name": "London",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "end-area": {
+        "id": "32fd275d-7731-4d78-bcde-d9a14d148c78",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Clewer",
+        "sort-name": "Clewer",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000123483226"
+      ],
+      "life-span": {
+        "begin": "1968",
+        "end": "1980-09-25",
+        "ended": true
+      },
+      "aliases": [
+        {
+          "sort-name": "??? ??????",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "??? ??????",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "??????????",
+          "name": "??????????",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "?????????",
+          "name": "?????????",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "ledzep",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "ledzep",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "LZ",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "LZ",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Led Zepplin",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Led Zepplin",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "???",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "???",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Led Zepplelin",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Led Zepplelin",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Led Zepellin",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Led Zepellin",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Led Zep",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Led Zep",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bootleg Zeppelin",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Bootleg Zeppelin",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "??????",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "??????",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "???????",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "???????",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 15,
+          "name": "rock"
+        },
+        {
+          "count": 4,
+          "name": "heavy metal"
+        },
+        {
+          "count": 1,
+          "name": "folk"
+        },
+        {
+          "count": 0,
+          "name": "metal"
+        },
+        {
+          "count": -1,
+          "name": "american"
+        },
+        {
+          "count": 1,
+          "name": "blues"
+        },
+        {
+          "count": 5,
+          "name": "british"
+        },
+        {
+          "count": 0,
+          "name": "uk"
+        },
+        {
+          "count": -1,
+          "name": "band"
+        },
+        {
+          "count": 25,
+          "name": "hard rock"
+        },
+        {
+          "count": -1,
+          "name": "usa"
+        },
+        {
+          "count": 3,
+          "name": "folk rock"
+        },
+        {
+          "count": 12,
+          "name": "blues rock"
+        },
+        {
+          "count": -2,
+          "name": "am�ricain"
+        },
+        {
+          "count": 4,
+          "name": "classic rock"
+        },
+        {
+          "count": -3,
+          "name": "pop rock"
+        },
+        {
+          "count": 1,
+          "name": "arena rock"
+        },
+        {
+          "count": 1,
+          "name": "british blues"
+        },
+        {
+          "count": 0,
+          "name": "english"
+        },
+        {
+          "count": 0,
+          "name": "zoo"
+        },
+        {
+          "count": -2,
+          "name": "film soundtrack"
+        },
+        {
+          "count": 0,
+          "name": "classic pop and rock"
+        },
+        {
+          "count": -1,
+          "name": "led zeppelin"
+        },
+        {
+          "count": -1,
+          "name": "persistence"
+        },
+        {
+          "count": -1,
+          "name": "want to listen"
+        },
+        {
+          "count": 1,
+          "name": "prog related"
+        }
+      ]
+    },
+    {
+      "id": "5dfdca28-9ddc-4853-933c-8bc97d87beec",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 90,
+      "name": "Marilyn Manson",
+      "sort-name": "Marilyn Manson",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "a2993fdb-6cc6-49da-abe6-831142053fd1",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Fort Lauderdale",
+        "sort-name": "Fort Lauderdale",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "the band",
+      "isnis": [
+        "0000000123530360"
+      ],
+      "life-span": {
+        "begin": "1989",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Manson Marilyn",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Manson Marilyn",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Marilyn Manson & the Spooky Kids",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Marilyn Manson & the Spooky Kids",
+          "locale": null,
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": "1989",
+          "end-date": "1992"
+        },
+        {
+          "sort-name": "Marilyn Manson and the Spooky Kids",
+          "name": "Marilyn Manson and the Spooky Kids",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "The Spooky Kids",
+          "name": "The Spooky Kids",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Marilyn Manson",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Marilyn Manson",
+          "locale": null,
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": "1992",
+          "end-date": null
+        },
+        {
+          "sort-name": "marily manson",
+          "name": "marily manson",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "?????????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "?????????",
+          "locale": "ja",
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Mar1lyn Man5on",
+          "name": "Mar1lyn Man5on",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Mariyln Manson",
+          "name": "Mariyln Manson",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Marilin Manson",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Marilin Manson",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Marylin Manson",
+          "name": "Marylin Manson",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "alternative rock"
+        },
+        {
+          "count": 1,
+          "name": "industrial"
+        },
+        {
+          "count": 1,
+          "name": "drum and bass"
+        },
+        {
+          "count": 5,
+          "name": "industrial rock"
+        },
+        {
+          "count": 5,
+          "name": "industrial metal"
+        },
+        {
+          "count": 0,
+          "name": "metal"
+        },
+        {
+          "count": 0,
+          "name": "american"
+        },
+        {
+          "count": 6,
+          "name": "alternative metal"
+        },
+        {
+          "count": 0,
+          "name": "alternative hard rock"
+        },
+        {
+          "count": 0,
+          "name": "rock and indie"
+        }
+      ]
+    },
+    {
+      "id": "28503ab7-8bf2-4666-a7bd-2644bfc7cb1d",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 89,
+      "name": "Dream Theater",
+      "sort-name": "Dream Theater",
+      "area": {
+        "id": "74e50e58-5deb-4b99-93a2-decbb365c07f",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "New York",
+        "sort-name": "New York",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "e331bfdf-b908-429c-a79b-710cf9c06abb",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Boston",
+        "sort-name": "Boston",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000123695368"
+      ],
+      "life-span": {
+        "begin": "1985",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "DreamTheater",
+          "name": "DreamTheater",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Majesty",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Majesty",
+          "locale": null,
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": "1985",
+          "end-date": "1988"
+        },
+        {
+          "sort-name": "Dream Theatre",
+          "name": "Dream Theatre",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 0,
+          "name": "progressive rock"
+        },
+        {
+          "count": 0,
+          "name": "heavy metal"
+        },
+        {
+          "count": 25,
+          "name": "progressive metal"
+        },
+        {
+          "count": 0,
+          "name": "thrash metal"
+        },
+        {
+          "count": 0,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "american"
+        },
+        {
+          "count": 0,
+          "name": "hard rock"
+        },
+        {
+          "count": 1,
+          "name": "prog metal"
+        },
+        {
+          "count": 0,
+          "name": "art rock"
+        },
+        {
+          "count": 0,
+          "name": "album rock"
+        },
+        {
+          "count": 0,
+          "name": "neo-progressive rock"
+        },
+        {
+          "count": 0,
+          "name": "rock opera"
+        },
+        {
+          "count": -1,
+          "name": "progressive-metal"
+        }
+      ]
+    },
+    {
+      "id": "00a9f935-ba93-4fc8-a33a-993abe9c936b",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 88,
+      "name": "Nightwish",
+      "sort-name": "Nightwish",
+      "country": "FI",
+      "area": {
+        "id": "6a264f94-6ff1-30b1-9a81-41f7bfabd616",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "Finland",
+        "sort-name": "Finland",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "a62f5ab3-c6e2-4b1e-b35f-2d83cd20ab58",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Kitee",
+        "sort-name": "Kitee",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "Finnish symphonic metal",
+      "isnis": [
+        "0000000106662492"
+      ],
+      "life-span": {
+        "begin": "1996-07",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Nightiwish",
+          "name": "Nightiwish",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "????????",
+          "name": "????????",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "?????",
+          "name": "?????",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": -1,
+          "name": "progressive metal"
+        },
+        {
+          "count": 4,
+          "name": "metal"
+        },
+        {
+          "count": 7,
+          "name": "finnish"
+        },
+        {
+          "count": 0,
+          "name": "gothic metal"
+        },
+        {
+          "count": 5,
+          "name": "power metal"
+        },
+        {
+          "count": 1,
+          "name": "melodic"
+        },
+        {
+          "count": 1,
+          "name": "female vocals"
+        },
+        {
+          "count": 21,
+          "name": "symphonic metal"
+        },
+        {
+          "count": 1,
+          "name": "finland"
+        },
+        {
+          "count": 5,
+          "name": "symphonic power metal"
+        },
+        {
+          "count": 1,
+          "name": "english"
+        },
+        {
+          "count": -1,
+          "name": "scandinavia"
+        },
+        {
+          "count": -1,
+          "name": "scandinave"
+        },
+        {
+          "count": -1,
+          "name": "scandinavie"
+        },
+        {
+          "count": -1,
+          "name": "scandinavian"
+        },
+        {
+          "count": 0,
+          "name": "finlandais"
+        },
+        {
+          "count": 0,
+          "name": "finlande"
+        },
+        {
+          "count": -1,
+          "name": "symphonic/power-metal"
+        },
+        {
+          "count": 1,
+          "name": "operatic metal"
+        }
+      ]
+    },
+    {
+      "id": "a466c2a2-6517-42fb-a160-1087c3bafd9f",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 88,
+      "name": "Slipknot",
+      "sort-name": "Slipknot",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "2bda1647-f64b-4277-acce-e9c1296d065e",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Des Moines",
+        "sort-name": "Des Moines",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "US metal band",
+      "isnis": [
+        "0000000115481722"
+      ],
+      "life-span": {
+        "begin": "1995",
+        "ended": null
+      },
+      "tags": [
+        {
+          "count": 2,
+          "name": "heavy metal"
+        },
+        {
+          "count": 4,
+          "name": "metal"
+        },
+        {
+          "count": 15,
+          "name": "nu metal"
+        },
+        {
+          "count": -1,
+          "name": "new metal"
+        },
+        {
+          "count": 7,
+          "name": "alternative metal"
+        },
+        {
+          "count": -1,
+          "name": "rap metal"
+        },
+        {
+          "count": 2,
+          "name": "groove metal"
+        },
+        {
+          "count": 0,
+          "name": "rock and indie"
+        }
+      ]
+    },
+    {
+      "id": "c3cceeed-3332-4cf0-8c4c-bbde425147b6",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 88,
+      "name": "Scorpions",
+      "sort-name": "Scorpions",
+      "country": "DE",
+      "area": {
+        "id": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "Germany",
+        "sort-name": "Germany",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "eca79b55-a6c4-4078-a383-8353271ee81e",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Hannover",
+        "sort-name": "Hannover",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "German rock band",
+      "isnis": [
+        "0000000110916387"
+      ],
+      "life-span": {
+        "begin": "1965",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Hunters, The",
+          "name": "The Hunters",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Rasselbande, The",
+          "name": "The Rasselbande",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "???",
+          "name": "???",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "The Scorpions",
+          "name": "The Scorpions",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "progressive rock"
+        },
+        {
+          "count": -1,
+          "name": "70s"
+        },
+        {
+          "count": 0,
+          "name": "hairmetal"
+        },
+        {
+          "count": -1,
+          "name": "80s"
+        },
+        {
+          "count": 7,
+          "name": "heavy metal"
+        },
+        {
+          "count": 3,
+          "name": "krautrock"
+        },
+        {
+          "count": 4,
+          "name": "german"
+        },
+        {
+          "count": 2,
+          "name": "metal"
+        },
+        {
+          "count": 19,
+          "name": "hard rock"
+        },
+        {
+          "count": 0,
+          "name": "power metal"
+        },
+        {
+          "count": 1,
+          "name": "acoustic rock"
+        },
+        {
+          "count": 0,
+          "name": "pop rock"
+        },
+        {
+          "count": 0,
+          "name": "european"
+        },
+        {
+          "count": 1,
+          "name": "80's"
+        },
+        {
+          "count": 1,
+          "name": "70's"
+        },
+        {
+          "count": 0,
+          "name": "loriel"
+        },
+        {
+          "count": 1,
+          "name": "aln-sh"
+        }
+      ]
+    },
+    {
+      "id": "66c662b6-6e2f-4930-8610-912e24c63ed1",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 88,
+      "name": "AC/DC",
+      "sort-name": "AC/DC",
+      "country": "AU",
+      "area": {
+        "id": "106e0bec-b638-3b37-b731-f53d507dc00e",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "Australia",
+        "sort-name": "Australia",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "3f179da4-83c6-4a28-a627-e46b4a8ff1ed",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Sydney",
+        "sort-name": "Sydney",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "Australian hard rock band",
+      "ipis": [
+        "00133076008"
+      ],
+      "isnis": [
+        "000000012271298X"
+      ],
+      "life-span": {
+        "begin": "1973-12-31",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "AC|DC",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "AC|DC",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Akka Dakka",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Akka Dakka",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Acca Dacca",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Acca Dacca",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "AC.DC",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "AC.DC",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "AC??DC",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "AC??DC",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "ACDC",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "ACDC",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "AC-DC",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "AC-DC",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "AC?DC",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "AC?DC",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "AC?DC",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "AC?DC",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "AC\\DC",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "AC\\DC",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "AC DC",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "AC DC",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 10,
+          "name": "rock"
+        },
+        {
+          "count": -2,
+          "name": "heavy metal"
+        },
+        {
+          "count": -2,
+          "name": "metal"
+        },
+        {
+          "count": 0,
+          "name": "australian"
+        },
+        {
+          "count": 0,
+          "name": "band"
+        },
+        {
+          "count": 38,
+          "name": "hard rock"
+        },
+        {
+          "count": 5,
+          "name": "blues rock"
+        },
+        {
+          "count": -2,
+          "name": "glam rock"
+        },
+        {
+          "count": 0,
+          "name": "classic rock"
+        },
+        {
+          "count": 1,
+          "name": "1980s"
+        },
+        {
+          "count": 1,
+          "name": "1970s"
+        },
+        {
+          "count": 0,
+          "name": "arena rock"
+        },
+        {
+          "count": 1,
+          "name": "rock and roll"
+        },
+        {
+          "count": 0,
+          "name": "english"
+        },
+        {
+          "count": 0,
+          "name": "australia"
+        },
+        {
+          "count": 0,
+          "name": "blues-rock"
+        },
+        {
+          "count": 0,
+          "name": "classic pop and rock"
+        },
+        {
+          "count": 0,
+          "name": "australie"
+        },
+        {
+          "count": 0,
+          "name": "australien"
+        },
+        {
+          "count": 0,
+          "name": "best"
+        },
+        {
+          "count": 0,
+          "name": "best rock"
+        },
+        {
+          "count": 0,
+          "name": "capa"
+        },
+        {
+          "count": 3,
+          "name": "rock & roll"
+        },
+        {
+          "count": 0,
+          "name": "want to listen"
+        },
+        {
+          "count": 0,
+          "name": "volts"
+        },
+        {
+          "count": -1,
+          "name": "+australia (sydney)"
+        }
+      ]
+    },
+    {
+      "id": "bdacc37b-8633-4bf8-9dd5-4662ee651aec",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 88,
+      "name": "Slayer",
+      "sort-name": "Slayer",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "b0fa1b5d-382d-4abd-989e-ae9bf9e2f34b",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Huntington Park",
+        "sort-name": "Huntington Park",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "end-area": {
+        "id": "c97f3307-fc87-481c-8635-d00a990efb7c",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Inglewood",
+        "sort-name": "Inglewood",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "US thrash metal band",
+      "isnis": [
+        "0000000115404735"
+      ],
+      "life-span": {
+        "begin": "1981",
+        "end": "2019-11-30",
+        "ended": true
+      },
+      "tags": [
+        {
+          "count": 0,
+          "name": "80s"
+        },
+        {
+          "count": 2,
+          "name": "heavy metal"
+        },
+        {
+          "count": 0,
+          "name": "90s"
+        },
+        {
+          "count": 21,
+          "name": "thrash metal"
+        },
+        {
+          "count": 3,
+          "name": "metal"
+        },
+        {
+          "count": 0,
+          "name": "american"
+        },
+        {
+          "count": 1,
+          "name": "black metal"
+        },
+        {
+          "count": 2,
+          "name": "speed metal"
+        },
+        {
+          "count": 0,
+          "name": "80s thrash metal"
+        },
+        {
+          "count": 0,
+          "name": "00s"
+        },
+        {
+          "count": 0,
+          "name": "rock and indie"
+        },
+        {
+          "count": 0,
+          "name": "classic metal"
+        },
+        {
+          "count": 0,
+          "name": "10s"
+        },
+        {
+          "count": 0,
+          "name": "classic thrash metal"
+        },
+        {
+          "count": 0,
+          "name": "thrash-metal"
+        },
+        {
+          "count": 1,
+          "name": "2008 universal fire victim"
+        }
+      ]
+    },
+    {
+      "id": "ba0d6274-db14-4ef5-b28d-657ebde1a396",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 88,
+      "name": "The Smashing Pumpkins",
+      "sort-name": "Smashing Pumpkins, The",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "29a709d8-0320-493e-8d0c-f2c386662b7f",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Chicago",
+        "sort-name": "Chicago",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000123149041"
+      ],
+      "life-span": {
+        "begin": "1988",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "The Smashing Pumpkinsgs",
+          "name": "The Smashing Pumpkinsgs",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Smashign Pumpkins",
+          "name": "Smashign Pumpkins",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Smashing Pumpkins",
+          "name": "Smashing Pumpkins",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Smashing Pumpkins, The",
+          "name": "Smashing Pumpkins, The",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "The Smashing Pumpkins & RedRed",
+          "name": "The Smashing Pumpkins & RedRed",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "The Smashing Pumpkins and Red Red Meat",
+          "name": "The Smashing Pumpkins and Red Red Meat",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Smahing Pumpkins",
+          "name": "Smahing Pumpkins",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Smashing Pumkins",
+          "name": "Smashing Pumkins",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 2,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "electronic"
+        },
+        {
+          "count": 16,
+          "name": "alternative rock"
+        },
+        {
+          "count": 4,
+          "name": "progressive rock"
+        },
+        {
+          "count": 1,
+          "name": "industrial rock"
+        },
+        {
+          "count": 4,
+          "name": "shoegaze"
+        },
+        {
+          "count": 0,
+          "name": "ambient"
+        },
+        {
+          "count": 0,
+          "name": "90s"
+        },
+        {
+          "count": 0,
+          "name": "american"
+        },
+        {
+          "count": 2,
+          "name": "grunge"
+        },
+        {
+          "count": 1,
+          "name": "hard rock"
+        },
+        {
+          "count": 0,
+          "name": "usa"
+        },
+        {
+          "count": 1,
+          "name": "indie rock"
+        },
+        {
+          "count": 0,
+          "name": "alternative"
+        },
+        {
+          "count": 0,
+          "name": "am�ricain"
+        },
+        {
+          "count": 1,
+          "name": "art rock"
+        },
+        {
+          "count": 1,
+          "name": "alternative metal"
+        },
+        {
+          "count": 2,
+          "name": "symphonic rock"
+        },
+        {
+          "count": 4,
+          "name": "neo-psychedelia"
+        },
+        {
+          "count": 3,
+          "name": "dream pop"
+        },
+        {
+          "count": 0,
+          "name": "rock and indie"
+        },
+        {
+          "count": 0,
+          "name": "united states"
+        },
+        {
+          "count": 1,
+          "name": "permanent wave"
+        },
+        {
+          "count": 1,
+          "name": "spacegrunge"
+        }
+      ]
+    },
+    {
+      "id": "b7ffd2af-418f-4be2-bdd1-22f8b48613da",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 87,
+      "name": "Nine Inch Nails",
+      "sort-name": "Nine Inch Nails",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "7b2ca1e7-e7f6-4155-881d-c660a45c11e8",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Cleveland",
+        "sort-name": "Cleveland",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000121493471"
+      ],
+      "life-span": {
+        "begin": "1988",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "?1?31?CH?41L5",
+          "name": "?1?31?CH?41L5",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "N.I.N.",
+          "name": "N.I.N.",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "NineInchNails",
+          "name": "NineInchNails",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "NI?",
+          "name": "NI?",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "NIN",
+          "name": "NIN",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Nine Inch Nails Live",
+          "name": "Nine Inch Nails Live",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 2,
+          "name": "rock"
+        },
+        {
+          "count": 6,
+          "name": "electronic"
+        },
+        {
+          "count": 0,
+          "name": "synthpop"
+        },
+        {
+          "count": 6,
+          "name": "alternative rock"
+        },
+        {
+          "count": 7,
+          "name": "industrial"
+        },
+        {
+          "count": 22,
+          "name": "industrial rock"
+        },
+        {
+          "count": 0,
+          "name": "creative commons"
+        },
+        {
+          "count": 2,
+          "name": "industrial metal"
+        },
+        {
+          "count": 3,
+          "name": "american"
+        },
+        {
+          "count": 0,
+          "name": "usa"
+        },
+        {
+          "count": 0,
+          "name": "am�ricain"
+        },
+        {
+          "count": 0,
+          "name": "experimental rock"
+        },
+        {
+          "count": 1,
+          "name": "alternative metal"
+        },
+        {
+          "count": 2,
+          "name": "electro-industrial"
+        },
+        {
+          "count": -1,
+          "name": "bootleg"
+        },
+        {
+          "count": 0,
+          "name": "rock and indie"
+        },
+        {
+          "count": 0,
+          "name": "n3"
+        },
+        {
+          "count": 0,
+          "name": "2008 universal fire victim"
+        }
+      ]
+    },
+    {
+      "id": "79491354-3d83-40e3-9d8e-7592d58d790a",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 87,
+      "name": "Deep Purple",
+      "sort-name": "Deep Purple",
+      "country": "GB",
+      "area": {
+        "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United Kingdom",
+        "sort-name": "United Kingdom",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "93e36643-acf7-4fb4-8760-de9d6bebfe4c",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Hertford",
+        "sort-name": "Hertford",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "English rock band",
+      "isnis": [
+        "0000000109435287"
+      ],
+      "life-span": {
+        "begin": "1968",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Dick Pimple",
+          "name": "Dick Pimple",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Deep Purple and The Royal Philharmonic Orchestra",
+          "name": "Deep Purple and The Royal Philharmonic Orchestra",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "???????",
+          "name": "???????",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "???",
+          "name": "???",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Dee Purple",
+          "name": "Dee Purple",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "????????",
+          "name": "????????",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Paice, Blackmore ,Gillan, Glover, Lord",
+          "name": "Paice, Blackmore ,Gillan, Glover, Lord",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "?????????",
+          "name": "?????????",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Deep Purple",
+          "name": "Depp Purple",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Deep Purpel",
+          "name": "Deep Purpel",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "????????",
+          "name": "????????",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Dep Purple",
+          "name": "Dep Purple",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "DP",
+          "name": "DP",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Dep Purpel",
+          "name": "Dep Purpel",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Purple",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Purple",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 9,
+          "name": "rock"
+        },
+        {
+          "count": 5,
+          "name": "progressive rock"
+        },
+        {
+          "count": -2,
+          "name": "70s"
+        },
+        {
+          "count": -2,
+          "name": "80s"
+        },
+        {
+          "count": 10,
+          "name": "heavy metal"
+        },
+        {
+          "count": -1,
+          "name": "metal"
+        },
+        {
+          "count": 3,
+          "name": "british"
+        },
+        {
+          "count": 0,
+          "name": "uk"
+        },
+        {
+          "count": -2,
+          "name": "60s"
+        },
+        {
+          "count": 22,
+          "name": "hard rock"
+        },
+        {
+          "count": 4,
+          "name": "blues rock"
+        },
+        {
+          "count": -2,
+          "name": "deep purple family"
+        },
+        {
+          "count": -2,
+          "name": "collection"
+        },
+        {
+          "count": -1,
+          "name": "art rock"
+        },
+        {
+          "count": 2,
+          "name": "classic rock"
+        },
+        {
+          "count": 0,
+          "name": "symphonic rock"
+        },
+        {
+          "count": 0,
+          "name": "english"
+        },
+        {
+          "count": -1,
+          "name": "aor"
+        },
+        {
+          "count": 0,
+          "name": "symphonic prog"
+        },
+        {
+          "count": 0,
+          "name": "classic pop and rock"
+        },
+        {
+          "count": 1,
+          "name": "hammond organ"
+        },
+        {
+          "count": -1,
+          "name": "hammond"
+        },
+        {
+          "count": 1,
+          "name": "proto-prog"
+        },
+        {
+          "count": -2,
+          "name": "deep purple"
+        },
+        {
+          "count": 0,
+          "name": "80's"
+        },
+        {
+          "count": 0,
+          "name": "60's"
+        },
+        {
+          "count": 0,
+          "name": "70's"
+        },
+        {
+          "count": -2,
+          "name": "deep purple live in berlin 1973 dvd video"
+        },
+        {
+          "count": -2,
+          "name": "want to listen"
+        },
+        {
+          "count": -2,
+          "name": "anthology"
+        },
+        {
+          "count": 1,
+          "name": "server name"
+        }
+      ]
+    },
+    {
+      "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 87,
+      "name": "Queen",
+      "sort-name": "Queen",
+      "country": "GB",
+      "area": {
+        "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United Kingdom",
+        "sort-name": "United Kingdom",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "f03d09b3-39dc-4083-afd6-159e3f0d462f",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "London",
+        "sort-name": "London",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "UK rock group",
+      "isnis": [
+        "0000000115265309"
+      ],
+      "life-span": {
+        "begin": "1970-06-27",
+        "ended": null
+      },
+      "tags": [
+        {
+          "count": 29,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "pop"
+        },
+        {
+          "count": 2,
+          "name": "progressive rock"
+        },
+        {
+          "count": -1,
+          "name": "70s"
+        },
+        {
+          "count": -1,
+          "name": "80s"
+        },
+        {
+          "count": 1,
+          "name": "heavy metal"
+        },
+        {
+          "count": -1,
+          "name": "90s"
+        },
+        {
+          "count": -2,
+          "name": "pop-rock"
+        },
+        {
+          "count": 9,
+          "name": "british"
+        },
+        {
+          "count": 3,
+          "name": "uk"
+        },
+        {
+          "count": -1,
+          "name": "band"
+        },
+        {
+          "count": 9,
+          "name": "hard rock"
+        },
+        {
+          "count": -1,
+          "name": "britannique"
+        },
+        {
+          "count": 1,
+          "name": "uplifting"
+        },
+        {
+          "count": 1,
+          "name": "melodic"
+        },
+        {
+          "count": 0,
+          "name": "disco"
+        },
+        {
+          "count": 7,
+          "name": "glam rock"
+        },
+        {
+          "count": -2,
+          "name": "queen family"
+        },
+        {
+          "count": 4,
+          "name": "art rock"
+        },
+        {
+          "count": 1,
+          "name": "fantasy"
+        },
+        {
+          "count": 1,
+          "name": "classic rock"
+        },
+        {
+          "count": 4,
+          "name": "pop rock"
+        },
+        {
+          "count": 3,
+          "name": "symphonic rock"
+        },
+        {
+          "count": 2,
+          "name": "arena rock"
+        },
+        {
+          "count": 1,
+          "name": "english"
+        },
+        {
+          "count": 1,
+          "name": "england"
+        },
+        {
+          "count": 0,
+          "name": "united kingdom"
+        },
+        {
+          "count": -1,
+          "name": "awesome"
+        },
+        {
+          "count": -1,
+          "name": "queen"
+        },
+        {
+          "count": -2,
+          "name": "film soundtrack"
+        },
+        {
+          "count": -2,
+          "name": "classic pop and rock"
+        },
+        {
+          "count": 2,
+          "name": "eclectic"
+        },
+        {
+          "count": -2,
+          "name": "platinum"
+        },
+        {
+          "count": 1,
+          "name": "energetic"
+        },
+        {
+          "count": 1,
+          "name": "playful"
+        },
+        {
+          "count": 1,
+          "name": "anthemic"
+        },
+        {
+          "count": 1,
+          "name": "medley"
+        },
+        {
+          "count": -2,
+          "name": "pop/rock"
+        },
+        {
+          "count": 0,
+          "name": "80's"
+        },
+        {
+          "count": -1,
+          "name": "90's"
+        },
+        {
+          "count": 0,
+          "name": "70's"
+        },
+        {
+          "count": 1,
+          "name": "rhythmic"
+        },
+        {
+          "count": -2,
+          "name": "langham 1 studio bbc"
+        },
+        {
+          "count": -2,
+          "name": "kind of magic"
+        },
+        {
+          "count": 1,
+          "name": "bombastic"
+        },
+        {
+          "count": -1,
+          "name": "sa-town anthem"
+        },
+        {
+          "count": -1,
+          "name": "server name"
+        },
+        {
+          "count": -1,
+          "name": "awe?some"
+        },
+        {
+          "count": -1,
+          "name": "rx27"
+        }
+      ]
+    },
+    {
+      "id": "5dcdb5eb-cb72-4e6e-9e63-b7bace604965",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 87,
+      "name": "Bon Jovi",
+      "sort-name": "Bon Jovi",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "5048da4b-5fe9-45fa-8c35-9fe09e4abcbc",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Sayreville",
+        "sort-name": "Sayreville",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "group",
+      "isnis": [
+        "0000000122845424"
+      ],
+      "life-span": {
+        "begin": "1983",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Bon Jovi",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Bon Jovi",
+          "locale": "en",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "???????",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "???????",
+          "locale": "ja",
+          "type": "Artist name",
+          "primary": true,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "BonJovi",
+          "name": "BonJovi",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bon Jovi and Baktabak",
+          "name": "Bon Jovi and Baktabak",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 11,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "heavy metal"
+        },
+        {
+          "count": 0,
+          "name": "metal"
+        },
+        {
+          "count": 0,
+          "name": "american"
+        },
+        {
+          "count": 0,
+          "name": "band"
+        },
+        {
+          "count": 9,
+          "name": "hard rock"
+        },
+        {
+          "count": 0,
+          "name": "usa"
+        },
+        {
+          "count": 0,
+          "name": "glam rock"
+        },
+        {
+          "count": 0,
+          "name": "classic rock"
+        },
+        {
+          "count": 0,
+          "name": "acoustic rock"
+        },
+        {
+          "count": 2,
+          "name": "pop rock"
+        },
+        {
+          "count": 4,
+          "name": "arena rock"
+        },
+        {
+          "count": 7,
+          "name": "glam metal"
+        },
+        {
+          "count": -1,
+          "name": "aor"
+        },
+        {
+          "count": 0,
+          "name": "pop and chart"
+        },
+        {
+          "count": 0,
+          "name": "hard fm"
+        }
+      ]
+    },
+    {
+      "id": "386b19c6-a3d2-414a-bef2-c178572b1cbe",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 87,
+      "name": "Moonspell",
+      "sort-name": "Moonspell",
+      "country": "PT",
+      "area": {
+        "id": "781b0c54-3d54-362d-a941-8a617def4992",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "Portugal",
+        "sort-name": "Portugal",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "9aee8c1a-c7d5-4713-af71-c022bccf50b4",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Lisboa",
+        "sort-name": "Lisboa",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000123314043"
+      ],
+      "life-span": {
+        "begin": "1989",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Moonspell",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Moonspell",
+          "locale": null,
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": "1992",
+          "end-date": null
+        },
+        {
+          "sort-name": "Morbid God",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Morbid God",
+          "locale": null,
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": "1989",
+          "end-date": "1992"
+        },
+        {
+          "sort-name": "Moonspell",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Moonspell",
+          "locale": null,
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": "1992",
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 2,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "dark metal"
+        },
+        {
+          "count": 4,
+          "name": "black metal"
+        },
+        {
+          "count": 1,
+          "name": "portuguese"
+        },
+        {
+          "count": 7,
+          "name": "gothic metal"
+        },
+        {
+          "count": 1,
+          "name": "gothic-metal"
+        }
+      ]
+    },
+    {
+      "id": "db859a53-b7ca-4892-bcda-5ef78d2c891f",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 86,
+      "name": "Vader",
+      "sort-name": "Vader",
+      "country": "PL",
+      "area": {
+        "id": "dd7f80c8-f017-3d01-8608-2a8c9c32b954",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "Poland",
+        "sort-name": "Poland",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "4e469f05-3d01-4572-be9d-38f58257be5c",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Olsztyn",
+        "sort-name": "Olsztyn",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "Polish death metal band",
+      "isnis": [
+        "0000000114820497"
+      ],
+      "life-span": {
+        "begin": "1986",
+        "ended": null
+      },
+      "tags": [
+        {
+          "count": 1,
+          "name": "death/thrash-metal"
+        },
+        {
+          "count": 7,
+          "name": "death metal"
+        },
+        {
+          "count": 1,
+          "name": "polish"
+        }
+      ]
+    },
+    {
+      "id": "f59c5520-5f46-4d2c-b2c4-822eabf53419",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 86,
+      "name": "Linkin Park",
+      "sort-name": "Linkin Park",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "ab42be96-8579-4952-b29a-5cbdf7227e7e",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Agoura Hills",
+        "sort-name": "Agoura Hills",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "American rock band",
+      "isnis": [
+        "0000000123251302"
+      ],
+      "life-span": {
+        "begin": "1999",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Lincoln Park",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Lincoln Park",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "????",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "????",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Xero",
+          "name": "Xero",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Limkin Park",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Limkin Park",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Hybrid Theory",
+          "name": "Hybrid Theory",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 9,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "alternative rock"
+        },
+        {
+          "count": -1,
+          "name": "industrial rock"
+        },
+        {
+          "count": 9,
+          "name": "metal"
+        },
+        {
+          "count": 2,
+          "name": "american"
+        },
+        {
+          "count": 1,
+          "name": "hip hop"
+        },
+        {
+          "count": 1,
+          "name": "usa"
+        },
+        {
+          "count": 16,
+          "name": "nu metal"
+        },
+        {
+          "count": -1,
+          "name": "new metal"
+        },
+        {
+          "count": 0,
+          "name": "am�ricain"
+        },
+        {
+          "count": 2,
+          "name": "alternative metal"
+        },
+        {
+          "count": 0,
+          "name": "pop rock"
+        },
+        {
+          "count": 3,
+          "name": "rapcore"
+        },
+        {
+          "count": 5,
+          "name": "rap metal"
+        },
+        {
+          "count": 8,
+          "name": "rap rock"
+        },
+        {
+          "count": 3,
+          "name": "alt rock"
+        },
+        {
+          "count": -1,
+          "name": "nu-metal"
+        },
+        {
+          "count": -1,
+          "name": "rock and indie"
+        },
+        {
+          "count": 0,
+          "name": "united states"
+        },
+        {
+          "count": -1,
+          "name": "roxette"
+        },
+        {
+          "count": 0,
+          "name": "the greatest"
+        }
+      ]
+    },
+    {
+      "id": "1d93c839-22e7-4f76-ad84-d27039efc048",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 86,
+      "name": "Sepultura",
+      "sort-name": "Sepultura",
+      "country": "BR",
+      "area": {
+        "id": "f45b47f8-5796-386e-b172-6c31b009a5d8",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "Brazil",
+        "sort-name": "Brazil",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "208e783b-661d-4164-935a-90f9e7937195",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Belo Horizonte",
+        "sort-name": "Belo Horizonte",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000115439903"
+      ],
+      "life-span": {
+        "begin": "1984",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Sepeltura",
+          "name": "Sepeltura",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 4,
+          "name": "heavy metal"
+        },
+        {
+          "count": 9,
+          "name": "thrash metal"
+        },
+        {
+          "count": 4,
+          "name": "metal"
+        },
+        {
+          "count": 4,
+          "name": "death metal"
+        },
+        {
+          "count": 1,
+          "name": "brazilian"
+        },
+        {
+          "count": 0,
+          "name": "alternative metal"
+        },
+        {
+          "count": 5,
+          "name": "groove metal"
+        },
+        {
+          "count": 1,
+          "name": "south american"
+        },
+        {
+          "count": 0,
+          "name": "rock and indie"
+        }
+      ]
+    },
+    {
+      "id": "2a90aa9c-d2ff-49fd-a8e5-2463f657eb45",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 86,
+      "name": "Rage",
+      "sort-name": "Rage",
+      "country": "DE",
+      "area": {
+        "id": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "Germany",
+        "sort-name": "Germany",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "a66a5bd1-0e75-4ac9-a03d-b1755c7bc0a9",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Herne",
+        "sort-name": "Herne",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "German metal band",
+      "isnis": [
+        "0000000109439528"
+      ],
+      "life-span": {
+        "begin": "1986",
+        "ended": null
+      },
+      "tags": [
+        {
+          "count": 4,
+          "name": "heavy metal"
+        },
+        {
+          "count": 1,
+          "name": "german"
+        },
+        {
+          "count": 0,
+          "name": "progressive metal"
+        },
+        {
+          "count": 0,
+          "name": "metal"
+        },
+        {
+          "count": 5,
+          "name": "power metal"
+        },
+        {
+          "count": 3,
+          "name": "speed metal"
+        },
+        {
+          "count": 1,
+          "name": "heavy/speed/power-metal"
+        }
+      ]
+    }
+  ]
+}

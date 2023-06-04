@@ -1,0 +1,2456 @@
+{
+  "created": "2023-05-19T13:43:29.907Z",
+  "count": 99167,
+  "offset": 0,
+  "releases": [
+    {
+      "id": "cfd8fa64-6d21-42b9-89f4-d766c9c347e3",
+      "score": 100,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+      "count": 1,
+      "title": "The Most of Little River Band - Vol 2",
+      "status": "Official",
+      "packaging": "Jewel Case",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Little River Band",
+          "artist": {
+            "id": "0b5df3f3-7f4c-4ffb-9279-dbab6cd9bea5",
+            "name": "Little River Band",
+            "sort-name": "Little River Band"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "ef0ed478-980e-469f-964b-82b83808dc67",
+        "type-id": "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "The Most of Little River Band - Vol 2",
+        "primary-type": "Album",
+        "secondary-types": [
+          "Compilation"
+        ],
+        "secondary-type-ids": [
+          "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1"
+        ]
+      },
+      "date": "1992",
+      "country": "AU",
+      "release-events": [
+        {
+          "date": "1992",
+          "area": {
+            "id": "106e0bec-b638-3b37-b731-f53d507dc00e",
+            "name": "Australia",
+            "sort-name": "Australia",
+            "iso-3166-1-codes": [
+              "AU"
+            ]
+          }
+        }
+      ],
+      "barcode": "5099943803422",
+      "label-info": [
+        {
+          "catalog-number": "4380342",
+          "label": {
+            "id": "0de31715-3c34-48c5-960c-7a97d2c46999",
+            "name": "EMI Music Group Australasia"
+          }
+        }
+      ],
+      "track-count": 19,
+      "media": [
+        {
+          "format": "CD",
+          "disc-count": 1,
+          "track-count": 19
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "pop rock"
+        },
+        {
+          "count": 1,
+          "name": "pop rock rock"
+        }
+      ]
+    },
+    {
+      "id": "0ca66a69-68c5-45a2-9091-6421f3c1fbef",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Upon Your Shore",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "The Spiral Electric",
+          "artist": {
+            "id": "4c43f713-4ed2-4a6d-bc6c-f36f7bbf82fe",
+            "name": "The Spiral Electric",
+            "sort-name": "Spiral Electric, The"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "6336a01e-dbaf-44c7-b742-4714acbafda5",
+        "type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "primary-type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "title": "Upon Your Shore",
+        "primary-type": "EP"
+      },
+      "date": "2015-04-01",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2015-04-01",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "track-count": 5,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 5
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "acid rock"
+        },
+        {
+          "count": 1,
+          "name": "indie rock"
+        },
+        {
+          "count": 1,
+          "name": "psychedelic rock"
+        },
+        {
+          "count": 1,
+          "name": "space rock"
+        },
+        {
+          "count": 1,
+          "name": "surf rock"
+        },
+        {
+          "count": 1,
+          "name": "stoner rock"
+        },
+        {
+          "count": 1,
+          "name": "alternative rock"
+        },
+        {
+          "count": 1,
+          "name": "rock"
+        }
+      ]
+    },
+    {
+      "id": "0fb3dd3d-0890-4ac0-af4d-846efb2f0048",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Germ City",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Mojo Bozo's Electric Circus",
+          "artist": {
+            "id": "963adf4b-a98e-4c3c-8b8e-485a38903ac2",
+            "name": "Mojo Bozo's Electric Circus",
+            "sort-name": "Mojo Bozo's Electric Circus"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "783c4396-f681-40a9-8d2e-0738de6ff1f5",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Germ City",
+        "primary-type": "Album"
+      },
+      "date": "2020-04-24",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2020-04-24",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "track-count": 13,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 13
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "progressive rock"
+        },
+        {
+          "count": 1,
+          "name": "stoner rock"
+        },
+        {
+          "count": 1,
+          "name": "hard rock"
+        },
+        {
+          "count": 1,
+          "name": "psychedelic rock"
+        },
+        {
+          "count": 1,
+          "name": "garage rock"
+        },
+        {
+          "count": 1,
+          "name": "surf rock"
+        },
+        {
+          "count": 1,
+          "name": "desert rock"
+        }
+      ]
+    },
+    {
+      "id": "bef227ac-46fd-4522-a4ad-06f2daf6d44e",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Superseed",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Superseed",
+          "artist": {
+            "id": "ff56ceec-fdbe-4c86-a391-3b0d8de5c6c4",
+            "name": "Superseed",
+            "sort-name": "Superseed"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "ddfc7067-f81e-4892-869e-96024d0d1cef",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Superseed",
+        "primary-type": "Album"
+      },
+      "date": "2019-04-22",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2019-04-22",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "track-count": 16,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 16
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "psychedelic rock"
+        },
+        {
+          "count": 1,
+          "name": "garage rock"
+        },
+        {
+          "count": 1,
+          "name": "classic rock"
+        },
+        {
+          "count": 1,
+          "name": "hard rock"
+        },
+        {
+          "count": 1,
+          "name": "punk rock"
+        },
+        {
+          "count": 1,
+          "name": "stoner rock"
+        },
+        {
+          "count": 1,
+          "name": "alternative rock"
+        },
+        {
+          "count": 1,
+          "name": "rock"
+        }
+      ]
+    },
+    {
+      "id": "6f3abd98-844b-4c98-a165-1ecc6b5bf5dd",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Inner Road to Somewhere",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Raul Hurtado",
+          "artist": {
+            "id": "f9b2a5ea-c378-439e-8ae4-d48a938711b3",
+            "name": "Raul Hurtado",
+            "sort-name": "Hurtado, Raul",
+            "disambiguation": "Colombian singer-songwriter"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "f79a1281-1ea8-47c5-8814-44f01170f406",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Inner Road to Somewhere",
+        "primary-type": "Album"
+      },
+      "date": "2020-12-18",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2020-12-18",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "barcode": "195999027814",
+      "track-count": 9,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 9
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "psychedelic rock"
+        },
+        {
+          "count": 1,
+          "name": "folk rock"
+        },
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "classic rock"
+        },
+        {
+          "count": 1,
+          "name": "christian rock"
+        },
+        {
+          "count": 1,
+          "name": "pop rock"
+        },
+        {
+          "count": 1,
+          "name": "alternative rock"
+        },
+        {
+          "count": 1,
+          "name": "soft rock"
+        }
+      ]
+    },
+    {
+      "id": "7000112d-d52b-47c8-8fbc-74ef74242868",
+      "score": 99,
+      "status-id": "518ffc83-5cde-34df-8627-81bff5093d92",
+      "count": 1,
+      "title": "Underground Rock Band",
+      "status": "Promotion",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Adeline Yeo (HP)",
+          "artist": {
+            "id": "baca10cc-e249-4969-a27f-6503955ae7b5",
+            "name": "Adeline Yeo (HP)",
+            "sort-name": "Yeo (HP), Adeline"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "3234c00f-ff07-4ca2-93f0-b316d2f63286",
+        "type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+        "primary-type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+        "title": "Underground Rock Band",
+        "primary-type": "Single",
+        "secondary-types": [
+          "Soundtrack"
+        ],
+        "secondary-type-ids": [
+          "22a628ad-c082-3c4f-b1b6-d41665107b88"
+        ]
+      },
+      "date": "2021-09-14",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2021-09-14",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "track-count": 0,
+      "media": [
+        {
+          "disc-count": 0,
+          "track-count": 0
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "funk rock"
+        },
+        {
+          "count": 1,
+          "name": "country rock"
+        },
+        {
+          "count": 1,
+          "name": "southern rock"
+        },
+        {
+          "count": 1,
+          "name": "art rock"
+        },
+        {
+          "count": 1,
+          "name": "j-rock"
+        },
+        {
+          "count": 1,
+          "name": "classic rock"
+        },
+        {
+          "count": 1,
+          "name": "soft rock"
+        },
+        {
+          "count": 1,
+          "name": "experimental rock"
+        },
+        {
+          "count": 1,
+          "name": "acoustic rock"
+        },
+        {
+          "count": 1,
+          "name": "pop rock"
+        },
+        {
+          "count": 1,
+          "name": "space rock"
+        },
+        {
+          "count": 1,
+          "name": "melodic hardcore"
+        },
+        {
+          "count": 1,
+          "name": "neo-progressive rock"
+        },
+        {
+          "count": 1,
+          "name": "garage rock"
+        },
+        {
+          "count": 1,
+          "name": "christian rock"
+        },
+        {
+          "count": 1,
+          "name": "arena rock"
+        },
+        {
+          "count": 1,
+          "name": "rock and roll"
+        },
+        {
+          "count": 1,
+          "name": "gothic rock"
+        },
+        {
+          "count": 1,
+          "name": "comedy rock"
+        },
+        {
+          "count": 1,
+          "name": "melodic rock"
+        },
+        {
+          "count": 1,
+          "name": "acid rock"
+        },
+        {
+          "count": 1,
+          "name": "heartland rock"
+        },
+        {
+          "count": 1,
+          "name": "surf rock"
+        },
+        {
+          "count": 1,
+          "name": "noise rock"
+        },
+        {
+          "count": 1,
+          "name": "roots rock"
+        },
+        {
+          "count": 1,
+          "name": "pub rock"
+        },
+        {
+          "count": 1,
+          "name": "rocksteady"
+        },
+        {
+          "count": 1,
+          "name": "boogie rock"
+        },
+        {
+          "count": 1,
+          "name": "happy hardcore"
+        },
+        {
+          "count": 1,
+          "name": "lovers rock"
+        },
+        {
+          "count": 1,
+          "name": "heavy rock"
+        },
+        {
+          "count": 1,
+          "name": "desert rock"
+        },
+        {
+          "count": 1,
+          "name": "electronic rock"
+        },
+        {
+          "count": 1,
+          "name": "indorock"
+        },
+        {
+          "count": 1,
+          "name": "mainstream rock"
+        },
+        {
+          "count": 1,
+          "name": "dance-rock"
+        },
+        {
+          "count": 1,
+          "name": "samba-rock"
+        },
+        {
+          "count": 1,
+          "name": "easycore"
+        },
+        {
+          "count": 1,
+          "name": "yacht rock"
+        },
+        {
+          "count": 1,
+          "name": "anatolian rock"
+        },
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "post-rock"
+        },
+        {
+          "count": 1,
+          "name": "alternative rock"
+        },
+        {
+          "count": 1,
+          "name": "progressive rock"
+        },
+        {
+          "count": 1,
+          "name": "industrial rock"
+        },
+        {
+          "count": 1,
+          "name": "instrumental"
+        },
+        {
+          "count": 1,
+          "name": "krautrock"
+        },
+        {
+          "count": 1,
+          "name": "stoner rock"
+        },
+        {
+          "count": 1,
+          "name": "punk rock"
+        },
+        {
+          "count": 1,
+          "name": "experimental"
+        },
+        {
+          "count": 1,
+          "name": "hard rock"
+        },
+        {
+          "count": 1,
+          "name": "rockabilly"
+        },
+        {
+          "count": 1,
+          "name": "indie rock"
+        },
+        {
+          "count": 1,
+          "name": "easy listening"
+        },
+        {
+          "count": 1,
+          "name": "folk rock"
+        },
+        {
+          "count": 1,
+          "name": "instrumental rock"
+        },
+        {
+          "count": 1,
+          "name": "psychedelic rock"
+        },
+        {
+          "count": 1,
+          "name": "blues rock"
+        }
+      ]
+    },
+    {
+      "id": "a1ca9a6d-f512-44ce-b297-82846e9ed1f2",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "count": 1,
+      "title": "Jams for Free",
+      "status": "Official",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Cosmic Fall",
+          "artist": {
+            "id": "8e278ac7-1008-4585-be52-ec47c2747207",
+            "name": "Cosmic Fall",
+            "sort-name": "Cosmic Fall"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "0c7c3382-571a-4539-af58-2f0bb3d88c87",
+        "title": "Jams for Free",
+        "secondary-types": [
+          "Compilation"
+        ],
+        "secondary-type-ids": [
+          "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1"
+        ]
+      },
+      "date": "2017-08-29",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2017-08-29",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "label": {
+            "id": "157afde4-4bf5-4039-8ad2-5a15acc85176",
+            "name": "[no label]"
+          }
+        }
+      ],
+      "track-count": 4,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 4
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "space rock"
+        },
+        {
+          "count": 1,
+          "name": "progressive rock"
+        },
+        {
+          "count": 1,
+          "name": "stoner rock"
+        },
+        {
+          "count": 1,
+          "name": "hard rock"
+        },
+        {
+          "count": 1,
+          "name": "instrumental rock"
+        },
+        {
+          "count": 1,
+          "name": "psychedelic rock"
+        },
+        {
+          "count": 1,
+          "name": "rock"
+        }
+      ]
+    },
+    {
+      "id": "c53e5056-3c74-48c9-ab0f-fc3a494bd9d2",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Resignation",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Raul Hurtado",
+          "artist": {
+            "id": "f9b2a5ea-c378-439e-8ae4-d48a938711b3",
+            "name": "Raul Hurtado",
+            "sort-name": "Hurtado, Raul",
+            "disambiguation": "Colombian singer-songwriter"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "578f3035-2340-44d1-9b45-128691df7086",
+        "type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+        "primary-type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+        "title": "Resignation",
+        "primary-type": "Single"
+      },
+      "date": "2021-07-30",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2021-07-30",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "barcode": "198000642273",
+      "track-count": 1,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 1
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "christian rock"
+        },
+        {
+          "count": 1,
+          "name": "pop rock"
+        },
+        {
+          "count": 1,
+          "name": "soft rock"
+        },
+        {
+          "count": 1,
+          "name": "classic rock"
+        },
+        {
+          "count": 1,
+          "name": "psychedelic rock"
+        },
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "alternative rock"
+        }
+      ]
+    },
+    {
+      "id": "1b2ebe4b-38e5-47e6-97de-3f2865d410be",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Strange Vibration",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Skunk",
+          "artist": {
+            "id": "933c69de-1490-4fdf-ba20-f64179a9b37f",
+            "name": "Skunk",
+            "sort-name": "Skunk",
+            "disambiguation": "Heavy rock and roll band from Oakland, CA"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "54266cee-c6c0-4ad2-af57-d327f9d8c7cc",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Strange Vibration",
+        "primary-type": "Album"
+      },
+      "date": "2019-04-20",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2019-04-20",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "catalog-number": "FM004",
+          "label": {
+            "id": "62a2847c-06fe-4b60-ab01-8a1de483787d",
+            "name": "Fuzzy Mind Records"
+          }
+        }
+      ],
+      "track-count": 9,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 9
+        }
+      ],
+      "tags": [
+        {
+          "count": 2,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "rock heavy rock"
+        },
+        {
+          "count": 2,
+          "name": "heavy rock"
+        },
+        {
+          "count": 1,
+          "name": "oakland"
+        },
+        {
+          "count": 1,
+          "name": "70's rock"
+        },
+        {
+          "count": 2,
+          "name": "stoner rock"
+        },
+        {
+          "count": 1,
+          "name": "retro rock"
+        }
+      ]
+    },
+    {
+      "id": "4199c795-e747-4112-99d9-71c1ad388849",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "ec27701a-4a22-37f4-bfac-6616e0f9750a",
+      "count": 1,
+      "title": "Deep Cuts, Volume 2 (1977�1982)",
+      "status": "Official",
+      "packaging": "Jewel Case",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Queen",
+          "artist": {
+            "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+            "name": "Queen",
+            "sort-name": "Queen",
+            "disambiguation": "UK rock group"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "7cee7f39-b5a1-4e80-87ca-32ff459ba961",
+        "type-id": "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Deep Cuts, Volume 2 (1977�1982)",
+        "primary-type": "Album",
+        "secondary-types": [
+          "Compilation"
+        ],
+        "secondary-type-ids": [
+          "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1"
+        ]
+      },
+      "date": "2011-07-06",
+      "country": "JP",
+      "release-events": [
+        {
+          "date": "2011-07-06",
+          "area": {
+            "id": "2db42837-c832-3c27-b4a3-08198f75693c",
+            "name": "Japan",
+            "sort-name": "Japan",
+            "iso-3166-1-codes": [
+              "JP"
+            ]
+          }
+        }
+      ],
+      "barcode": "4988005667960",
+      "label-info": [
+        {
+          "catalog-number": "UICY-15075",
+          "label": {
+            "id": "dfd92cd3-4888-46d2-b968-328b1feb2642",
+            "name": "Island"
+          }
+        }
+      ],
+      "track-count": 14,
+      "media": [
+        {
+          "format": "SHM-CD",
+          "disc-count": 1,
+          "track-count": 14
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "progressive rock"
+        },
+        {
+          "count": 1,
+          "name": "hard rock"
+        },
+        {
+          "count": 1,
+          "name": "glam rock"
+        },
+        {
+          "count": 1,
+          "name": "classic rock"
+        },
+        {
+          "count": 1,
+          "name": "soft rock"
+        },
+        {
+          "count": 1,
+          "name": "pop rock"
+        }
+      ]
+    },
+    {
+      "id": "de28cce2-cc53-42c5-b8ec-c327ac948d52",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "count": 1,
+      "title": "Deep Cuts, Volume 3 (1984�1995)",
+      "status": "Official",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Queen",
+          "artist": {
+            "id": "0383dadf-2a4e-4d10-a46a-e9e041da8eb3",
+            "name": "Queen",
+            "sort-name": "Queen",
+            "disambiguation": "UK rock group"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "77d7bc36-a8ba-4ebd-bd59-c3820744bdfe",
+        "type-id": "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Deep Cuts, Volume 3 (1984�1995)",
+        "primary-type": "Album",
+        "secondary-types": [
+          "Compilation"
+        ],
+        "secondary-type-ids": [
+          "dd2a21e1-0c00-3729-a7a0-de60b84eb5d1"
+        ]
+      },
+      "date": "2011-09-11",
+      "country": "JP",
+      "release-events": [
+        {
+          "date": "2011-09-11",
+          "area": {
+            "id": "2db42837-c832-3c27-b4a3-08198f75693c",
+            "name": "Japan",
+            "sort-name": "Japan",
+            "iso-3166-1-codes": [
+              "JP"
+            ]
+          }
+        }
+      ],
+      "barcode": "4988005668967",
+      "asin": "B00599UG3S",
+      "label-info": [
+        {
+          "catalog-number": "UICY-15098",
+          "label": {
+            "id": "13a464dc-b9fd-4d16-a4f4-d4316f6a46c7",
+            "name": "Universal Music"
+          }
+        },
+        {
+          "catalog-number": "UICY-15098",
+          "label": {
+            "id": "dfd92cd3-4888-46d2-b968-328b1feb2642",
+            "name": "Island"
+          }
+        }
+      ],
+      "track-count": 15,
+      "media": [
+        {
+          "format": "SHM-CD",
+          "disc-count": 1,
+          "track-count": 15
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "progressive rock"
+        },
+        {
+          "count": 1,
+          "name": "hard rock"
+        },
+        {
+          "count": 1,
+          "name": "glam rock"
+        },
+        {
+          "count": 1,
+          "name": "classic rock"
+        },
+        {
+          "count": 1,
+          "name": "soft rock"
+        },
+        {
+          "count": 1,
+          "name": "pop rock"
+        }
+      ]
+    },
+    {
+      "id": "f8ca7ccd-202e-4aa7-aeaf-84db789e9550",
+      "score": 99,
+      "count": 1,
+      "title": "Say Yes to Love",
+      "text-representation": {
+        "language": "eng"
+      },
+      "artist-credit": [
+        {
+          "name": "JD Days",
+          "artist": {
+            "id": "24982237-eb64-47b5-bec8-da1ee80e7bc6",
+            "name": "JD Days",
+            "sort-name": "Days, JD",
+            "disambiguation": "English Artist"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "4be01444-4347-4bbb-957d-704d75ba2b45",
+        "type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+        "primary-type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+        "title": "Say Yes to Love",
+        "primary-type": "Single"
+      },
+      "date": "2022",
+      "country": "GB",
+      "release-events": [
+        {
+          "date": "2022",
+          "area": {
+            "id": "8a754a16-0027-3a29-b6d7-2b40ea0481ed",
+            "name": "United Kingdom",
+            "sort-name": "United Kingdom",
+            "iso-3166-1-codes": [
+              "GB"
+            ]
+          }
+        }
+      ],
+      "track-count": 1,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 1
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "post rock"
+        },
+        {
+          "count": 1,
+          "name": "rock and roll"
+        },
+        {
+          "count": 1,
+          "name": "pop rock"
+        },
+        {
+          "count": 1,
+          "name": "progressive rock"
+        },
+        {
+          "count": 1,
+          "name": "art rock"
+        },
+        {
+          "count": 1,
+          "name": "classic rock"
+        },
+        {
+          "count": 1,
+          "name": "hard rock"
+        },
+        {
+          "count": 1,
+          "name": "rock anthem"
+        },
+        {
+          "count": 1,
+          "name": "rock ballad"
+        },
+        {
+          "count": 1,
+          "name": "alternative rock"
+        },
+        {
+          "count": 1,
+          "name": "rock"
+        }
+      ]
+    },
+    {
+      "id": "dca074e2-62d9-41ef-b90b-578b7e8a3578",
+      "score": 98,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "count": 1,
+      "title": "No somos los mismos",
+      "status": "Official",
+      "text-representation": {
+        "language": "spa",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Sierra Le�n",
+          "artist": {
+            "id": "87e13c25-ee0a-49c0-98cf-4d6566a6177f",
+            "name": "Sierra Le�n",
+            "sort-name": "Sierra Le�n"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "63ad572c-9f14-4bcc-b296-aa6279cd6f8f",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "No somos los mismos",
+        "primary-type": "Album"
+      },
+      "date": "2015-10-05",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2015-10-05",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "track-count": 10,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 10
+        }
+      ],
+      "tags": [
+        {
+          "count": 3,
+          "name": "progressive rock"
+        },
+        {
+          "count": 3,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "rock progresivo"
+        },
+        {
+          "count": 1,
+          "name": "experimental rock."
+        },
+        {
+          "count": 1,
+          "name": "rock electr�nico"
+        },
+        {
+          "count": 2,
+          "name": "tepic"
+        },
+        {
+          "count": 1,
+          "name": "rock alternativo"
+        },
+        {
+          "count": 1,
+          "name": "electronic rock"
+        },
+        {
+          "count": 1,
+          "name": "experimental rock"
+        },
+        {
+          "count": 3,
+          "name": "indie rock"
+        },
+        {
+          "count": 1,
+          "name": "alternative rock"
+        }
+      ]
+    },
+    {
+      "id": "35bf53f7-7288-4e33-ab98-8dec8857d40a",
+      "score": 98,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "count": 1,
+      "title": "You Said It",
+      "status": "Official",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Koyo",
+          "artist": {
+            "id": "af773037-7776-464e-a7ef-7492da6f8021",
+            "name": "Koyo",
+            "sort-name": "Koyo",
+            "disambiguation": "UK indie rock band"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "cf0289d0-158f-48a5-becb-6bdf72359cb7",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "You Said It",
+        "primary-type": "Album"
+      },
+      "date": "2020-06-26",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2020-06-26",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "track-count": 11,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 11
+        }
+      ],
+      "tags": [
+        {
+          "count": 2,
+          "name": "rock"
+        },
+        {
+          "count": 2,
+          "name": "post-rock"
+        },
+        {
+          "count": 2,
+          "name": "alternative rock"
+        },
+        {
+          "count": 2,
+          "name": "math rock"
+        },
+        {
+          "count": 2,
+          "name": "indie rock"
+        },
+        {
+          "count": 2,
+          "name": "psychedelic rock"
+        },
+        {
+          "count": 2,
+          "name": "pop rock"
+        },
+        {
+          "count": 1,
+          "name": "leeds"
+        },
+        {
+          "count": 1,
+          "name": "prog rock"
+        },
+        {
+          "count": 1,
+          "name": "psych rock"
+        },
+        {
+          "count": 1,
+          "name": "grunge rock"
+        }
+      ]
+    },
+    {
+      "id": "3fdbac02-17f3-44a1-9c28-4482b9f0bd13",
+      "score": 98,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Sons of Morpheus",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "joinphrase": " / ",
+          "name": "Onyric Joy",
+          "artist": {
+            "id": "c451b296-2ca2-404a-b062-a4a5626f309c",
+            "name": "Onyric Joy",
+            "sort-name": "Onyric Joy"
+          }
+        },
+        {
+          "name": "Dos Brujos",
+          "artist": {
+            "id": "8f7c52c3-1f37-4084-98c8-d51105c079ce",
+            "name": "Dos Brujos",
+            "sort-name": "Dos Brujos",
+            "disambiguation": "instrumental metal duo from Graz, Austria"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "1abcbf01-1412-4dab-8941-d1c9c0f51da8",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Sons of Morpheus",
+        "primary-type": "Album"
+      },
+      "date": "2021-09-24",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2021-09-24",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "track-count": 4,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 4
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "progressive rock"
+        },
+        {
+          "count": 1,
+          "name": "stoner rock"
+        },
+        {
+          "count": 1,
+          "name": "psychedelic rock"
+        },
+        {
+          "count": 1,
+          "name": "space rock"
+        },
+        {
+          "count": 1,
+          "name": "post-rock"
+        }
+      ]
+    },
+    {
+      "id": "cb735142-8f32-4cda-9a01-44ab7cd4de3c",
+      "score": 98,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Overheated",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Johnny Jetson",
+          "artist": {
+            "id": "24869dce-c8d0-4b5f-aa21-38ae35b14bc7",
+            "name": "Johnny Jetson",
+            "sort-name": "Jetson, Johnny"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "59cbb0cd-b31a-4326-b323-71a4129123a6",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Overheated",
+        "primary-type": "Album"
+      },
+      "date": "2021-05-20",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2021-05-20",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "label": {
+            "id": "157afde4-4bf5-4039-8ad2-5a15acc85176",
+            "name": "[no label]"
+          }
+        }
+      ],
+      "track-count": 10,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 10
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "glam rock"
+        },
+        {
+          "count": 1,
+          "name": "hard rock"
+        },
+        {
+          "count": 1,
+          "name": "pop rock"
+        },
+        {
+          "count": 1,
+          "name": "punk rock"
+        },
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "blues rock"
+        }
+      ]
+    },
+    {
+      "id": "91ac0589-0949-4e71-99f0-84f643734adb",
+      "score": 98,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Dog Ear",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "joinphrase": " & ",
+          "name": "Fever Dog",
+          "artist": {
+            "id": "b9460ee6-b0e9-4fab-805e-f2f0871e6fe1",
+            "name": "Fever Dog",
+            "sort-name": "Fever Dog"
+          }
+        },
+        {
+          "name": "3rd Ear Experience",
+          "artist": {
+            "id": "e09b9aba-698e-440b-9a31-db4a717d3c5c",
+            "name": "3rd Ear Experience",
+            "sort-name": "3rd Ear Experience"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "788c850e-0f44-4997-be50-a4a3d311ce53",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Dog Ear",
+        "primary-type": "Album"
+      },
+      "date": "2014-07-12",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2014-07-12",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "track-count": 3,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 3
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "psychedelic rock"
+        },
+        {
+          "count": 1,
+          "name": "progressive rock"
+        },
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "desert rock"
+        },
+        {
+          "count": 1,
+          "name": "space rock"
+        },
+        {
+          "count": 1,
+          "name": "glam rock"
+        }
+      ]
+    },
+    {
+      "id": "4cd440e4-0e1d-422b-bd2c-04df9cecd856",
+      "score": 98,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "False Dawn",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Spacelord",
+          "artist": {
+            "id": "c50686c4-dfe3-46f0-bd31-892a823af69c",
+            "name": "Spacelord",
+            "sort-name": "Spacelord"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "49a8d5ac-2346-427f-b729-8bef380851a5",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "False Dawn",
+        "primary-type": "Album"
+      },
+      "date": "2021-11-05",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2021-11-05",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "track-count": 8,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 8
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "desert rock"
+        },
+        {
+          "count": 1,
+          "name": "psychedelic rock"
+        },
+        {
+          "count": 1,
+          "name": "hard rock"
+        },
+        {
+          "count": 1,
+          "name": "stoner rock"
+        },
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "heavy rock"
+        }
+      ]
+    },
+    {
+      "id": "55786a1f-72b0-43d5-829e-aa664750b618",
+      "score": 98,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Land of Decay",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Lumberjack",
+          "artist": {
+            "id": "9b1f6d3a-046a-4dcd-a407-bbaf96877094",
+            "name": "Lumberjack",
+            "sort-name": "Lumberjack",
+            "disambiguation": "Russian garage rock band"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "743cd8c9-1aaf-4761-bd62-450f34042fb2",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Land of Decay",
+        "primary-type": "Album"
+      },
+      "date": "2015-10-19",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2015-10-19",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "track-count": 11,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 11
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "psychedelic rock"
+        },
+        {
+          "count": 1,
+          "name": "alternative rock"
+        },
+        {
+          "count": 1,
+          "name": "stoner rock"
+        },
+        {
+          "count": 1,
+          "name": "garage rock"
+        },
+        {
+          "count": 1,
+          "name": "space rock"
+        },
+        {
+          "count": 1,
+          "name": "rock"
+        }
+      ]
+    },
+    {
+      "id": "2927fd92-5e38-478d-b4f6-6af4484ae0b8",
+      "score": 98,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Flock",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Lumberjack",
+          "artist": {
+            "id": "9b1f6d3a-046a-4dcd-a407-bbaf96877094",
+            "name": "Lumberjack",
+            "sort-name": "Lumberjack",
+            "disambiguation": "Russian garage rock band"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "74c881a5-492f-45e4-a467-536e5b476e4d",
+        "type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "primary-type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "title": "Flock",
+        "primary-type": "EP"
+      },
+      "date": "2013-11-15",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2013-11-15",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "track-count": 3,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 3
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "garage rock"
+        },
+        {
+          "count": 1,
+          "name": "space rock"
+        },
+        {
+          "count": 1,
+          "name": "psychedelic rock"
+        },
+        {
+          "count": 1,
+          "name": "stoner rock"
+        },
+        {
+          "count": 1,
+          "name": "alternative rock"
+        }
+      ]
+    },
+    {
+      "id": "edf4f40e-7b47-4e54-aad2-8b8c8b18522b",
+      "score": 98,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Garage Stuff",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Lumberjack",
+          "artist": {
+            "id": "9b1f6d3a-046a-4dcd-a407-bbaf96877094",
+            "name": "Lumberjack",
+            "sort-name": "Lumberjack",
+            "disambiguation": "Russian garage rock band"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "64220b56-abf4-447d-8ae2-bd7eece193a9",
+        "type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "primary-type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "title": "Garage Stuff",
+        "primary-type": "EP"
+      },
+      "date": "2012-10-06",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2012-10-06",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "track-count": 5,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 5
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "garage rock"
+        },
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "space rock"
+        },
+        {
+          "count": 1,
+          "name": "psychedelic rock"
+        },
+        {
+          "count": 1,
+          "name": "stoner rock"
+        },
+        {
+          "count": 1,
+          "name": "alternative rock"
+        }
+      ]
+    },
+    {
+      "id": "f630a4a4-c5fa-405f-89c9-0fca95b4bbf5",
+      "score": 98,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Golden Moose",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Lumberjack",
+          "artist": {
+            "id": "9b1f6d3a-046a-4dcd-a407-bbaf96877094",
+            "name": "Lumberjack",
+            "sort-name": "Lumberjack",
+            "disambiguation": "Russian garage rock band"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "1a6ee252-d1d4-4c40-88e0-a2c5d51b4d4e",
+        "type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "primary-type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "title": "Golden Moose",
+        "primary-type": "EP"
+      },
+      "date": "2013-10-13",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2013-10-13",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "track-count": 3,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 3
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "space rock"
+        },
+        {
+          "count": 1,
+          "name": "stoner rock"
+        },
+        {
+          "count": 1,
+          "name": "alternative rock"
+        },
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "garage rock"
+        },
+        {
+          "count": 1,
+          "name": "psychedelic rock"
+        }
+      ]
+    },
+    {
+      "id": "30912e73-2d47-43ee-aff1-33f771d1e189",
+      "score": 98,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "count": 1,
+      "title": "Elle, De La Mer",
+      "status": "Official",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "L'uomo Nero",
+          "artist": {
+            "id": "fa742860-cc13-41d5-935f-dde7243b07ac",
+            "name": "L'uomo Nero",
+            "sort-name": "L'uomo Nero"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "7c9843c6-fbcf-4393-99e3-13d7046ebf1d",
+        "type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "primary-type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "title": "Elle, De La Mer",
+        "primary-type": "EP"
+      },
+      "date": "2021-07-16",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2021-07-16",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "label": {
+            "id": "430cf5b7-68e4-472c-94e3-9f0e53be6a1d",
+            "name": "Desert Records"
+          }
+        }
+      ],
+      "track-count": 4,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 4
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 2,
+          "name": "alternative rock"
+        },
+        {
+          "count": 2,
+          "name": "hard rock"
+        },
+        {
+          "count": 2,
+          "name": "blues rock"
+        },
+        {
+          "count": 2,
+          "name": "desert rock"
+        },
+        {
+          "count": 2,
+          "name": "occult rock"
+        }
+      ]
+    },
+    {
+      "id": "0a96ed67-bfdd-4a31-b96f-68b4dd5f2fe9",
+      "score": 98,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Flor Vil",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "joinphrase": ", ",
+          "name": "Tilde",
+          "artist": {
+            "id": "7bbca11e-b37b-4422-8d46-72cf585d2c6b",
+            "name": "Tilde",
+            "sort-name": "Tilde",
+            "disambiguation": "Experimentos Rurales"
+          }
+        },
+        {
+          "joinphrase": " & ",
+          "name": "La Era de Acuario",
+          "artist": {
+            "id": "6c6ba104-7755-4558-ae8f-944b80228174",
+            "name": "La Era de Acuario",
+            "sort-name": "Era de Acuario, La",
+            "disambiguation": "Psychedelic retro rock from Mexico"
+          }
+        },
+        {
+          "name": "Dh�rmico",
+          "artist": {
+            "id": "4eb83114-03f5-4cfb-8d33-bced26bf8a61",
+            "name": "Dh�rmico",
+            "sort-name": "Dh�rmico"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "1e4fe3aa-7172-494b-b454-737ef144f7ab",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Flor Vil",
+        "primary-type": "Album"
+      },
+      "date": "2021-11-26",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2021-11-26",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "catalog-number": "XR-038",
+          "label": {
+            "id": "baf7c88c-6ef8-432c-9ef3-ca7eba3e67d6",
+            "name": "Experimentos Rurales"
+          }
+        }
+      ],
+      "track-count": 6,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 6
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "post-rock"
+        },
+        {
+          "count": 1,
+          "name": "experimental rock"
+        },
+        {
+          "count": 1,
+          "name": "psychedelic rock"
+        },
+        {
+          "count": 1,
+          "name": "instrumental rock"
+        },
+        {
+          "count": 1,
+          "name": "progressive rock"
+        }
+      ]
+    },
+    {
+      "id": "b2f23a80-014d-4549-a1ea-b1714259e0bb",
+      "score": 98,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Trouble Comes",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Year of October",
+          "artist": {
+            "id": "b3010c30-0e14-4305-b724-b4d5df109306",
+            "name": "Year of October",
+            "sort-name": "Year of October"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "59e52b6f-d2ef-494e-b45b-cec54de388c8",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Trouble Comes",
+        "primary-type": "Album"
+      },
+      "date": "2017-10-31",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2017-10-31",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "track-count": 10,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 10
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "indie rock"
+        },
+        {
+          "count": 1,
+          "name": "alternative rock"
+        },
+        {
+          "count": 1,
+          "name": "stoner rock"
+        },
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "psychedelic rock"
+        },
+        {
+          "count": 1,
+          "name": "garage rock"
+        }
+      ]
+    }
+  ]
+}

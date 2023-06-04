@@ -23,6 +23,7 @@ class HttpRequestBuilderTest {
 
         // then
         assertEquals(TEST_URL, request.getUri().toString());
+        assertEquals("GET", request.getMethod());
     }
 
     @Test
@@ -35,6 +36,7 @@ class HttpRequestBuilderTest {
 
         // then
         assertEquals(TEST_URL, request.getUri().toString());
+        assertEquals("POST", request.getMethod());
         assertEquals(testBody, IOUtils.toString(new InputStreamReader(request.getEntity().getContent())));
     }
 

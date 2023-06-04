@@ -1,0 +1,34 @@
+{
+  "albums": {
+    "items": [
+      {
+        "id": "5LEXck3kfixFaA3CqVE7bC",
+        "name": "White Pony",
+        "release_date": "2000-05-16",
+        "release_date_precision": "day",
+        "total_tracks": 12,
+        "type": "album",
+        "uri": "spotify:album:5LEXck3kfixFaA3CqVE7bC"
+      },
+      {
+        "id": "57KFwKnC0ZjaIQGnhE7ops",
+        "name": "White Pony (20th Anniversary Deluxe Edition)",
+        "release_date": "2020-12-11",
+        "release_date_precision": "day",
+        "total_tracks": 22,
+        "type": "album",
+        "uri": "spotify:album:57KFwKnC0ZjaIQGnhE7ops"
+      },
+      {
+        "id": "2snx0vxpQurw383yb2ogY7",
+        "name": "White Pony",
+        "release_date": "2016-03-16",
+        "release_date_precision": "day",
+        "total_tracks": 1,
+        "type": "album",
+        "uri": "spotify:album:2snx0vxpQurw383yb2ogY7"
+      }],
+    "limit": 20,
+    "total": 3
+  }
+}

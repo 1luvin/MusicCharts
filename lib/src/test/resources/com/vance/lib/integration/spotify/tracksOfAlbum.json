@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "duration_ms": 237360,
+      "id": "0Qrb3L8JgreLBW8g4qyan9",
+      "name": "Back to School (Mini Maggit)"
+    },
+    {
+      "duration_ms": 189760,
+      "id": "0FpYnuKYFJXHAmHbS1CycY",
+      "name": "Feiticeira"
+    },
+    {
+      "duration_ms": 255373,
+      "id": "2jSJm3Gv6GLxduWLenmjKS",
+      "name": "Digital Bath"
+    },
+    {
+      "duration_ms": 241800,
+      "id": "3jnYlchDDAiLzfkPPy12ig",
+      "name": "Elite"
+    },
+    {
+      "duration_ms": 268026,
+      "id": "6HgrJfzfj9WRBABdussy8z",
+      "name": "Rx Queen"
+    },
+    {
+      "duration_ms": 161600,
+      "id": "5qNr7GnEmD3zA2oQTAdI3a",
+      "name": "Street Carp"
+    },
+    {
+      "duration_ms": 200466,
+      "id": "3JVtnUPy4JhlbhQnfzw85l",
+      "name": "Teenager"
+    },
+    {
+      "duration_ms": 289200,
+      "id": "42Kv1RoTAm09FeytxiuZIB",
+      "name": "Knife Prty"
+    },
+    {
+      "duration_ms": 203600,
+      "id": "7cYKGj2j9AWNwQukTl2Jev",
+      "name": "Korea"
+    },
+    {
+      "duration_ms": 368666,
+      "id": "7IoK6jZBxY7NMoQPoPXZCF",
+      "name": "Passenger"
+    },
+    {
+      "duration_ms": 299533,
+      "id": "51c94ac31swyDQj9B3Lzs3",
+      "name": "Change (In the House of Flies)"
+    },
+    {
+      "duration_ms": 453226,
+      "id": "0FrT8a39eo6siL1yIxVGTP",
+      "name": "Pink Maggit"
+    }
+  ],
+  "limit": 20,
+  "next": null,
+  "offset": 0,
+  "previous": null,
+  "total": 12
+}

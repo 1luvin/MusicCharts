@@ -3,6 +3,8 @@ package com.vance.lib;
 import com.vance.lib.integration.LastFmIntegration;
 import com.vance.lib.integration.MusicbrainzIntegration;
 import com.vance.lib.integration.SpotifyIntegration;
+import com.vance.lib.service.web.http.RequestService;
+import com.vance.lib.service.web.secrets.SecretProvider;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,9 +14,11 @@ import java.util.Map;
 
 public class ChartDataProvider {
     private final Logger log = LoggerFactory.getLogger(ChartDataProvider.class);
-    private final MusicbrainzIntegration musicbrainz = new MusicbrainzIntegration();
-    private final SpotifyIntegration spotify = new SpotifyIntegration();
-    private final LastFmIntegration lastFM = new LastFmIntegration();
+    private final RequestService requestService = RequestService.getInstance();
+    private final SecretProvider secretProvider = SecretProvider.getInstance(requestService);
+    private final MusicbrainzIntegration musicbrainz = new MusicbrainzIntegration(requestService);
+    private final LastFmIntegration lastFM = new LastFmIntegration(requestService, secretProvider);
+    private final SpotifyIntegration spotify = new SpotifyIntegration(requestService, secretProvider);
 
     public Map<String, Long> numberOfArtistsOfGenres(@NotNull List<String> genres) {
         log.info("Getting number of artists of genres, genres: {}", genres);
@@ -67,8 +71,10 @@ public class ChartDataProvider {
     }
 
     public static void main(String[] args) {
-        MusicbrainzIntegration integration = new MusicbrainzIntegration();
+        final RequestService requestServiceInstance = RequestService.getInstance();
+        final SecretProvider secretProviderInstance = SecretProvider.getInstance(requestServiceInstance);
+        SpotifyIntegration integration = new SpotifyIntegration(requestServiceInstance, secretProviderInstance);
 
-        integration.getNumberOfReleasesOfGenres(List.of("rock"));
+        integration.getPopularArtistsOfGenre("Rock");
     }
 }

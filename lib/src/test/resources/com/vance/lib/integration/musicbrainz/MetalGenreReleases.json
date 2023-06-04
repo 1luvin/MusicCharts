@@ -1,0 +1,2181 @@
+{
+  "created": "2023-05-19T13:43:30.455Z",
+  "count": 57526,
+  "offset": 0,
+  "releases": [
+    {
+      "id": "8bf4e235-8b10-4e00-904d-338b8f03175b",
+      "score": 100,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "count": 1,
+      "title": "Apollo",
+      "status": "Official",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Tristan Harders",
+          "artist": {
+            "id": "2b476539-623f-4897-af8d-f22d9c25f69f",
+            "name": "Tristan Harders",
+            "sort-name": "Harders, Tristan"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "d11f4cf1-ab3f-473e-8c11-d91f147737ac",
+        "type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+        "primary-type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+        "title": "Apollo",
+        "primary-type": "Single"
+      },
+      "date": "2021-03-05",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2021-03-05",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "label": {
+            "id": "157afde4-4bf5-4039-8ad2-5a15acc85176",
+            "name": "[no label]"
+          }
+        }
+      ],
+      "track-count": 1,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 1
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "melodic death metal"
+        },
+        {
+          "count": 1,
+          "name": "heavy metal"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "power metal"
+        },
+        {
+          "count": 1,
+          "name": "symphonic metal"
+        },
+        {
+          "count": 1,
+          "name": "folk metal"
+        },
+        {
+          "count": 1,
+          "name": "melodic metal"
+        },
+        {
+          "count": 1,
+          "name": "hamburg"
+        },
+        {
+          "count": 1,
+          "name": "epic metal"
+        },
+        {
+          "count": 1,
+          "name": "metal metal"
+        }
+      ]
+    },
+    {
+      "id": "f262bd84-78aa-4029-8087-8206f9dfc390",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "8f931351-d2e2-310f-afc6-37b89ddba246",
+      "count": 1,
+      "title": "The Realms of Fire and Death",
+      "status": "Official",
+      "packaging": "Digipak",
+      "artist-credit": [
+        {
+          "name": "Ignea",
+          "artist": {
+            "id": "5a28849b-7e11-4618-a921-ff37eb4a0001",
+            "name": "Ignea",
+            "sort-name": "Ignea",
+            "disambiguation": "Ukrainian Modern Oriental Metal Band"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "20dc1c5b-e48c-4d43-90a4-67896564c2e2",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "The Realms of Fire and Death",
+        "primary-type": "Album"
+      },
+      "date": "2020-04-17",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2020-04-17",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "label": {
+            "id": "157afde4-4bf5-4039-8ad2-5a15acc85176",
+            "name": "[no label]"
+          }
+        }
+      ],
+      "track-count": 10,
+      "media": [
+        {
+          "format": "CD",
+          "disc-count": 2,
+          "track-count": 10
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "oriental metal"
+        },
+        {
+          "count": 1,
+          "name": "symphonic metal"
+        },
+        {
+          "count": 1,
+          "name": "new metal"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "eclectic metal"
+        },
+        {
+          "count": 1,
+          "name": "modern metal"
+        },
+        {
+          "count": 1,
+          "name": "melodic metal"
+        }
+      ]
+    },
+    {
+      "id": "7999a899-0bf6-41de-a685-ae626f759a39",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Black Flame Dominion",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Cult of Eibon",
+          "artist": {
+            "id": "50bb2aaf-8cc0-452c-9fcb-ce1da29a1c1b",
+            "name": "Cult of Eibon",
+            "sort-name": "Cult of Eibon",
+            "disambiguation": "Black Metal from Greece"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "a50c0da8-c1ea-4349-8056-c87947ef2fc1",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Black Flame Dominion",
+        "primary-type": "Album"
+      },
+      "date": "2021-10-29",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2021-10-29",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "label": {
+            "id": "567decb7-cfac-433a-8d80-1ce379342b44",
+            "name": "Iron Bonehead Productions"
+          }
+        }
+      ],
+      "track-count": 8,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 8
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "thrash metal"
+        },
+        {
+          "count": 1,
+          "name": "doom metal"
+        },
+        {
+          "count": 1,
+          "name": "black metal"
+        },
+        {
+          "count": 1,
+          "name": "death metal"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "heavy metal"
+        }
+      ]
+    },
+    {
+      "id": "03083f2e-2d69-4ebd-97ec-9f2c00198972",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Spiritual Tinctures",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "The Merchant",
+          "artist": {
+            "id": "03a2cbed-e01f-45ff-b094-8a8466c458ec",
+            "name": "The Merchant",
+            "sort-name": "Merchant, The",
+            "disambiguation": "New York doom/sludge metal duo; Ken Ghani & Jachin Brown"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "68902f15-6757-46e2-960c-1f2dbda40df3",
+        "type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "primary-type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "title": "Spiritual Tinctures",
+        "primary-type": "EP"
+      },
+      "date": "2022-01-02",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2022-01-02",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "track-count": 3,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 3
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "sludge metal"
+        },
+        {
+          "count": 1,
+          "name": "stoner metal"
+        },
+        {
+          "count": 1,
+          "name": "death metal"
+        },
+        {
+          "count": 1,
+          "name": "doom metal"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "heavy metal"
+        }
+      ]
+    },
+    {
+      "id": "56db01be-b416-45c9-948d-c13f37edcab1",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Bind",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "1000 Bone Cylinder Explosion",
+          "artist": {
+            "id": "4a0d4ef1-5bb9-4f66-857e-e7ff3a5ac6a3",
+            "name": "1000 Bone Cylinder Explosion",
+            "sort-name": "1000 Bone Cylinder Explosion"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "ade1c64e-9092-4a25-b70d-037383e4fbac",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Bind",
+        "primary-type": "Album"
+      },
+      "date": "2021-10-01",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2021-10-01",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "barcode": "196400903031",
+      "track-count": 11,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 11
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "power metal"
+        },
+        {
+          "count": 1,
+          "name": "death metal"
+        },
+        {
+          "count": 1,
+          "name": "black metal"
+        },
+        {
+          "count": 1,
+          "name": "thrash metal"
+        },
+        {
+          "count": 1,
+          "name": "progressive metal"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        }
+      ]
+    },
+    {
+      "id": "2166eb3e-0362-49fd-b1d3-54ca6d76596b",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Exhortation to the Impure",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Verbum",
+          "artist": {
+            "id": "d2220c98-b012-4abb-a613-7b00676ffab0",
+            "name": "Verbum",
+            "sort-name": "Verbum",
+            "disambiguation": "Chilean black/death/doom metal"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "1b95cc6b-bdb5-4967-a35c-d9008dd970d9",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Exhortation to the Impure",
+        "primary-type": "Album"
+      },
+      "date": "2022-01-14",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2022-01-14",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "label": {
+            "id": "567decb7-cfac-433a-8d80-1ce379342b44",
+            "name": "Iron Bonehead Productions"
+          }
+        }
+      ],
+      "track-count": 8,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 8
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "death metal"
+        },
+        {
+          "count": 1,
+          "name": "black metal"
+        },
+        {
+          "count": 1,
+          "name": "doom metal"
+        },
+        {
+          "count": 1,
+          "name": "thrash metal"
+        },
+        {
+          "count": 1,
+          "name": "heavy metal"
+        }
+      ]
+    },
+    {
+      "id": "3b89340d-8952-4c02-b8e1-b4c182613fc0",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "count": 1,
+      "title": "Western Decadence",
+      "status": "Official",
+      "artist-credit": [
+        {
+          "name": "Anal Blasphemy",
+          "artist": {
+            "id": "49226294-693d-4c50-8b7d-34f03f5aae45",
+            "name": "Anal Blasphemy",
+            "sort-name": "Anal Blasphemy",
+            "disambiguation": "Finnish black/death metal"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "cc33c77d-8722-4ed5-9d3b-9c9279606060",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Western Decadence",
+        "primary-type": "Album"
+      },
+      "label-info": [
+        {
+          "label": {
+            "id": "567decb7-cfac-433a-8d80-1ce379342b44",
+            "name": "Iron Bonehead Productions"
+          }
+        }
+      ],
+      "track-count": 9,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 9
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "thrash metal"
+        },
+        {
+          "count": 1,
+          "name": "black metal"
+        },
+        {
+          "count": 1,
+          "name": "death metal"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "heavy metal"
+        },
+        {
+          "count": 1,
+          "name": "doom metal"
+        }
+      ]
+    },
+    {
+      "id": "28bf220e-bc87-4285-ad6d-f22832e7af9f",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Queen Corrosia",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Soul Grinder",
+          "artist": {
+            "id": "5c7cc7a1-3553-46ed-8977-3c4ce4b928ed",
+            "name": "Soul Grinder",
+            "sort-name": "Soul Grinder",
+            "disambiguation": "heavy metal band from Portland, OR, USA"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "3af88c76-fab5-4468-867e-9a4c0878ad09",
+        "type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "primary-type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "title": "Queen Corrosia",
+        "primary-type": "EP"
+      },
+      "date": "2022-05-06",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2022-05-06",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "track-count": 3,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 3
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "heavy metal"
+        },
+        {
+          "count": 1,
+          "name": "thrash metal"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "death metal"
+        },
+        {
+          "count": 1,
+          "name": "doom metal"
+        },
+        {
+          "count": 1,
+          "name": "sludge metal"
+        }
+      ]
+    },
+    {
+      "id": "e1685516-7f60-44d7-904a-5ae62228c943",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Runecaller",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Runecaller",
+          "artist": {
+            "id": "6d23f13c-2314-4304-ab45-7c02503195e9",
+            "name": "Runecaller",
+            "sort-name": "Runecaller"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "8dccc4da-0aaf-4fd3-a4ec-02cc143f37f4",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Runecaller",
+        "primary-type": "Album"
+      },
+      "date": "2022-04-14",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2022-04-14",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "label": {
+            "id": "157afde4-4bf5-4039-8ad2-5a15acc85176",
+            "name": "[no label]"
+          }
+        }
+      ],
+      "track-count": 5,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 5
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "progressive metal"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "black metal"
+        },
+        {
+          "count": 1,
+          "name": "doom metal"
+        },
+        {
+          "count": 1,
+          "name": "stoner metal"
+        },
+        {
+          "count": 1,
+          "name": "sludge metal"
+        }
+      ]
+    },
+    {
+      "id": "365dc870-8b7c-43a7-af6e-7793a8f7bd8c",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Bereft",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Hands of Despair",
+          "artist": {
+            "id": "31658a0b-3ebc-4e06-ad6c-c349b32507f9",
+            "name": "Hands of Despair",
+            "sort-name": "Hands of Despair",
+            "disambiguation": "Canadian progressive death/black metal"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "3388ab1a-5192-4274-aaa9-3a1f6f110ed6",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Bereft",
+        "primary-type": "Album"
+      },
+      "date": "2016-02-09",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2016-02-09",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "barcode": "820103524261",
+      "label-info": [
+        {
+          "catalog-number": "[none]",
+          "label": {
+            "id": "0c3a09ff-5617-4e61-80ba-40bb4e44cd15",
+            "name": "Deathbound Records"
+          }
+        }
+      ],
+      "track-count": 7,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 7
+        }
+      ],
+      "tags": [
+        {
+          "count": 0,
+          "name": "metal"
+        },
+        {
+          "count": 2,
+          "name": "death metal"
+        },
+        {
+          "count": 2,
+          "name": "black metal"
+        },
+        {
+          "count": 0,
+          "name": "doom metal"
+        },
+        {
+          "count": 0,
+          "name": "stoner metal"
+        },
+        {
+          "count": 0,
+          "name": "sludge metal"
+        }
+      ]
+    },
+    {
+      "id": "a4f8cabb-e520-496b-a79f-98d882597c61",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Abomination of the Flames",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Beyond Mortal Dreams",
+          "artist": {
+            "id": "04aa68b0-60f0-4002-ac3e-9c824b594e32",
+            "name": "Beyond Mortal Dreams",
+            "sort-name": "Beyond Mortal Dreams",
+            "disambiguation": "Australian Death Metal"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "6f59a0ec-6167-4423-9fd9-2f3532c13983",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Abomination of the Flames",
+        "primary-type": "Album"
+      },
+      "date": "2022-04-15",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2022-04-15",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "label": {
+            "id": "2d22a4f8-6241-416b-98a3-a71e13d4be8f",
+            "name": "Lavadome"
+          }
+        }
+      ],
+      "track-count": 7,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 7
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "heavy metal"
+        },
+        {
+          "count": 1,
+          "name": "progressive metal"
+        },
+        {
+          "count": 1,
+          "name": "thrash metal"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "death metal"
+        },
+        {
+          "count": 1,
+          "name": "black metal"
+        }
+      ]
+    },
+    {
+      "id": "39448eab-f1fa-4d04-b31a-496699170d44",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "On the Verge of Dysfunction",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Speedwhore",
+          "artist": {
+            "id": "6380759d-9281-40f4-80b4-a20741dacad6",
+            "name": "Speedwhore",
+            "sort-name": "Speedwhore",
+            "disambiguation": "German black/thrash metal"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "8555bb0f-98d1-4111-8c3e-ffcf07d58392",
+        "type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "primary-type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "title": "On The Verge Of Dysfunction",
+        "primary-type": "EP"
+      },
+      "date": "2016-10-28",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2016-10-28",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "track-count": 7,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 7
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "thrash metal"
+        },
+        {
+          "count": 1,
+          "name": "death metal"
+        },
+        {
+          "count": 1,
+          "name": "black metal"
+        },
+        {
+          "count": 1,
+          "name": "speed metal"
+        },
+        {
+          "count": 1,
+          "name": "heavy metal"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        }
+      ]
+    },
+    {
+      "id": "1dcb755f-bb19-4b87-8115-a772400c958c",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Dimensions of Hades",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Draugr",
+          "artist": {
+            "id": "5991206e-8397-404e-a70c-7f62625efa6e",
+            "name": "Draugr",
+            "sort-name": "Draugr",
+            "disambiguation": "Finnish black metal"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "c7f71f3f-b704-4ef0-86b3-f811e87976bd",
+        "type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "primary-type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "title": "Dimensions of Hades",
+        "primary-type": "EP",
+        "secondary-types": [
+          "Demo"
+        ],
+        "secondary-type-ids": [
+          "81598169-0d6c-3bce-b4be-866fa658eda3"
+        ]
+      },
+      "date": "2017-12-23",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2017-12-23",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "label": {
+            "id": "567decb7-cfac-433a-8d80-1ce379342b44",
+            "name": "Iron Bonehead Productions"
+          }
+        }
+      ],
+      "track-count": 6,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 6
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "heavy metal"
+        },
+        {
+          "count": 1,
+          "name": "thrash metal"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "death metal"
+        },
+        {
+          "count": 1,
+          "name": "black metal"
+        },
+        {
+          "count": 1,
+          "name": "doom metal"
+        }
+      ]
+    },
+    {
+      "id": "0808b676-de46-4560-a9b7-6b0229058913",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Upon Judas' Throne",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Whore of Bethlehem",
+          "artist": {
+            "id": "99013efe-0142-42ac-87c8-3dded394c702",
+            "name": "Whore of Bethlehem",
+            "sort-name": "Whore of Bethlehem",
+            "disambiguation": "Texas Death Metal"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "a460ca23-0feb-4ea5-b45f-b4d72190467f",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Upon Judas' Throne",
+        "primary-type": "Album"
+      },
+      "date": "2014-05-13",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2014-05-13",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "label": {
+            "id": "157afde4-4bf5-4039-8ad2-5a15acc85176",
+            "name": "[no label]"
+          }
+        }
+      ],
+      "track-count": 10,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 10
+        }
+      ],
+      "tags": [
+        {
+          "count": 2,
+          "name": "metal"
+        },
+        {
+          "count": 2,
+          "name": "death metal"
+        },
+        {
+          "count": 1,
+          "name": "extreme metal"
+        },
+        {
+          "count": 2,
+          "name": "black metal"
+        },
+        {
+          "count": 2,
+          "name": "heavy metal"
+        },
+        {
+          "count": 2,
+          "name": "thrash metal"
+        }
+      ]
+    },
+    {
+      "id": "3ed46b64-b3d8-41ed-a3d2-720136cf1b1d",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "count": 1,
+      "title": "For Darkest Eyes (live in Krakow)",
+      "status": "Official",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "My Dying Bride",
+          "artist": {
+            "id": "2f04ad1f-9f97-41d0-a09c-59c40dfe9cd1",
+            "name": "My Dying Bride",
+            "sort-name": "My Dying Bride"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "0821b148-845f-3ec3-bbd4-d1e44499ea30",
+        "type-id": "6fd474e2-6b58-3102-9d17-d6f7eb7da0a0",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "For Darkest Eyes",
+        "primary-type": "Album",
+        "secondary-types": [
+          "Live"
+        ],
+        "secondary-type-ids": [
+          "6fd474e2-6b58-3102-9d17-d6f7eb7da0a0"
+        ]
+      },
+      "label-info": [
+        {
+          "label": {
+            "id": "93380db4-fe15-49dd-9f99-d5aeebab1bcc",
+            "name": "Peaceville Records"
+          }
+        }
+      ],
+      "track-count": 10,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 10
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "death metal"
+        },
+        {
+          "count": 1,
+          "name": "black metal"
+        },
+        {
+          "count": 1,
+          "name": "progressive metal"
+        },
+        {
+          "count": 1,
+          "name": "doom metal"
+        },
+        {
+          "count": 1,
+          "name": "heavy metal"
+        }
+      ]
+    },
+    {
+      "id": "71dfe02c-4489-467e-b370-6b0994fb0825",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Resisting Another Equation",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Ec{c}entric Pendulum",
+          "artist": {
+            "id": "6b576fb5-d17a-49e1-8348-f4af0d307e69",
+            "name": "Eccentric Pendulum",
+            "sort-name": "Eccentric Pendulum"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "19da8688-7d2a-4eda-b340-7de38706d4bd",
+        "type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+        "primary-type-id": "d6038452-8ee0-3f68-affc-2de9a1ede0b9",
+        "title": "Resisting Another Equation",
+        "primary-type": "Single"
+      },
+      "date": "2015-12-25",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2015-12-25",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "track-count": 1,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 1
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "groove metal"
+        },
+        {
+          "count": 1,
+          "name": "progressive metal"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "heavy metal"
+        },
+        {
+          "count": 1,
+          "name": "death metal"
+        },
+        {
+          "count": 1,
+          "name": "thrash metal"
+        }
+      ]
+    },
+    {
+      "id": "dc92ea8e-d932-4c84-85ac-fd25c0e83c5f",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Death Return",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Apostasy",
+          "artist": {
+            "id": "9b9b1c72-add6-4f70-b63b-ade36c3a62e5",
+            "name": "Apostasy",
+            "sort-name": "Apostasy",
+            "disambiguation": "Chile"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "c045d9f4-7ddf-46db-b612-0fdba00255d4",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Death Return",
+        "primary-type": "Album"
+      },
+      "date": "2021-05-14",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2021-05-14",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "label": {
+            "id": "a020d440-419c-4298-a0fe-9f8a81c2fba6",
+            "name": "Fallen Temple"
+          }
+        }
+      ],
+      "track-count": 7,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 7
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "doom metal"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "thrash metal"
+        },
+        {
+          "count": 1,
+          "name": "black metal"
+        },
+        {
+          "count": 1,
+          "name": "death metal"
+        },
+        {
+          "count": 1,
+          "name": "speed metal"
+        }
+      ]
+    },
+    {
+      "id": "7497a933-151d-4553-af3c-ab4b0ba0a2dc",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "As the Flower Withers",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "My Dying Bride",
+          "artist": {
+            "id": "2f04ad1f-9f97-41d0-a09c-59c40dfe9cd1",
+            "name": "My Dying Bride",
+            "sort-name": "My Dying Bride"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "93267b44-6f6e-3a5d-939b-21c11b737af6",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "As the Flower Withers",
+        "primary-type": "Album"
+      },
+      "date": "2021-01-20",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2021-01-20",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "barcode": "801056703224",
+      "label-info": [
+        {
+          "label": {
+            "id": "8d4c9b9a-05cb-4eec-a354-62638559b717",
+            "name": "Peaceville"
+          }
+        }
+      ],
+      "track-count": 8,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 8
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "black metal"
+        },
+        {
+          "count": 1,
+          "name": "heavy metal"
+        },
+        {
+          "count": 1,
+          "name": "progressive metal"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "death metal"
+        },
+        {
+          "count": 1,
+          "name": "doom metal"
+        }
+      ]
+    },
+    {
+      "id": "0dbedac6-fa16-41cb-afb1-7ffc4291c7fb",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Songs of Darkness, Words of Light",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "My Dying Bride",
+          "artist": {
+            "id": "2f04ad1f-9f97-41d0-a09c-59c40dfe9cd1",
+            "name": "My Dying Bride",
+            "sort-name": "My Dying Bride"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "7100a810-0736-38b0-926f-33a7c2af8c91",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Songs of Darkness, Words of Light",
+        "primary-type": "Album"
+      },
+      "date": "2021-01-20",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2021-01-20",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "barcode": "801056811028",
+      "label-info": [
+        {
+          "label": {
+            "id": "8d4c9b9a-05cb-4eec-a354-62638559b717",
+            "name": "Peaceville"
+          }
+        }
+      ],
+      "track-count": 8,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 8
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "doom metal"
+        },
+        {
+          "count": 1,
+          "name": "black metal"
+        },
+        {
+          "count": 1,
+          "name": "heavy metal"
+        },
+        {
+          "count": 1,
+          "name": "progressive metal"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "death metal"
+        }
+      ]
+    },
+    {
+      "id": "75138ad6-0158-4bf5-b52d-43ab8c5a45fd",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "?????????",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "ell"
+      },
+      "artist-credit": [
+        {
+          "name": "Kawir",
+          "artist": {
+            "id": "bbd2c220-221e-4d3e-8475-9109a85579f4",
+            "name": "Kawir",
+            "sort-name": "Kawir"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "88ee7172-0c60-4f85-8f49-f2efd0da9d7f",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "?????????",
+        "primary-type": "Album"
+      },
+      "date": "2017-10-08",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2017-10-08",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "label-info": [
+        {
+          "label": {
+            "id": "567decb7-cfac-433a-8d80-1ce379342b44",
+            "name": "Iron Bonehead Productions"
+          }
+        }
+      ],
+      "track-count": 6,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 6
+        }
+      ],
+      "tags": [
+        {
+          "count": 0,
+          "name": "doom metal"
+        },
+        {
+          "count": 0,
+          "name": "heavy metal"
+        },
+        {
+          "count": 0,
+          "name": "thrash metal"
+        },
+        {
+          "count": 0,
+          "name": "metal"
+        },
+        {
+          "count": 0,
+          "name": "death metal"
+        },
+        {
+          "count": 2,
+          "name": "black metal"
+        }
+      ]
+    },
+    {
+      "id": "ef1276af-26a9-4244-85a0-1ffd7f15c6ae",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Vassafor / Sinistrous Diabolus",
+      "status": "Official",
+      "disambiguation": "Bandcamp release",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "joinphrase": " / ",
+          "name": "Vassafor",
+          "artist": {
+            "id": "2e159359-6c37-4a07-a27f-4216d91b39ff",
+            "name": "Vassafor",
+            "sort-name": "Vassafor",
+            "disambiguation": "New Zealand black metal"
+          }
+        },
+        {
+          "name": "Sinistrous Diabolus",
+          "artist": {
+            "id": "a1df3d4f-4d3b-4d99-b63f-130ec082e862",
+            "name": "Sinistrous Diabolus",
+            "sort-name": "Sinistrous Diabolus",
+            "disambiguation": "New Zealand death/doom metal"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "e7a7c376-5b10-4872-85c8-86197d870a0e",
+        "type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "primary-type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "title": "Vassafor / Sinistrous Diabolus",
+        "primary-type": "EP"
+      },
+      "date": "2014-05-08",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2014-05-08",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "barcode": "",
+      "label-info": [
+        {
+          "label": {
+            "id": "567decb7-cfac-433a-8d80-1ce379342b44",
+            "name": "Iron Bonehead Productions"
+          }
+        }
+      ],
+      "track-count": 3,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 3
+        }
+      ],
+      "tags": [
+        {
+          "count": 0,
+          "name": "heavy metal"
+        },
+        {
+          "count": 1,
+          "name": "thrash metal"
+        },
+        {
+          "count": 0,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "death metal"
+        },
+        {
+          "count": 2,
+          "name": "black metal"
+        },
+        {
+          "count": 0,
+          "name": "doom metal"
+        }
+      ]
+    },
+    {
+      "id": "b17277f9-8ec8-4f9d-8d2c-46d2392f5616",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "For Lies I Sire",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "My Dying Bride",
+          "artist": {
+            "id": "2f04ad1f-9f97-41d0-a09c-59c40dfe9cd1",
+            "name": "My Dying Bride",
+            "sort-name": "My Dying Bride"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "f059c64d-6a93-3dfc-bbd8-368f7f3d985d",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "For Lies I Sire",
+        "primary-type": "Album"
+      },
+      "date": "2021-01-21",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2021-01-21",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "barcode": "801056824523",
+      "label-info": [
+        {
+          "label": {
+            "id": "8d4c9b9a-05cb-4eec-a354-62638559b717",
+            "name": "Peaceville"
+          }
+        }
+      ],
+      "track-count": 9,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 9
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "heavy metal"
+        },
+        {
+          "count": 1,
+          "name": "progressive metal"
+        },
+        {
+          "count": 1,
+          "name": "doom metal"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "death metal"
+        },
+        {
+          "count": 1,
+          "name": "black metal"
+        }
+      ]
+    },
+    {
+      "id": "eceff13f-4017-441d-8f1d-8a97b4110617",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Soundtrack Of A Future Motion Picture",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "FLYSH",
+          "artist": {
+            "id": "d13f6dec-6c7b-461d-bc44-0f8baad72e72",
+            "name": "FLYSH",
+            "sort-name": "FLYSH"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "84c4c840-ff17-498e-85bc-00fcfd7b970c",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "Soundtrack Of A Future Motion Picture",
+        "primary-type": "Album"
+      },
+      "date": "2021-04-30",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2021-04-30",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "barcode": "196052394638",
+      "track-count": 10,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 10
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "industrial metal"
+        },
+        {
+          "count": 1,
+          "name": "death metal"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "post-metal"
+        },
+        {
+          "count": 1,
+          "name": "alternative metal"
+        },
+        {
+          "count": 1,
+          "name": "nu metal"
+        }
+      ]
+    },
+    {
+      "id": "fa007ba4-d20d-417d-9d2d-3267a1ffedbc",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "Gods of Pandemonium",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "joinphrase": " / ",
+          "name": "Volahn",
+          "artist": {
+            "id": "9251a7de-f353-4cef-8a99-5d6654feafb3",
+            "name": "Volahn",
+            "sort-name": "Volahn",
+            "disambiguation": "United States black metal"
+          }
+        },
+        {
+          "name": "Xaxamatza",
+          "artist": {
+            "id": "5544a0e3-9515-4ad2-a9d7-236f9726490e",
+            "name": "Xaxamatza",
+            "sort-name": "Xaxamatza"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "75f00cc7-7897-4342-89f1-4f5ff6b8365a",
+        "type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "primary-type-id": "6d0c5bf6-7a33-3420-a519-44fc63eedebf",
+        "title": "Gods of Pandemonium",
+        "primary-type": "EP"
+      },
+      "date": "2017-12-23",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2017-12-23",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "track-count": 2,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 2
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "death metal"
+        },
+        {
+          "count": 1,
+          "name": "heavy metal"
+        },
+        {
+          "count": 1,
+          "name": "thrash metal"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        },
+        {
+          "count": 1,
+          "name": "black metal"
+        },
+        {
+          "count": 1,
+          "name": "doom metal"
+        }
+      ]
+    },
+    {
+      "id": "b4ab181e-ad7e-4eb2-8705-eb7fc8de57bc",
+      "score": 99,
+      "status-id": "4e304316-386d-3409-af2e-78857eec5cfe",
+      "packaging-id": "119eba76-b343-3e02-a292-f0f00644bb9b",
+      "count": 1,
+      "title": "The Ancient Ritual of Death",
+      "status": "Official",
+      "packaging": "None",
+      "text-representation": {
+        "language": "eng",
+        "script": "Latn"
+      },
+      "artist-credit": [
+        {
+          "name": "Beast of Revelation",
+          "artist": {
+            "id": "6f9f0b36-7ca3-4ff7-9bf9-c34835e6c895",
+            "name": "Beast of Revelation",
+            "sort-name": "Beast of Revelation"
+          }
+        }
+      ],
+      "release-group": {
+        "id": "285cdedc-864b-4a47-a3aa-3a1ff02b6fd7",
+        "type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "primary-type-id": "f529b476-6e62-324f-b0aa-1f3e33d313fc",
+        "title": "The Ancient Ritual of Death",
+        "primary-type": "Album"
+      },
+      "date": "2020-03-06",
+      "country": "XW",
+      "release-events": [
+        {
+          "date": "2020-03-06",
+          "area": {
+            "id": "525d4e18-3d00-31b9-a58b-a146a916de8f",
+            "name": "[Worldwide]",
+            "sort-name": "[Worldwide]",
+            "iso-3166-1-codes": [
+              "XW"
+            ]
+          }
+        }
+      ],
+      "barcode": "195079243943",
+      "label-info": [
+        {
+          "label": {
+            "id": "567decb7-cfac-433a-8d80-1ce379342b44",
+            "name": "Iron Bonehead Productions"
+          }
+        }
+      ],
+      "track-count": 9,
+      "media": [
+        {
+          "format": "Digital Media",
+          "disc-count": 0,
+          "track-count": 9
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "death metal"
+        },
+        {
+          "count": 1,
+          "name": "doom metal"
+        },
+        {
+          "count": 1,
+          "name": "black metal"
+        },
+        {
+          "count": 1,
+          "name": "heavy metal"
+        },
+        {
+          "count": 1,
+          "name": "thrash metal"
+        },
+        {
+          "count": 1,
+          "name": "metal"
+        }
+      ]
+    }
+  ]
+}

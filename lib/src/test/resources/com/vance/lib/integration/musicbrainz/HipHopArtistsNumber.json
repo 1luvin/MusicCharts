@@ -1,0 +1,2502 @@
+{
+  "created": "2023-05-19T12:43:19.286Z",
+  "count": 2481,
+  "offset": 0,
+  "artists": [
+    {
+      "id": "bf2e15d0-4b77-469e-bfb4-f8414415baca",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 100,
+      "name": "Public Enemy",
+      "sort-name": "Public Enemy",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "3d1aad97-ab44-4494-a0d5-2a2a66ffdc0b",
+        "type": "County",
+        "type-id": "bcecec27-8bdb-3e00-8254-d948dda502fa",
+        "name": "Nassau County",
+        "sort-name": "Nassau County",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "US rap group",
+      "isnis": [
+        "0000000123699764"
+      ],
+      "life-span": {
+        "begin": "1985",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Public Enemy",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Public Enemy",
+          "locale": null,
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "hardcore hip hop"
+        },
+        {
+          "count": 6,
+          "name": "hip hop"
+        },
+        {
+          "count": 1,
+          "name": "east coast hip hop"
+        },
+        {
+          "count": 0,
+          "name": "political hip hop"
+        },
+        {
+          "count": 0,
+          "name": "rap"
+        },
+        {
+          "count": -1,
+          "name": "hiphop"
+        },
+        {
+          "count": -1,
+          "name": "hip-hop"
+        },
+        {
+          "count": -1,
+          "name": "hip hop rnb and dance hall"
+        },
+        {
+          "count": 0,
+          "name": "us"
+        },
+        {
+          "count": 1,
+          "name": "conscious hip hop"
+        }
+      ]
+    },
+    {
+      "id": "a8ebde98-7e91-46c7-992c-90039ba42017",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 96,
+      "name": "De La Soul",
+      "sort-name": "De La Soul",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "75e398a3-5f3f-4224-9cd8-0fe44715bc95",
+        "type": "Subdivision",
+        "type-id": "fd3d44c5-80a1-3842-9745-2c4972d35afa",
+        "name": "New York",
+        "sort-name": "New York",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000121119957"
+      ],
+      "life-span": {
+        "begin": "1987",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Dela Soul",
+          "name": "Dela Soul",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Delasoul",
+          "name": "Delasoul",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 0,
+          "name": "american"
+        },
+        {
+          "count": 0,
+          "name": "hip-hop"
+        },
+        {
+          "count": 8,
+          "name": "hip hop"
+        },
+        {
+          "count": 1,
+          "name": "turntablism"
+        },
+        {
+          "count": 0,
+          "name": "hip hop rnb and dance hall"
+        },
+        {
+          "count": 1,
+          "name": "abstract hip hop"
+        },
+        {
+          "count": 1,
+          "name": "boom bap"
+        },
+        {
+          "count": 2,
+          "name": "jazz rap"
+        },
+        {
+          "count": 1,
+          "name": "conscious hip hop"
+        },
+        {
+          "count": 1,
+          "name": "east coast hip hop"
+        }
+      ]
+    },
+    {
+      "id": "9beb62b2-88db-4cea-801e-162cd344ee53",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 96,
+      "name": "Beastie Boys",
+      "sort-name": "Beastie Boys",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "74e50e58-5deb-4b99-93a2-decbb365c07f",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "New York",
+        "sort-name": "New York",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000109430830"
+      ],
+      "life-span": {
+        "begin": "1979",
+        "end": "2014",
+        "ended": true
+      },
+      "aliases": [
+        {
+          "sort-name": "Beastie Boys-11",
+          "name": "Beastie Boys-11",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "The Beasty Boys",
+          "name": "The Beasty Boys",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Beasty Boys",
+          "name": "Beasty Boys",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Beastie Boys, The",
+          "name": "Beastie Boys, The",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Beastie Boys-01",
+          "name": "Beastie Boys-01",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "The Beastie Boys",
+          "name": "The Beastie Boys",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Beastie Boys - Sabotage",
+          "name": "Beastie Boys - Sabotage",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "rock"
+        },
+        {
+          "count": 1,
+          "name": "alternative rock"
+        },
+        {
+          "count": 1,
+          "name": "rap"
+        },
+        {
+          "count": 1,
+          "name": "punk"
+        },
+        {
+          "count": 0,
+          "name": "american"
+        },
+        {
+          "count": 0,
+          "name": "hip-hop"
+        },
+        {
+          "count": 1,
+          "name": "electro"
+        },
+        {
+          "count": 12,
+          "name": "hip hop"
+        },
+        {
+          "count": 0,
+          "name": "usa"
+        },
+        {
+          "count": 1,
+          "name": "funk"
+        },
+        {
+          "count": 0,
+          "name": "hiphop"
+        },
+        {
+          "count": 1,
+          "name": "hardcore punk"
+        },
+        {
+          "count": 0,
+          "name": "am�ricain"
+        },
+        {
+          "count": 0,
+          "name": "alternative hip-hop"
+        },
+        {
+          "count": 0,
+          "name": "ny"
+        },
+        {
+          "count": 6,
+          "name": "rap rock"
+        },
+        {
+          "count": 0,
+          "name": "us"
+        },
+        {
+          "count": 0,
+          "name": "rock and indie"
+        },
+        {
+          "count": 1,
+          "name": "alternative hip hop"
+        },
+        {
+          "count": 0,
+          "name": "prank calls"
+        },
+        {
+          "count": 3,
+          "name": "east coast hip hop"
+        },
+        {
+          "count": 0,
+          "name": "new york hardcore"
+        }
+      ]
+    },
+    {
+      "id": "9689aa5a-4471-4fb4-9721-07cecda0fa9f",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 96,
+      "name": "A Tribe Called Quest",
+      "sort-name": "Tribe Called Quest, A",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "fd6f9906-6264-46e9-b70b-71431d3619bf",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "St. Albans",
+        "sort-name": "St. Albans",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000098920585"
+      ],
+      "life-span": {
+        "begin": "1985",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "A Tribe Calle Quest",
+          "name": "A Tribe Calle Quest",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Tribe Called Quest",
+          "name": "Tribe Called Quest",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "ATCQ",
+          "name": "ATCQ",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 0,
+          "name": "american"
+        },
+        {
+          "count": 0,
+          "name": "hip-hop"
+        },
+        {
+          "count": 11,
+          "name": "hip hop"
+        },
+        {
+          "count": 0,
+          "name": "alternative hip-hop"
+        },
+        {
+          "count": 0,
+          "name": "progressive hip-hop"
+        },
+        {
+          "count": 0,
+          "name": "hip hop rnb and dance hall"
+        },
+        {
+          "count": 2,
+          "name": "alternative hip hop"
+        },
+        {
+          "count": 2,
+          "name": "jazz rap"
+        },
+        {
+          "count": 1,
+          "name": "east coast hip hop"
+        }
+      ]
+    },
+    {
+      "id": "5ecc3f72-20a6-47a0-8dc5-fb0b3dadeea0",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 95,
+      "name": "Run?D.M.C.",
+      "sort-name": "Run?D.M.C.",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "898f4b4a-937c-4a34-834d-a8fb4b368034",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Hollis",
+        "sort-name": "Hollis",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000121576947"
+      ],
+      "life-span": {
+        "begin": "1982",
+        "end": "2002-10-30",
+        "ended": true
+      },
+      "aliases": [
+        {
+          "sort-name": "Run D.M.C.",
+          "name": "Run D.M.C.",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Run Dmc",
+          "name": "Run Dmc",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Run-DMC",
+          "name": "Run-DMC",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 0,
+          "name": "hardcore hip hop"
+        },
+        {
+          "count": 0,
+          "name": "rap"
+        },
+        {
+          "count": 0,
+          "name": "hip-hop"
+        },
+        {
+          "count": 0,
+          "name": "hip house"
+        },
+        {
+          "count": 0,
+          "name": "usa"
+        },
+        {
+          "count": 0,
+          "name": "boom bap"
+        },
+        {
+          "count": 5,
+          "name": "hip hop"
+        },
+        {
+          "count": 0,
+          "name": "rap rock"
+        },
+        {
+          "count": 0,
+          "name": "rock and indie"
+        },
+        {
+          "count": 4,
+          "name": "east coast hip hop"
+        }
+      ]
+    },
+    {
+      "id": "73fdb566-a9b1-494c-9f32-51768ec9fd27",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 95,
+      "name": "OutKast",
+      "sort-name": "OutKast",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "69846b91-e293-472d-acbf-e72ce3b60b48",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "East Point",
+        "sort-name": "East Point",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "000000011537277X"
+      ],
+      "life-span": {
+        "begin": "1991",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Outcast.",
+          "name": "Outcast.",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "(Outkast)",
+          "name": "(Outkast)",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 2,
+          "name": "pop"
+        },
+        {
+          "count": 0,
+          "name": "american"
+        },
+        {
+          "count": 0,
+          "name": "hip-hop"
+        },
+        {
+          "count": -1,
+          "name": "experimental"
+        },
+        {
+          "count": 9,
+          "name": "hip hop"
+        },
+        {
+          "count": 1,
+          "name": "funk"
+        },
+        {
+          "count": 1,
+          "name": "neo-soul"
+        },
+        {
+          "count": 5,
+          "name": "southern hip hop"
+        },
+        {
+          "count": 3,
+          "name": "pop rap"
+        },
+        {
+          "count": 0,
+          "name": "alternative hip-hop"
+        },
+        {
+          "count": 0,
+          "name": "southern hip-hop"
+        },
+        {
+          "count": 1,
+          "name": "dirty south"
+        },
+        {
+          "count": -1,
+          "name": "hip hop rnb and dance hall"
+        },
+        {
+          "count": 1,
+          "name": "contemporary r&b"
+        },
+        {
+          "count": 1,
+          "name": "conscious hip hop"
+        },
+        {
+          "count": 1,
+          "name": "atlanta hip hop"
+        }
+      ]
+    },
+    {
+      "id": "0febdcf7-4e1f-4661-9493-b40427de2c13",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 93,
+      "name": "Wu?Tang Clan",
+      "sort-name": "Wu?Tang Clan",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "a8c1d0e2-0837-454c-afa9-4190b3fe4d92",
+        "type": "District",
+        "type-id": "84039871-5e47-38ca-a66a-45e512c8290f",
+        "name": "Staten Island",
+        "sort-name": "Staten Island",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000121612813"
+      ],
+      "life-span": {
+        "begin": "1992",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "WuTang Clan",
+          "name": "WuTang Clan",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Wu Tang Clan",
+          "name": "Wu Tang Clan",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "The Wu-Tang Clan",
+          "name": "The Wu-Tang Clan",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Wu Tang",
+          "name": "Wu Tang",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Wu-Tang",
+          "name": "Wu-Tang",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 0,
+          "name": "rap"
+        },
+        {
+          "count": 0,
+          "name": "hip-hop"
+        },
+        {
+          "count": 9,
+          "name": "hip hop"
+        },
+        {
+          "count": 0,
+          "name": "usa"
+        },
+        {
+          "count": 0,
+          "name": "new york"
+        },
+        {
+          "count": 0,
+          "name": "hiphop"
+        },
+        {
+          "count": 0,
+          "name": "gangsta rap"
+        },
+        {
+          "count": 0,
+          "name": "wu-tang"
+        },
+        {
+          "count": 0,
+          "name": "us"
+        },
+        {
+          "count": -2,
+          "name": "hip hop rnb and dance hall"
+        },
+        {
+          "count": 3,
+          "name": "boom bap"
+        },
+        {
+          "count": -1,
+          "name": "conscious hip hop"
+        },
+        {
+          "count": 2,
+          "name": "east coast hip hop"
+        },
+        {
+          "count": 3,
+          "name": "hardcore hip hop"
+        },
+        {
+          "count": 0,
+          "name": "instrumental hip hop"
+        }
+      ]
+    },
+    {
+      "id": "c0c1183e-6940-48ca-8f96-98250fcb3ef1",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 93,
+      "name": "Slum Village",
+      "sort-name": "Slum Village",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "b03ff310-d8e2-45cf-9455-769f76641eb2",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Detroit",
+        "sort-name": "Detroit",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000106622079"
+      ],
+      "life-span": {
+        "begin": "1996",
+        "ended": null
+      },
+      "tags": [
+        {
+          "count": 3,
+          "name": "hip hop"
+        }
+      ]
+    },
+    {
+      "id": "0221734a-35a8-40f7-b5c5-2f61a200bc7c",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 93,
+      "name": "Migos",
+      "sort-name": "Migos",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "4222b62f-c051-4813-8eae-77aaff46b7a1",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Lawrenceville",
+        "sort-name": "Lawrenceville",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000469017193"
+      ],
+      "life-span": {
+        "begin": "2008",
+        "ended": null
+      },
+      "tags": [
+        {
+          "count": 2,
+          "name": "hip hop"
+        }
+      ]
+    },
+    {
+      "id": "ef954679-5ee7-4016-acef-7ac71f2fa3d8",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 92,
+      "name": "Atmosphere",
+      "sort-name": "Atmosphere",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "3e80aaa7-9b71-450f-8147-0ecf101d8f1a",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Minneapolis",
+        "sort-name": "Minneapolis",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "Minneapolis hip hop duo Slug & Ant",
+      "life-span": {
+        "begin": "1994",
+        "ended": null
+      },
+      "tags": [
+        {
+          "count": 4,
+          "name": "hip hop"
+        },
+        {
+          "count": 0,
+          "name": "summer song"
+        }
+      ]
+    },
+    {
+      "id": "3dc00dcb-6106-43d1-b48d-21d236f53983",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 92,
+      "name": "People Under the Stairs",
+      "sort-name": "People Under the Stairs",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "1f40c6e1-47ba-4e35-996f-fe6ee5840e62",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Los Angeles",
+        "sort-name": "Los Angeles",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "life-span": {
+        "begin": "1997",
+        "end": "2019",
+        "ended": true
+      },
+      "aliases": [
+        {
+          "sort-name": "People Under the Stairs:",
+          "name": "People Under the Stairs:",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Puts",
+          "name": "Puts",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "P.U.T.S.",
+          "name": "P.U.T.S.",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 1,
+          "name": "underground hip hop"
+        },
+        {
+          "count": 1,
+          "name": "alternative hip hop"
+        },
+        {
+          "count": 0,
+          "name": "alternative hip-hop"
+        },
+        {
+          "count": 0,
+          "name": "american"
+        },
+        {
+          "count": 0,
+          "name": "hip-hop"
+        },
+        {
+          "count": 2,
+          "name": "hip hop"
+        }
+      ]
+    },
+    {
+      "id": "a80c5dc5-b12e-4667-9f5a-b568961f3839",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 92,
+      "name": "Run the Jewels",
+      "sort-name": "Run the Jewels",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "life-span": {
+        "begin": "2013",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Yankee and the Brave",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Yankee and the Brave",
+          "locale": null,
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "RTJ",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "RTJ",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 0,
+          "name": "hip-hop"
+        },
+        {
+          "count": 9,
+          "name": "hip hop"
+        },
+        {
+          "count": 2,
+          "name": "experimental hip hop"
+        },
+        {
+          "count": 1,
+          "name": "conscious hip hop"
+        },
+        {
+          "count": 3,
+          "name": "political hip hop"
+        },
+        {
+          "count": 3,
+          "name": "hardcore hip hop"
+        }
+      ]
+    },
+    {
+      "id": "2fa45bbb-0efb-4950-9d40-94bf23cbfec1",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 91,
+      "name": "Bone Thugs?n?Harmony",
+      "sort-name": "Bone Thugs?n?Harmony",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "7b2ca1e7-e7f6-4155-881d-c660a45c11e8",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Cleveland",
+        "sort-name": "Cleveland",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000122900913"
+      ],
+      "life-span": {
+        "begin": "1993",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "B.O.N.E. Thugs ?N? Harmony",
+          "name": "B.O.N.E. Thugs ?N? Harmony",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bones Thugg n Harmony",
+          "name": "Bones Thugg n Harmony",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bone, Thugs And Harmony",
+          "name": "Bone, Thugs And Harmony",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bone Thungs -N- Harmony",
+          "name": "Bone Thungs -N- Harmony",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bone thugs~n~harmony",
+          "name": "Bone thugs~n~harmony",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bone Thugs ~N~ Harmony",
+          "name": "Bone Thugs ~N~ Harmony",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bone Thugs-N-Harmony",
+          "name": "Bone Thugs-N-Harmony",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bone Thugs 'n Harmony",
+          "name": "Bone Thugs 'n Harmony",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bone, Thugs N Harmony",
+          "name": "Bone, Thugs N Harmony",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bone Thugs 'n' Harmony",
+          "name": "Bone Thugs 'n' Harmony",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bones Thugs-N-Harmony",
+          "name": "Bones Thugs-N-Harmony",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bone Thugs & Harmony",
+          "name": "Bone Thugs & Harmony",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bone Thugs'n Harmony",
+          "name": "Bone Thugs'n Harmony",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bone Thugs -n- Harmony",
+          "name": "Bone Thugs -n- Harmony",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bone Thugs N' Harmony",
+          "name": "Bone Thugs N' Harmony",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bone Thugs N Harmony",
+          "name": "Bone Thugs N Harmony",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bone Thugs - N - Harmony",
+          "name": "Bone Thugs - N - Harmony",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bone Thugs",
+          "name": "Bone Thugs",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bone Enterprisee",
+          "name": "Bone Enterprisee",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Bone Enterprise",
+          "name": "Bone Enterprise",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "B.O.N.E. Enterprise",
+          "name": "B.O.N.E. Enterprise",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "BONE Enterprise",
+          "name": "B.O.N.E. Enterpri$e",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 5,
+          "name": "hip hop"
+        },
+        {
+          "count": 1,
+          "name": "gangsta rap"
+        }
+      ]
+    },
+    {
+      "id": "733e7372-5400-4c79-9059-33e2b2262d01",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 91,
+      "name": "Fettes Brot",
+      "sort-name": "Fettes Brot",
+      "country": "DE",
+      "area": {
+        "id": "85752fda-13c4-31a3-bee5-0e5cb1f51dad",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "Germany",
+        "sort-name": "Germany",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "d01976cd-f990-4d95-926a-a2e336b53c36",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Schenefeld",
+        "sort-name": "Schenefeld",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000115327696"
+      ],
+      "life-span": {
+        "begin": "1992",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Fettesbrot",
+          "name": "Fettesbrot",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "D.O.C.H.!",
+          "name": "D.O.C.H.!",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 3,
+          "name": "german"
+        },
+        {
+          "count": 2,
+          "name": "hip hop"
+        }
+      ]
+    },
+    {
+      "id": "80b3cf5e-18fe-4c59-98c7-e5bb87210710",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 91,
+      "name": "The Roots",
+      "sort-name": "Roots, The",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "0eeb01c2-6e31-46ad-96b8-319749f731d2",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Philadelphia",
+        "sort-name": "Philadelphia",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "US hip hop group",
+      "life-span": {
+        "begin": "1987",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "?????",
+          "name": "?????",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "The Roots Featuring D'Angelo",
+          "name": "The Roots Featuring D'Angelo",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "The Roots ft. Cody Chesnu TT",
+          "name": "The Roots ft. Cody Chesnu TT",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Roots",
+          "name": "Roots",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 2,
+          "name": "rock"
+        },
+        {
+          "count": 3,
+          "name": "jazz"
+        },
+        {
+          "count": 0,
+          "name": "hip-hop"
+        },
+        {
+          "count": 8,
+          "name": "hip hop"
+        },
+        {
+          "count": 0,
+          "name": "band"
+        },
+        {
+          "count": 3,
+          "name": "soul"
+        },
+        {
+          "count": 0,
+          "name": "live"
+        },
+        {
+          "count": 0,
+          "name": "us"
+        },
+        {
+          "count": 0,
+          "name": "hip hop rnb and dance hall"
+        },
+        {
+          "count": 2,
+          "name": "alternative hip hop"
+        },
+        {
+          "count": 1,
+          "name": "jazz rap"
+        },
+        {
+          "count": 0,
+          "name": "conscious hip hop"
+        },
+        {
+          "count": 1,
+          "name": "east coast hip hop"
+        },
+        {
+          "count": 1,
+          "name": "2008 universal fire victim"
+        }
+      ]
+    },
+    {
+      "id": "51508c1f-8d07-4a00-9cf1-26c570fe7b78",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 91,
+      "name": "Cypress Hill",
+      "sort-name": "Cypress Hill",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "a18182c4-65a2-4f6b-87cb-6cd9573aec24",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "South Gate",
+        "sort-name": "South Gate",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000122482707"
+      ],
+      "life-span": {
+        "begin": "1988",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Cyprerss Hill",
+          "name": "Cyprerss Hill",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 2,
+          "name": "west coast hip hop"
+        },
+        {
+          "count": 1,
+          "name": "gangsta rap"
+        },
+        {
+          "count": 1,
+          "name": "rap rock"
+        },
+        {
+          "count": 1,
+          "name": "hardcore hip hop"
+        },
+        {
+          "count": 8,
+          "name": "hip hop"
+        },
+        {
+          "count": 0,
+          "name": "latin rap"
+        },
+        {
+          "count": 0,
+          "name": "hip-hop"
+        },
+        {
+          "count": 1,
+          "name": "chicano rap"
+        },
+        {
+          "count": 1,
+          "name": "alternative hip hop"
+        },
+        {
+          "count": 0,
+          "name": "rock and indie"
+        },
+        {
+          "count": 0,
+          "name": "american"
+        },
+        {
+          "count": 0,
+          "name": "rap metal"
+        },
+        {
+          "count": 1,
+          "name": "nu metal"
+        },
+        {
+          "count": 0,
+          "name": "hiphop"
+        },
+        {
+          "count": 0,
+          "name": "us"
+        },
+        {
+          "count": 0,
+          "name": "brostep"
+        },
+        {
+          "count": 1,
+          "name": "boom bap"
+        },
+        {
+          "count": 2,
+          "name": "rapcore"
+        }
+      ]
+    },
+    {
+      "id": "0135e5ec-4ffd-46e5-9c3c-566b3df46a8d",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 91,
+      "name": "Supr�me NTM",
+      "sort-name": "Supr�me NTM",
+      "country": "FR",
+      "area": {
+        "id": "08310658-51eb-3801-80de-5a0739207115",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "France",
+        "sort-name": "France",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "dc10c22b-e510-4006-8b7f-fecb4f36436e",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Paris",
+        "sort-name": "Paris",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000123699772"
+      ],
+      "life-span": {
+        "begin": "1989",
+        "end": "2001",
+        "ended": true
+      },
+      "aliases": [
+        {
+          "sort-name": "Nique Ta M�re",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Nique Ta M�re",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "N.T.M.",
+          "name": "N.T.M.",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Nique Ta Maman",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Nique Ta Maman",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Supreme NTM",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "Supreme NTM",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "NTM",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "NTM",
+          "locale": null,
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 3,
+          "name": "hip hop"
+        }
+      ]
+    },
+    {
+      "id": "4fa39dc8-c695-4e0e-ba04-92c63d99c9f9",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 90,
+      "name": "EPMD",
+      "sort-name": "EPMD",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "49b9bf5c-6c47-4b8e-a887-3ec67545dd84",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Brentwood",
+        "sort-name": "Brentwood",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "000000011229979X"
+      ],
+      "life-span": {
+        "begin": "1986",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "E.P.M.D.",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "E.P.M.D.",
+          "locale": null,
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "EPEE MD",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "EPEE MD",
+          "locale": null,
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "EPEEMD",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "EPEEMD",
+          "locale": null,
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "EPMD",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "EPMD",
+          "locale": null,
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Erick and Parrish Making Dollars",
+          "type-id": "894afba6-2816-3c24-8072-eadb66bd04bc",
+          "name": "Erick and Parrish Making Dollars",
+          "locale": null,
+          "type": "Artist name",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 5,
+          "name": "hip hop"
+        }
+      ]
+    },
+    {
+      "id": "ea321799-9b1d-4e74-a074-a5facf597d82",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 90,
+      "name": "Fugees",
+      "sort-name": "Fugees",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "54ae0634-e043-48d5-8218-c07b8b937d50",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "South Orange",
+        "sort-name": "South Orange",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000115160283"
+      ],
+      "life-span": {
+        "begin": "1992",
+        "end": "2006",
+        "ended": true
+      },
+      "aliases": [
+        {
+          "sort-name": "Fugees (Refugee Camp)",
+          "name": "Fugees (Refugee Camp)",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Fugees (Tranzlator Crew)",
+          "name": "Fugees (Tranzlator Crew)",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Wyclef Jean and the Fugees",
+          "name": "Wyclef Jean and the Fugees",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "The Fugees",
+          "name": "The Fugees",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "TheFugeesVEVO",
+          "type-id": "1937e404-b981-3cb7-8151-4c86ebfc8d8e",
+          "name": "TheFugeesVEVO",
+          "locale": null,
+          "type": "Search hint",
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 0,
+          "name": "american"
+        },
+        {
+          "count": 0,
+          "name": "hip-hop"
+        },
+        {
+          "count": 7,
+          "name": "hip hop"
+        },
+        {
+          "count": 1,
+          "name": "soul"
+        },
+        {
+          "count": 0,
+          "name": "rnb"
+        },
+        {
+          "count": 0,
+          "name": "alternative hip-hop"
+        },
+        {
+          "count": 0,
+          "name": "hip hop rnb and dance hall"
+        },
+        {
+          "count": 2,
+          "name": "alternative hip hop"
+        },
+        {
+          "count": 0,
+          "name": "pop soul"
+        },
+        {
+          "count": 0,
+          "name": "boom bap"
+        },
+        {
+          "count": 1,
+          "name": "contemporary r&b"
+        },
+        {
+          "count": 0,
+          "name": "conscious hip hop"
+        },
+        {
+          "count": 0,
+          "name": "east coast hip hop"
+        },
+        {
+          "count": 0,
+          "name": "hardcore hip hop"
+        }
+      ]
+    },
+    {
+      "id": "69c4cc43-8163-41c5-ac81-30946d27bb69",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 90,
+      "name": "CunninLynguists",
+      "sort-name": "CunninLynguists",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "Kentucky hip hop group",
+      "life-span": {
+        "begin": "2000-03",
+        "ended": null
+      },
+      "aliases": [
+        {
+          "sort-name": "Cunning Lynguists",
+          "name": "Cunning Lynguists",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Cunnin Lynguists",
+          "name": "Cunnin Lynguists",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "CunningLynguists",
+          "name": "CunningLynguists",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Cunninylynguists",
+          "name": "Cunninylynguists",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 0,
+          "name": "southern hip hop"
+        },
+        {
+          "count": 3,
+          "name": "hip hop"
+        },
+        {
+          "count": 0,
+          "name": "american"
+        },
+        {
+          "count": 0,
+          "name": "hip-hop"
+        },
+        {
+          "count": 0,
+          "name": "political hip hop"
+        },
+        {
+          "count": 0,
+          "name": "rap"
+        },
+        {
+          "count": 0,
+          "name": "conscious hip hop"
+        }
+      ]
+    },
+    {
+      "id": "92ee5562-3c1b-4e02-ac22-aae6261edac5",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 90,
+      "name": "Blackalicious",
+      "sort-name": "Blackalicious",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "21879fba-fe4e-4dbc-99e8-cad9142e5618",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Sacramento",
+        "sort-name": "Sacramento",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000115335952"
+      ],
+      "life-span": {
+        "begin": "1992",
+        "end": "2021",
+        "ended": true
+      },
+      "aliases": [
+        {
+          "sort-name": "Black Alicious",
+          "name": "Black Alicious",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 3,
+          "name": "hip hop"
+        },
+        {
+          "count": 1,
+          "name": "underground hip hop"
+        }
+      ]
+    },
+    {
+      "id": "ff7466a5-c538-4d2b-8450-54f11b20f2f4",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 90,
+      "name": "Boogie Down Productions",
+      "sort-name": "Boogie Down Productions",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "eb4a386e-1178-4e3a-a371-30418dd6fd2e",
+        "type": "District",
+        "type-id": "84039871-5e47-38ca-a66a-45e512c8290f",
+        "name": "The Bronx",
+        "sort-name": "The Bronx",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "isnis": [
+        "0000000109464619"
+      ],
+      "life-span": {
+        "begin": "1986",
+        "end": "1992",
+        "ended": true
+      },
+      "aliases": [
+        {
+          "sort-name": "B.D.P.",
+          "name": "B.D.P.",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "BDP",
+          "name": "BDP",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 0,
+          "name": "american"
+        },
+        {
+          "count": 0,
+          "name": "hip-hop"
+        },
+        {
+          "count": 5,
+          "name": "hip hop"
+        },
+        {
+          "count": 0,
+          "name": "east coast hip-hop"
+        },
+        {
+          "count": 0,
+          "name": "krs one"
+        }
+      ]
+    },
+    {
+      "id": "d75d1f08-bbb8-4eae-9877-399ca9121197",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 90,
+      "name": "Mobb Deep",
+      "sort-name": "Mobb Deep",
+      "area": {
+        "id": "675bbb61-a94a-4b54-9242-1fbf81a46ee6",
+        "type": "District",
+        "type-id": "84039871-5e47-38ca-a66a-45e512c8290f",
+        "name": "Queensbridge",
+        "sort-name": "Queensbridge",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "675bbb61-a94a-4b54-9242-1fbf81a46ee6",
+        "type": "District",
+        "type-id": "84039871-5e47-38ca-a66a-45e512c8290f",
+        "name": "Queensbridge",
+        "sort-name": "Queensbridge",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "QB hip hop duo Prodigy & Havoc",
+      "isnis": [
+        "0000000102992507"
+      ],
+      "life-span": {
+        "begin": "1993",
+        "end": "2017-06-20",
+        "ended": true
+      },
+      "aliases": [
+        {
+          "sort-name": "Mobb Deep Blend",
+          "name": "Mobb Deep Blend",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        },
+        {
+          "sort-name": "Moob Deep",
+          "name": "Moob Deep",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 3,
+          "name": "hip hop"
+        },
+        {
+          "count": 1,
+          "name": "boom bap"
+        },
+        {
+          "count": 2,
+          "name": "gangsta rap"
+        },
+        {
+          "count": 1,
+          "name": "new york"
+        },
+        {
+          "count": 1,
+          "name": "us"
+        },
+        {
+          "count": 2,
+          "name": "east coast hip hop"
+        },
+        {
+          "count": 0,
+          "name": "rap"
+        },
+        {
+          "count": 0,
+          "name": "hip-hop"
+        },
+        {
+          "count": 0,
+          "name": "hip hop rnb and dance hall"
+        }
+      ]
+    },
+    {
+      "id": "9ef8042a-2528-4f5c-b7c1-5e72b1efe170",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 89,
+      "name": "Gang Starr",
+      "sort-name": "Gang Starr",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "e331bfdf-b908-429c-a79b-710cf9c06abb",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Boston",
+        "sort-name": "Boston",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "end-area": {
+        "id": "e331bfdf-b908-429c-a79b-710cf9c06abb",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Boston",
+        "sort-name": "Boston",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "US hip hop duo, Guru & DJ Premier",
+      "isnis": [
+        "000000012364611X"
+      ],
+      "life-span": {
+        "begin": "1985",
+        "end": "2006",
+        "ended": true
+      },
+      "aliases": [
+        {
+          "sort-name": "Gangstarr",
+          "name": "Gangstarr",
+          "locale": null,
+          "type": null,
+          "primary": null,
+          "begin-date": null,
+          "end-date": null
+        }
+      ],
+      "tags": [
+        {
+          "count": 2,
+          "name": "boom bap"
+        },
+        {
+          "count": 4,
+          "name": "hip hop"
+        },
+        {
+          "count": 1,
+          "name": "east coast hip hop"
+        },
+        {
+          "count": -1,
+          "name": "hip hop rnb and dance hall"
+        }
+      ]
+    },
+    {
+      "id": "b929c0c9-5de0-4d87-8eb9-365ad1725629",
+      "type": "Group",
+      "type-id": "e431f5f6-b5d2-343d-8b36-72607fffb74b",
+      "score": 89,
+      "name": "Little Brother",
+      "sort-name": "Little Brother",
+      "country": "US",
+      "area": {
+        "id": "489ce91b-6658-3307-9877-795b68554c98",
+        "type": "Country",
+        "type-id": "06dd0ae4-8c74-30bb-b43d-95dcedf961de",
+        "name": "United States",
+        "sort-name": "United States",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "begin-area": {
+        "id": "ad641986-dad6-4f0a-bf90-2430ac5d0c86",
+        "type": "City",
+        "type-id": "6fd8f29a-3d0a-32fc-980d-ea697b69da78",
+        "name": "Durham",
+        "sort-name": "Durham",
+        "life-span": {
+          "ended": null
+        }
+      },
+      "disambiguation": "US hip hop group",
+      "life-span": {
+        "begin": "2003",
+        "end": "2010",
+        "ended": true
+      },
+      "tags": [
+        {
+          "count": 0,
+          "name": "hip-hop"
+        },
+        {
+          "count": 1,
+          "name": "underground hip-hop"
+        },
+        {
+          "count": 2,
+          "name": "hip hop"
+        },
+        {
+          "count": 0,
+          "name": "rap"
+        }
+      ]
+    }
+  ]
+}

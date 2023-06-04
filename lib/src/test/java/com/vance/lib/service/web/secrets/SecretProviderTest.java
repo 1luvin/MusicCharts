@@ -9,28 +9,14 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class SecretProviderTest {
 
-
     private static final RequestService requestService = mock(RequestService.class);
     private static final SecretProvider secretProvider = SecretProvider.getInstance(requestService);
 
-
-    @Test
-    void shouldReturnRightDiscogsToken() {
-        // given
-        final String expectedToken = "tFFpfMGVXnlmcvflRBArACvhVuVGkFhJmMWsDrnk";
-
-        // when
-        final String actualToken = secretProvider.getDiscogsToken();
-
-        // then
-        assertEquals(expectedToken, actualToken);
-    }
 
     @Test
     void shouldReturnRightLastFMToken() {
@@ -55,7 +41,7 @@ class SecretProviderTest {
         final String actualToken = secretProvider.getSpotifyToken();
 
         // then
-        verify(requestService).sendRequest(any(ClassicHttpRequest.class));
+        verify(requestService, times(1)).sendRequest(any(ClassicHttpRequest.class));
         assertEquals(expectedToken, actualToken);
     }
 }

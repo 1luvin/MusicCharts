@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Map;
 
@@ -26,7 +27,7 @@ public class MusicbrainzIntegrationTest {
     private final MusicbrainzIntegration musicbrainzIntegration = new MusicbrainzIntegration(requestService);
 
     @Test
-    void shouldGetNumberOfArtistsOfGenres() throws IOException {
+    void shouldGetNumberOfArtistsOfGenres() throws IOException, URISyntaxException {
         // given
         final String rock = "rock";
         final String hipHop = "hip-hop";
@@ -57,7 +58,7 @@ public class MusicbrainzIntegrationTest {
     }
 
     @Test
-    void shouldGetNumberOfReleasesOfGenres() throws IOException {
+    void shouldGetNumberOfReleasesOfGenres() throws IOException, URISyntaxException {
         // given
         final String rock = "rock";
         final String hipHop = "hip-hop";
@@ -107,7 +108,7 @@ public class MusicbrainzIntegrationTest {
         final Map<String, Long> actual3 = musicbrainzIntegration.getNumberOfReleasesOfGenreInYears(YEARS_10_TO_19, genre);
 
         // then
-        verify(requestService, times(1)).sendRequest(any(ClassicHttpRequest.class));
+        verify(requestService, times(30)).sendRequest(any(ClassicHttpRequest.class));
         assertEquals(expectedSize, actual1.size());
         assertEquals(expectedSize, actual2.size());
         assertEquals(expectedSize, actual3.size());
@@ -150,7 +151,7 @@ public class MusicbrainzIntegrationTest {
         assertThrows(IllegalArgumentException.class, () -> musicbrainzIntegration.getNumberOfArtistsOfGenres(badGenre));
     }
 
-    private String readFile(String fileName) throws IOException {
+    private String readFile(String fileName) throws IOException, URISyntaxException {
         return FileUtil.readFile(fileName, MusicbrainzIntegrationTest.class);
     }
 }

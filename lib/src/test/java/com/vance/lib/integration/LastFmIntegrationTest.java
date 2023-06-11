@@ -9,6 +9,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.Map;
 
 import static com.vance.lib.util.FileUtil.readFile;
@@ -28,7 +29,7 @@ public class LastFmIntegrationTest {
     private final LastFmIntegration lastFmIntegration = new LastFmIntegration(requestService, secretProvider);
 
     @Test
-    void shouldGetPopularityOfGenres() throws IOException {
+    void shouldGetPopularityOfGenres() throws IOException, URISyntaxException {
         // given
         final String testResponse = readFile("lastfm/PopularityOfGenres.json", LastFmIntegrationTest.class);
         final Map<String, Long> expected = parser.parsePopularityOfGenres(testResponse);

@@ -13,6 +13,7 @@ import java.util.function.Function;
 
 import static java.lang.Integer.parseInt;
 import static java.lang.String.format;
+import static java.util.Objects.requireNonNull;
 import static java.util.Optional.ofNullable;
 import static java.util.Spliterators.spliteratorUnknownSize;
 import static java.util.stream.Collectors.joining;
@@ -21,9 +22,8 @@ import static java.util.stream.StreamSupport.stream;
 
 public class SpotifyParser {
     private final Logger log = LoggerFactory.getLogger(SpotifyParser.class);
-
-    private final String ITEMS_ARRAY_NAME = "items";
-    private final String TRACKS_ARRAY_NAME = "tracks";
+    private final String ITEMS = "items";
+    private final String TRACKS = "tracks";
     private final ElementExtractor<JsonNode, String> ID_EXTRACTOR = node -> node.get("id").asText();
     private final ElementExtractor<JsonNode, Map.Entry<String, Long>> NAME_DURATION_EXTRACTOR =
             node -> Map.entry(node.get("name").asText(), node.get("duration_ms").asLong());
@@ -38,7 +38,7 @@ public class SpotifyParser {
         final int total = parsedSearch.get(searchType + "s").get("total").asInt();
         if (total == 0) throw new IllegalStateException(format("No %s to parse", searchType + "s"));
 
-        final JsonNode parsedItem = parsedSearch.get(searchType + "s").get(ITEMS_ARRAY_NAME).get(0);
+        final JsonNode parsedItem = parsedSearch.get(searchType + "s").get(ITEMS).get(0);
         if (!itemName.equals(parsedItem.get("name").asText()))
             throw new IllegalStateException(format("Cannot find expected %s %s, found: %s", searchType, itemName, parsedItem.get("name")));
 
@@ -48,7 +48,7 @@ public class SpotifyParser {
     }
 
     public String parseIdOfItems(@NotNull String items, SpotifySearchTypes type) throws JsonProcessingException {
-        final JsonNode parsedItems = readTree(items).get(type.name().toLowerCase() + "s").get(ITEMS_ARRAY_NAME);
+        final JsonNode parsedItems = readTree(items).get(type.name().toLowerCase() + "s").get(ITEMS);
 
         if (!parsedItems.isArray()) throw new RuntimeException("Cannot parse ids of " + type);
 
@@ -58,53 +58,47 @@ public class SpotifyParser {
                 .collect(joining(","));
     }
 
-    public Map<String, Long> parseDurationOfTracksFromAlbum(@NotNull String albumTracks) throws JsonProcessingException {
-        return stream(spliteratorUnknownSize(
-                parseJsonArray(albumTracks, ITEMS_ARRAY_NAME).iterator(), Spliterator.ORDERED), true)
+    public Map<String, Long> parseDurationOfTracksFromAlbum(@NotNull String tracks) throws JsonProcessingException {
+        return stream(spliteratorUnknownSize(parseJsonArray(tracks, ITEMS).iterator(), Spliterator.ORDERED), true)
                 .map(NAME_DURATION_EXTRACTOR)
                 .collect(toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
     public Map<String, Integer> parsePopularityOfAlbums(@NotNull String albums) throws JsonProcessingException {
-        Map<String, Integer> result = new HashMap<>();
+        final Map<String, Integer> result = new HashMap<>();
         stream(spliteratorUnknownSize(parseJsonArray(albums, "albums").iterator(), Spliterator.ORDERED), true)
                 .forEach(node -> result.put(node.get("name").asText(), node.get("popularity").asInt()));
         return result;
     }
 
     public Map<String, Integer> parsePopularityOfTracksOfArtist(@NotNull String tracks) throws JsonProcessingException {
-        return stream(spliteratorUnknownSize(
-                parseJsonArray(tracks, TRACKS_ARRAY_NAME).iterator(), Spliterator.ORDERED), true)
+        return stream(spliteratorUnknownSize(parseJsonArray(tracks, TRACKS).iterator(), Spliterator.ORDERED), true)
                 .map(NAME_POPULARITY_EXTRACTOR)
                 .collect(toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
     public Map<String, Integer> parsePopularityOfTracksFromAlbum(String tracks) throws JsonProcessingException {
-        return stream(spliteratorUnknownSize(
-                parseJsonArray(tracks, TRACKS_ARRAY_NAME).iterator(), Spliterator.ORDERED), true)
+        return stream(spliteratorUnknownSize(parseJsonArray(tracks, TRACKS).iterator(), Spliterator.ORDERED), true)
                 .map(NAME_POPULARITY_EXTRACTOR)
                 .collect(toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
     public String parseIdOfTracks(String tracks) throws JsonProcessingException {
-        return stream(spliteratorUnknownSize(
-                parseJsonArray(tracks, ITEMS_ARRAY_NAME).iterator(), Spliterator.ORDERED), true)
+        return stream(spliteratorUnknownSize(parseJsonArray(tracks, ITEMS).iterator(), Spliterator.ORDERED), true)
                 .map(ID_EXTRACTOR)
                 .collect(joining(","));
     }
 
     public Map<Integer, List<String>> parseActivityOfArtist(String albums) throws JsonProcessingException {
         final Map<Integer, List<String>> result = new LinkedHashMap<>();
-        stream(spliteratorUnknownSize(
-                parseJsonArray(albums, ITEMS_ARRAY_NAME).iterator(), Spliterator.ORDERED), true)
+        stream(spliteratorUnknownSize(parseJsonArray(albums, ITEMS).iterator(), Spliterator.ORDERED), true)
                 .forEach(node -> setArtistActivity(node, result));
         return result;
     }
 
     public Map<String, Long> parsePopularityOfArtistsOfGenre(String artists) throws JsonProcessingException {
-        String parsedArtists = readTree(artists).get("artists").toString();
-        return stream(spliteratorUnknownSize(
-                parseJsonArray(parsedArtists, ITEMS_ARRAY_NAME).iterator(), Spliterator.ORDERED), true)
+        final String data = readTree(artists).get("artists").toString();
+        return stream(spliteratorUnknownSize(parseJsonArray(data, ITEMS).iterator(), Spliterator.ORDERED), true)
                 .map(node -> Map.entry(node.get("name").asText(), node.get("followers").get("total").asLong()))
                 .collect(toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
@@ -112,7 +106,9 @@ public class SpotifyParser {
     private JsonNode parseJsonArray(String json, String arrayName) throws JsonProcessingException {
         final JsonNode parsedArray = ofNullable(readTree(json).get(arrayName)).orElseThrow(() ->
                 new RuntimeException(format("Cannot parse %s as it is not an array of nodes", arrayName)));
-        if (!parsedArray.isArray()) throw new RuntimeException(format("Cannot parse %s as it is not an array of nodes", arrayName));
+
+        if (!parsedArray.isArray())
+            throw new RuntimeException(format("Cannot parse %s as it is not an array of nodes", arrayName));
 
         return parsedArray;
     }
@@ -127,8 +123,8 @@ public class SpotifyParser {
         final String releaseNameAndType = format("%s : %s", node.get("name").asText(), node.get("album_type").asText());
 
         if (result.containsKey(year)) {
-            if (!result.get(year).contains(releaseNameAndType))
-                result.get(year).add(releaseNameAndType);
+            if (!requireNonNull(result.get(year)).contains(releaseNameAndType))
+                requireNonNull(result.get(year)).add(releaseNameAndType);
         } else {
             List<String> list = new ArrayList<>();
             list.add(releaseNameAndType);

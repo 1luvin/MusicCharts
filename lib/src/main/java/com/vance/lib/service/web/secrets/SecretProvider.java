@@ -21,16 +21,17 @@ import static java.lang.String.format;
 import static org.slf4j.LoggerFactory.getLogger;
 
 public class SecretProvider {
-    private String lastFMToken;
-    private String spotifyToken;
-    private String spotifyClientID;
-    private String spotifyClientSecret;
+    private static final Logger log = getLogger(SecretProvider.class);
+    private final ObjectMapper objectMapper = new ObjectMapper();
+    private final Calendar calendar = new GregorianCalendar();
+    private final RequestService requestService;
     private Integer lastUpdatedHour = -1;
     private Integer lastUpdatedDate = -1;
-    private final RequestService requestService;
-    private final Calendar calendar = new GregorianCalendar();
-    private final ObjectMapper objectMapper = new ObjectMapper();
-    private static final Logger log = getLogger(SecretProvider.class);
+    private String spotifyClientSecret;
+    private String spotifyClientID;
+    private String spotifyToken;
+    private String lastFMToken;
+
     private static SecretProvider secretProviderInstance = null;
 
     private SecretProvider(RequestService requestService) {
@@ -53,7 +54,7 @@ public class SecretProvider {
             lastFMToken = node.get("lastFM_token").asText();
             spotifyClientID = spotifyNode.get("client_id").asText();
             spotifyClientSecret = spotifyNode.get("client_secret").asText();
-        } catch (IOException e) {
+        } catch (IOException | URISyntaxException e) {
             log.error(e.getMessage());
         }
     }

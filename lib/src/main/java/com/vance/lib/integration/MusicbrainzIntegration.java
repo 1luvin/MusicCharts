@@ -33,7 +33,6 @@ public class MusicbrainzIntegration {
         final Map<String, Long> result = new LinkedHashMap<>();
         genres.forEach(genre -> addCountToMap(result, genre, urlBuilder.musicbrainz().numberOfArtistsOfGenre(genre).build()));
         return result;
-
     }
 
     public Map<String, Long> getNumberOfReleasesOfGenres(List<String> genres) {

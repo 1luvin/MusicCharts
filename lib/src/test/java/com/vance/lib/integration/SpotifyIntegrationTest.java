@@ -10,6 +10,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Map;
 
@@ -35,7 +36,7 @@ public class SpotifyIntegrationTest {
     }
 
     @Test
-    void shouldGetPopularityOfAlbums() throws IOException {
+    void shouldGetPopularityOfAlbums() throws IOException, URISyntaxException {
         // given
         final String albums = readFile("spotify/albumsSearch.json", SpotifyIntegrationTest.class);
         final String popularity = readFile("spotify/albumsPopularity.json", SpotifyIntegration.class);
@@ -61,7 +62,7 @@ public class SpotifyIntegrationTest {
     }
 
     @Test
-    void shouldNotGetPopularityOfAlbumsAsAlbumsPopularityResponseIsEmpty() throws IOException {
+    void shouldNotGetPopularityOfAlbumsAsAlbumsPopularityResponseIsEmpty() throws IOException, URISyntaxException {
         // given
         final String albums = readFile("spotify/albumsSearch.json", SpotifyIntegrationTest.class);
         final String popularity = "{}";
@@ -84,7 +85,7 @@ public class SpotifyIntegrationTest {
     }
 
     @Test
-    void shouldNotGetPopularityOfAlbumsAsAlbumPopularityIsBad() throws IOException {
+    void shouldNotGetPopularityOfAlbumsAsAlbumPopularityIsBad() throws IOException, URISyntaxException {
         // given
         final String albums = readFile("spotify/albumsSearch.json", SpotifyIntegrationTest.class);
         final String popularity = "{---}";
@@ -96,7 +97,7 @@ public class SpotifyIntegrationTest {
     }
 
     @Test
-    void shouldGetActivityOfArtist() throws IOException {
+    void shouldGetActivityOfArtist() throws IOException, URISyntaxException {
         // given
         final String artist = readFile("spotify/artistSearch.json", SpotifyIntegrationTest.class);
         final String albums = readFile("spotify/albumsOfArtist.json", SpotifyIntegrationTest.class);
@@ -111,7 +112,7 @@ public class SpotifyIntegrationTest {
     }
 
     @Test
-    void shouldNotGetActivityOfArtistAsArtistNameIsWrong() throws IOException {
+    void shouldNotGetActivityOfArtistAsArtistNameIsWrong() throws IOException, URISyntaxException {
         // given
         final String artist = readFile("spotify/artistSearch.json", SpotifyIntegrationTest.class);
         final String albums = readFile("spotify/albumsOfArtist.json", SpotifyIntegrationTest.class);
@@ -122,7 +123,7 @@ public class SpotifyIntegrationTest {
     }
 
     @Test
-    void shouldGetDurationOfTracksInAlbum() throws IOException {
+    void shouldGetDurationOfTracksInAlbum() throws IOException, URISyntaxException {
         // given
         final String album = readFile("spotify/albumSearch.json", SpotifyIntegrationTest.class);
         final String tracks = readFile("spotify/tracksOfAlbum.json", SpotifyIntegrationTest.class);
@@ -138,7 +139,7 @@ public class SpotifyIntegrationTest {
     }
 
     @Test
-    void shouldGetPopularityOfTracksInAlbum() throws IOException {
+    void shouldGetPopularityOfTracksInAlbum() throws IOException, URISyntaxException {
         // given
         final String album = readFile("spotify/albumSearch.json", SpotifyIntegrationTest.class);
         final String tracks = readFile("spotify/tracksOfAlbum.json", SpotifyIntegrationTest.class);
@@ -155,7 +156,7 @@ public class SpotifyIntegrationTest {
     }
 
     @Test
-    void shouldGet() throws IOException {
+    void shouldGet() throws IOException, URISyntaxException {
         // given
         final String artist = readFile("spotify/artistSearch.json", SpotifyIntegrationTest.class);
         final String tracks = readFile("spotify/tracksOfArtist.json", SpotifyIntegrationTest.class);
@@ -171,7 +172,7 @@ public class SpotifyIntegrationTest {
     }
 
     @Test
-    void shouldGetPopularArtistsOfGenre() throws IOException {
+    void shouldGetPopularArtistsOfGenre() throws IOException, URISyntaxException {
         // given
         final String artists = readFile("spotify/popularArtists.json", SpotifyIntegrationTest.class);
         final Map<String, Long> expected = parser.parsePopularityOfArtistsOfGenre(artists);

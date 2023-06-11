@@ -15,15 +15,13 @@ public class HttpRequestBuilder {
     private ClassicHttpRequest request = null;
 
     public ClassicHttpRequest build() throws URISyntaxException {
-        ClassicHttpRequest result = Optional.ofNullable(request).orElseThrow(() -> {
-            request = null;
-            return new IllegalStateException("Building uninitialized request");
-        });
-        if ("/".equals(result.getUri().toString())) {
-            request = null;
-            throw new IllegalStateException("Request url is not set");
-        }
+        final ClassicHttpRequest result = Optional.ofNullable(request)
+                .orElseThrow(() -> new IllegalStateException("Building uninitialized request"));
         request = null;
+
+        if ("/".equals(result.getUri().toString()))
+            throw new IllegalStateException("Request url is not set");
+
         return result;
     }
 

@@ -15,8 +15,6 @@ import org.slf4j.LoggerFactory;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Map;
-import java.util.concurrent.atomic.AtomicReference;
-import java.util.stream.IntStream;
 
 public class SpotifyIntegration {
     private final Logger log = LoggerFactory.getLogger(SpotifyIntegration.class);

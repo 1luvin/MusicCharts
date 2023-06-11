@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vance.lib.service.web.url.configuration.SpotifySearchTypes;
+import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,8 +40,8 @@ public class SpotifyParser {
         if (total == 0) throw new IllegalStateException(format("No %s to parse", searchType + "s"));
 
         final JsonNode parsedItem = parsedSearch.get(searchType + "s").get(ITEMS).get(0);
-        if (!itemName.equals(parsedItem.get("name").asText()))
-            throw new IllegalStateException(format("Cannot find expected %s %s, found: %s", searchType, itemName, parsedItem.get("name")));
+        if (!StringUtils.containsIgnoreCase(parsedItem.get("name").asText(), itemName))
+            throw new IllegalStateException(format("Cannot find expected %s %s, found: %s", searchType, itemName, parsedItem.get("name").asText()));
 
         final String id = parsedItem.get("id").asText();
         log.debug("Parsed id of {} : {}", searchType, id);

@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.nio.charset.Charset;
+import java.util.Objects;
 
 import static java.lang.String.format;
 import static org.apache.hc.client5.http.impl.classic.HttpClients.createDefault;
@@ -32,14 +33,21 @@ public class RequestService {
     }
 
     public String sendRequest(ClassicHttpRequest request) {
+        String url = null;
         final CloseableHttpClient httpClient = createDefault();
         try (httpClient) {
-            log.debug("Sending {} request to {}", request.getMethod(), request.getUri().toString());
+            url = request.getUri().toString();
+            log.debug("Sending {} request to {}", request.getMethod(), url);
             return httpClient.execute(request, responseHandler);
         } catch (IOException | URISyntaxException e) {
             log.error(e.getMessage());
         }
-        throw new IllegalStateException(format("Error with proceeding request to %s", request.getRequestUri()));
+
+        if (Objects.requireNonNull(url).contains("https://api.spotify.com/v1/search")) {
+            throw new IllegalStateException(String.format("Spotify search problem, url: %s", request.getRequestUri()));
+        }
+
+        throw new RuntimeException(format("Error with proceeding request to %s", request.getRequestUri()));
     }
 
     private static class CustomResponseHandler implements HttpClientResponseHandler<String> {

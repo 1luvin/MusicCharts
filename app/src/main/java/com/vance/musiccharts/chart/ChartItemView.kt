@@ -37,9 +37,9 @@ class ChartItemView(
     private val imageView: ImageView
     private val textView: TextView
 
-    private val imageSize: Int get() = 18.dp
-    private val indent: Int get() = 2.dp
-    private val outlineWidth: Float get() = 1.5f.dp
+    private val imageSize: Int = 18.dp
+    private val indent: Int = 2.dp
+    private val outlineWidth: Float = 1.5f.dp
 
     var isChecked: Boolean = true
         private set

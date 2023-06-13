@@ -3,19 +3,28 @@ package com.vance.musiccharts
 import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
+import android.text.TextUtils
 import android.view.Gravity
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.core.widget.NestedScrollView
 import com.vance.lib.ChartDataProvider
 import com.vance.musiccharts.chart.BarChartView
+import com.vance.musiccharts.chart.ChartView
+import com.vance.musiccharts.chart.PieChartView
+import com.vance.musiccharts.extension.Log
+import com.vance.musiccharts.util.Font
 import com.vance.musiccharts.util.Layout
 import com.vance.musiccharts.util.Theme
+import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
@@ -23,6 +32,7 @@ import kotlinx.coroutines.withContext
 class MainActivity : AppCompatActivity() {
 
     private val chartProvider: ChartDataProvider = ChartDataProvider()
+    private val mainScope: CoroutineScope = MainScope()
 
     companion object {
         @SuppressLint("StaticFieldLeak")
@@ -72,47 +82,68 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(scroll)
 
-        val dudes = arrayOf("Alan Walker", "Rarin", "Max Korzh")
-        MainScope().launch(Dispatchers.IO) {
-            dudes.forEach { dude ->
-                val data = chartProvider.popularityOfAlbums(dude).toList().sortedBy { (_, value) -> -value }.toMap()
-                withContext(Dispatchers.Main) {
-                    addBarChart(
-                        title = dude,
-                        subtitle = "The popularity of albums",
-                        data = data
-                    )
+        addSectionView("Album")
+
+        addChart(
+            BarChartView(
+                context = this,
+                title = "Popularity of tracks in album",
+                subtitle = "Provide album name",
+                searchHint = "Album",
+                onSearch = { chartView, query ->
+                    mainScope.launch(Dispatchers.IO) {
+                        val data = chartProvider.popularityOfTracksInAlbum(query).toList().sortedBy { (_, value) -> -value }.toMap()
+                        val itemNames = data.keys.take(7)
+                        val itemValues = data.values.map { it.toFloat() }.take(7)
+                        withContext(Dispatchers.Main) {
+                            chartView.updateChart(itemNames, itemValues)
+                        }
+                    }
                 }
-            }
-        }
+            )
+        )
+
+        addChart(
+            PieChartView(
+                context = this,
+                title = "Duration of tracks in album",
+                subtitle = "Provide album name",
+                searchHint = "Album",
+                onSearch = { chartView, query ->
+                    mainScope.launch(Dispatchers.IO) {
+                        val data = chartProvider.durationOfTracksInAlbum(query).toList().sortedBy { (_, value) -> -value }.toMap()
+                        val itemNames = data.keys.take(7)
+                        val itemValues = data.values.map { it / 60_000f }.take(7)
+                        withContext(Dispatchers.Main) {
+                            chartView.updateChart(itemNames, itemValues)
+                        }
+                    }
+                }
+            )
+        )
     }
 
-    private fun addBarChart(title: String, subtitle: String, data: Map<String, Int>) {
-        BarChartView(
-            context = this,
-            title = title,
-            subtitle = subtitle,
-            itemNames = data.keys.take(7),
-            itemValues = data.values.map { it.toFloat() }.take(7)
-        ).apply {
-            alpha = 0f
-            scaleX = 0.5f
-            scaleY = scaleX
-            pivotX = 0f
-            pivotY = 0f
-        }.also {
-            layout.addView(
-                it, Layout.ezLinear(
-                    Layout.MATCH_PARENT, Layout.WRAP_CONTENT,
-                    0, 0, 0, 12
-                )
-            )
-            it.animate()
-                .setDuration(250)
-                .alpha(1f)
-                .scaleX(1f)
-                .scaleY(1f)
-                .start()
+    private fun addSectionView(name: String) {
+        val view = TextView(this).apply {
+            setTextColor(0xFF2AABEE.toInt())
+            setTextSizeDp(35)
+            typeface = Font.Bold
+            isSingleLine = true
+            ellipsize = TextUtils.TruncateAt.END
+            text = name
         }
+        layout.addView(
+            view, Layout.ezLinear(
+                Layout.MATCH_PARENT, Layout.WRAP_CONTENT,
+                12, 24, 12, 24
+            )
+        )
     }
+
+    private fun addChart(chartView: ChartView) = layout.addView(
+        chartView, Layout.ezLinear(
+            Layout.MATCH_PARENT, Layout.WRAP_CONTENT,
+            0, 0, 0, 12
+        )
+    )
 }

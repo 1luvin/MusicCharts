@@ -4,6 +4,8 @@ import android.content.Context
 import android.text.TextUtils
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.annotation.CallSuper
+import com.vance.musiccharts.cell.SearchCell
 import com.vance.musiccharts.setTextSizeDp
 import com.vance.musiccharts.util.Font
 import com.vance.musiccharts.util.Layout
@@ -12,7 +14,9 @@ import com.vance.musiccharts.util.Theme
 abstract class ChartView(
     context: Context,
     title: String,
-    subtitle: String
+    subtitle: String,
+    searchHint: String,
+    onSearch: (ChartView, String) -> Unit
 ) : LinearLayout(context) {
 
     companion object {
@@ -32,8 +36,9 @@ abstract class ChartView(
 
     private val textView: TextView
     private val textView2: TextView
+    private val searchCell: SearchCell
 
-    protected val indent: Int get() = 12
+    protected val indent: Int = 12
 
     init {
         orientation = VERTICAL
@@ -65,5 +70,24 @@ abstract class ChartView(
                 indent, 0, indent, 0
             )
         )
+
+        searchCell = SearchCell(
+            context,
+            hint = searchHint,
+            onSearch = {
+                onSearch(this, it)
+            }
+        )
+        addView(
+            searchCell, Layout.ezLinear(
+                Layout.MATCH_PARENT, 40,
+                indent, indent, indent, indent * 2
+            )
+        )
+    }
+
+    @CallSuper
+    open fun updateChart(itemNames: List<String>, itemValues: List<Float>) {
+        searchCell.stopLoading()
     }
 }

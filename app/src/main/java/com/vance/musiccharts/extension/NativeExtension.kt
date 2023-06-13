@@ -36,7 +36,9 @@ val Float.px get() = if (this == 0f) 0f else this / density
     Boolean
  */
 
-fun Boolean.asFloat() = if (this) 1f else 0f
+fun Boolean.asInt(): Int = if (this) 1 else 0
+
+fun Boolean.asFloat(): Float = asInt().toFloat()
 
 /*
     IntArray

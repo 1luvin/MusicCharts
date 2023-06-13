@@ -4,11 +4,15 @@ import com.vance.lib.ChartDataProvider;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.stream.Collectors;
 
 import static java.util.Optional.ofNullable;
 import static org.slf4j.LoggerFactory.getLogger;
@@ -52,8 +56,16 @@ public class FileUtil {
     public static String readFile(@NotNull String name, Class<?> clazz) throws IOException, URISyntaxException {
         log.info("Reading file {}", name);
 
-        final URL resource = ofNullable(clazz.getResource(name)).orElseThrow(() ->
-                new IOException("Failed to locate file " + name));
-        return Files.readString(Paths.get(resource.toURI()).toAbsolutePath());
+        final InputStream inputStream = ofNullable(clazz.getResourceAsStream(name))
+                .orElseThrow(() -> new IOException("Failed to open file " + name));
+        String result = new BufferedReader(new InputStreamReader(inputStream)).lines().collect(Collectors.joining());
+        inputStream.close();
+
+        return result;
+
+//        final URL resource = ofNullable(clazz.getResource(name)).orElseThrow(() ->
+//                new IOException("Failed to locate file " + name));
+        // TODO: Получаю ошибку типа "Provided jar is not installed"
+//        return Files.readString(Paths.get(resource.toURI()).toAbsolutePath());
     }
 }

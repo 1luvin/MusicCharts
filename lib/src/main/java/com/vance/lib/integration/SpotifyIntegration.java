@@ -26,7 +26,9 @@ public class SpotifyIntegration {
     private final boolean WITH_LIMIT = true;
     private final boolean WITHOUT_LIMIT = false;
     private String cachedAlbumId = null;
+    private String cachedArtistId = null;
     private String cachedAlbumName = null;
+    private String cachedArtistName = null;
 
     public SpotifyIntegration(RequestService requestService, SecretProvider secretProvider) {
         this.requestService = requestService;
@@ -49,12 +51,9 @@ public class SpotifyIntegration {
         }
     }
 
-    public Map<String, Integer> getPopularityOfTracksOfArtist(@NotNull String artistName) {
+    public Map<String, Integer> getPopularityOfTracksOfArtist(@NotNull String artist) {
         try {
-            final String searchResponse = searchItem(artistName, SpotifySearchTypes.ARTIST, WITH_LIMIT);
-            final String artistId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ARTIST, artistName);
-
-            final String tracks = sendRequestToSpotify(urlBuilder.spotify().topTracksOfArtist(artistId).build());
+            final String tracks = sendRequestToSpotify(urlBuilder.spotify().topTracksOfArtist(getArtistID(artist)).build());
             final Map<String, Integer> result = parser.parsePopularityOfTracksOfArtist(tracks);
 
             log.debug("Result of getting popularity of tracks of artist: {}", result.toString());
@@ -96,10 +95,7 @@ public class SpotifyIntegration {
 
     public Map<Integer, List<String>> getActivityOfArtist(@NotNull String artistName) {
         try {
-            final String searchResponse = searchItem(artistName, SpotifySearchTypes.ARTIST, WITHOUT_LIMIT);
-            final String artistId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ARTIST, artistName);
-
-            final String albums = sendRequestToSpotify(urlBuilder.spotify().albumsOfArtist(artistId, false).build());
+            final String albums = sendRequestToSpotify(urlBuilder.spotify().albumsOfArtist(getArtistID(artistName), false).build());
             final Map<Integer, List<String>> result = parser.parseActivityOfArtist(albums);
 
             log.debug("Result of getting activity of artist: {}", result.toString());
@@ -158,6 +154,16 @@ public class SpotifyIntegration {
         }
 
         return cachedAlbumId;
+    }
+
+    private String getArtistID(String artistName) throws JsonProcessingException {
+        if (!StringUtils.equals(artistName, cachedArtistName)) {
+            final String searchResponse = searchItem(artistName, SpotifySearchTypes.ARTIST, WITHOUT_LIMIT);
+            cachedArtistName = artistName;
+            cachedArtistId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ARTIST, artistName);
+        }
+
+        return cachedArtistId;
     }
 
     static class SpotifyIntegrationException extends RuntimeException {

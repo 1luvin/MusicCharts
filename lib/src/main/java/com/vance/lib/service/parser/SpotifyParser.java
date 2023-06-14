@@ -12,6 +12,8 @@ import org.slf4j.LoggerFactory;
 import java.util.*;
 import java.util.function.Function;
 
+import static com.vance.lib.util.StringUtil.removeParts;
+import static com.vance.lib.util.StringUtil.validateString;
 import static java.lang.Integer.parseInt;
 import static java.lang.String.format;
 import static java.util.Objects.requireNonNull;
@@ -25,12 +27,15 @@ public class SpotifyParser {
     private final Logger log = LoggerFactory.getLogger(SpotifyParser.class);
     private final String ITEMS = "items";
     private final String TRACKS = "tracks";
+    private final List<String> removableParts = List.of(" (Remastered)");
+    private final List<String> restrictedValues = List.of(" (Live at");
     private final ElementExtractor<JsonNode, String> ID_EXTRACTOR = node -> node.get("id").asText();
     private final ElementExtractor<JsonNode, Map.Entry<String, Long>> NAME_DURATION_EXTRACTOR =
-            node -> Map.entry(node.get("name").asText(), node.get("duration_ms").asLong());
+            node -> Map.entry(removeParts(node.get("name").asText(), removableParts), node.get("duration_ms").asLong());
     private final ElementExtractor<JsonNode, Map.Entry<String, Integer>> NAME_POPULARITY_EXTRACTOR =
-            node -> Map.entry(node.get("name").asText(), node.get("popularity").asInt());
+            node -> Map.entry(removeParts(node.get("name").asText(), removableParts), node.get("popularity").asInt());
     private final ObjectMapper objectMapper = new ObjectMapper();
+
 
     public String parseIdOfItem(@NotNull String item, SpotifySearchTypes type, @NotNull String itemName) throws JsonProcessingException {
         final String searchType = type.name().toLowerCase();
@@ -62,6 +67,7 @@ public class SpotifyParser {
     public Map<String, Long> parseDurationOfTracksFromAlbum(@NotNull String tracks) throws JsonProcessingException {
         return stream(spliteratorUnknownSize(parseJsonArray(tracks, ITEMS).iterator(), Spliterator.ORDERED), true)
                 .map(NAME_DURATION_EXTRACTOR)
+                .filter(entry -> validateString(entry.getKey(), restrictedValues))
                 .collect(toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
@@ -75,12 +81,14 @@ public class SpotifyParser {
     public Map<String, Integer> parsePopularityOfTracksOfArtist(@NotNull String tracks) throws JsonProcessingException {
         return stream(spliteratorUnknownSize(parseJsonArray(tracks, TRACKS).iterator(), Spliterator.ORDERED), true)
                 .map(NAME_POPULARITY_EXTRACTOR)
+                .filter(entry -> validateString(entry.getKey(), restrictedValues))
                 .collect(toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
     public Map<String, Integer> parsePopularityOfTracksFromAlbum(String tracks) throws JsonProcessingException {
         return stream(spliteratorUnknownSize(parseJsonArray(tracks, TRACKS).iterator(), Spliterator.ORDERED), true)
                 .map(NAME_POPULARITY_EXTRACTOR)
+                .filter(entry -> validateString(entry.getKey(), restrictedValues))
                 .collect(toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 

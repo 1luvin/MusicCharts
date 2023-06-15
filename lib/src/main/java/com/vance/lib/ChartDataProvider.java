@@ -91,7 +91,5 @@ public class ChartDataProvider {
         integration.getActivityOfArtist("Tool");
         integration.getPopularityOfTracksInAlbum("White Pony");
         integration.getDurationOfTracksInAlbum("Lateralus");
-
-        System.out.println("Total requests: " + requestServiceInstance.getNumberOfRequests());
     }
 }

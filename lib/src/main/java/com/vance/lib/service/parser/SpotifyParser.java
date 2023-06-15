@@ -32,7 +32,7 @@ public class SpotifyParser {
     private final String TRACKS = "tracks";
     private final String POPULARITY = "popularity";
     private final List<String> removableParts = List.of(" (Remastered)", "(Remastered)");
-    private final List<String> restrictedValues = List.of(" (Live at");
+    private final List<String> restrictedValues = List.of(" (Live at", "Mix");
     private final ElementExtractor<JsonNode, String> ID_EXTRACTOR = node -> getText(node, ID);
     private final ElementExtractor<JsonNode, Map.Entry<String, Long>> NAME_DURATION_EXTRACTOR =
             node -> Map.entry(removeParts(getText(node, NAME), removableParts), getLong(node, "duration_ms"));

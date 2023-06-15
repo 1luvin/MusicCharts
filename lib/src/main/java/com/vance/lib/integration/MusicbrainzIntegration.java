@@ -8,9 +8,7 @@ import com.vance.lib.service.web.url.UrlBuilder;
 import org.jetbrains.annotations.TestOnly;
 
 import java.net.URISyntaxException;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class MusicbrainzIntegration {
     public static final int YEARS_90_TO_99 = 0;
@@ -23,21 +21,25 @@ public class MusicbrainzIntegration {
     private final List<String> century1990 = List.of("1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999");
     private final List<String> century2000 = List.of("2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009");
     private final List<String> century2010 = List.of("2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019");
+    private final List<String> genres = List.of("Pop", "Rock", "Jazz", "Blues", "Classical", "Rap", "Electronic");
+    private final List<String> genresWithoutOne = List.of("Pop", "Rock", "Jazz", "Blues", "Classical", "Rap");
     private int waitTime = 500;
 
     public MusicbrainzIntegration(RequestService requestService) {
         this.requestService = requestService;
     }
 
-    public Map<String, Long> getNumberOfArtistsOfGenres(List<String> genres) {
+    public Map<String, Long> getNumberOfArtistsOfGenres(String genre) {
         final Map<String, Long> result = new LinkedHashMap<>();
-        genres.forEach(genre -> addCountToMap(result, genre, urlBuilder.musicbrainz().numberOfArtistsOfGenre(genre).build()));
+        getGenres(genre).forEach(value ->
+                addCountToMap(result, value, urlBuilder.musicbrainz().numberOfArtistsOfGenre(value).build()));
         return result;
     }
 
-    public Map<String, Long> getNumberOfReleasesOfGenres(List<String> genres) {
+    public Map<String, Long> getNumberOfReleasesOfGenres(String genre) {
         final Map<String, Long> result = new LinkedHashMap<>();
-        genres.forEach(genre -> addCountToMap(result, genre, urlBuilder.musicbrainz().releasesOfGenre(genre).build()));
+        getGenres(genre).forEach(value ->
+                addCountToMap(result, value, urlBuilder.musicbrainz().releasesOfGenre(value ).build()));
         return result;
     }
 
@@ -92,6 +94,16 @@ public class MusicbrainzIntegration {
         } catch (URISyntaxException e) {
             throw new IllegalArgumentException(String.format("Bad url created: %s", finalUrl));
         }
+    }
+
+    private List<String> getGenres(String genre) {
+        return genres.contains(genre) ? genres : createUniqueListWithGenres(genre);
+    }
+
+    private List<String> createUniqueListWithGenres(String genre) {
+        final List<String> result = new ArrayList<>(genresWithoutOne);
+        result.add(genre);
+        return result;
     }
 
     static class MusicbrainzIntegrationException extends RuntimeException {

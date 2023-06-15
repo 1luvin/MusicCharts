@@ -20,14 +20,14 @@ public class ChartDataProvider {
     private final LastFmIntegration lastFM = new LastFmIntegration(requestService, secretProvider);
     private final SpotifyIntegration spotify = new SpotifyIntegration(requestService, secretProvider);
 
-    public Map<String, Long> numberOfArtistsOfGenres(@NotNull List<String> genres) {
-        log.info("Getting number of artists of genres, genres: {}", genres);
-        return musicbrainz.getNumberOfArtistsOfGenres(genres);
+    public Map<String, Long> numberOfArtistsOfGenres(@NotNull String genre) {
+        log.info("Getting number of artists of genres, genres: {}", genre);
+        return musicbrainz.getNumberOfArtistsOfGenres(genre);
     }
 
-    public Map<String, Long> numberOfReleasesOfGenres(@NotNull List<String> genres) {
-        log.info("Getting number of releases of genres, genres: {}", genres);
-        return musicbrainz.getNumberOfReleasesOfGenres(genres);
+    public Map<String, Long> numberOfReleasesOfGenres(@NotNull String genre) {
+        log.info("Getting number of releases of genres, genres: {}", genre);
+        return musicbrainz.getNumberOfReleasesOfGenres(genre);
     }
 
     public Map<String, Long> numberOfReleasesOfGenreInYears(int years, @NotNull String genre) {
@@ -74,7 +74,24 @@ public class ChartDataProvider {
         final RequestService requestServiceInstance = RequestService.getInstance();
         final SecretProvider secretProviderInstance = SecretProvider.getInstance(requestServiceInstance);
         SpotifyIntegration integration = new SpotifyIntegration(requestServiceInstance, secretProviderInstance);
+        MusicbrainzIntegration musicbrainzIntegration = new MusicbrainzIntegration(requestServiceInstance);
+        LastFmIntegration lastFmIntegration = new LastFmIntegration(requestServiceInstance, secretProviderInstance);
+
+        musicbrainzIntegration.getNumberOfArtistsOfGenres("Rock");
+        musicbrainzIntegration.getNumberOfReleasesOfGenres("Metal");
+        musicbrainzIntegration.getNumberOfReleasesOfGenreInYears(MusicbrainzIntegration.YEARS_90_TO_99, "Rock");
+        musicbrainzIntegration.getNumberOfReleasesOfGenreInYears(MusicbrainzIntegration.YEARS_00_TO_09, "Rock");
+        musicbrainzIntegration.getNumberOfReleasesOfGenreInYears(MusicbrainzIntegration.YEARS_10_TO_19, "Rock");
+
+        lastFmIntegration.getPopularityOfGenres();
 
         integration.getPopularArtistsOfGenre("Rock");
+        integration.getPopularityOfTracksOfArtist("Deftones");
+        integration.getPopularityOfAlbums("Queen");
+        integration.getActivityOfArtist("Tool");
+        integration.getPopularityOfTracksInAlbum("White Pony");
+        integration.getDurationOfTracksInAlbum("Lateralus");
+
+        System.out.println("Total requests: " + requestServiceInstance.getNumberOfRequests());
     }
 }

@@ -7,6 +7,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UrlBuilderTest {
     private final String SPOTIFY_BASE_URL = "https://api.spotify.com/v1";
+    private final String MUSICBRAINZ_BASE_URL = "https://musicbrainz.org/ws/2";
+    private final String LASTFM_BASE_URL = "http://ws.audioscrobbler.com/2.0";
+    private final String TEST_GENRE = "TEST_GENRE";
     private final UrlBuilder builder = new UrlBuilder();
 
 
@@ -14,8 +17,6 @@ public class UrlBuilderTest {
     void shouldBuildBaseUrls() {
         // given
         final String SPOTIFY_TOKEN_URL = "https://accounts.spotify.com/api/token";
-        final String MUSICBRAINZ_BASE_URL = "https://musicbrainz.org/ws/2";
-        final String LASTFM_BASE_URL = "http://ws.audioscrobbler.com/2.0";
 
         // when
         final String spotifyToken = builder.spotifyToken();
@@ -103,6 +104,67 @@ public class UrlBuilderTest {
         // when
         final String actualUrl = builder.spotify()
                 .search(query, SpotifySearchTypes.ARTIST, false)
+                .build();
+
+        // then
+        assertEquals(expectedUrl, actualUrl);
+    }
+
+    // Musicbrainz URLs tests:
+
+    @Test
+    void shouldBuildUrlForNumberOfArtistsOfGenre() {
+        // given
+        final String expectedUrl = MUSICBRAINZ_BASE_URL + "/artist/?query=type:group%20AND%20tag:" + TEST_GENRE;
+
+        // when
+        final String actualUrl = builder.musicbrainz()
+                .numberOfArtistsOfGenre(TEST_GENRE)
+                .build();
+
+        // then
+        assertEquals(expectedUrl, actualUrl);
+    }
+
+    @Test
+    void shouldBuildUrlForReleasesOfGenre() {
+        // given
+        final String expectedUrl = MUSICBRAINZ_BASE_URL + "/release/?query=tag:" + TEST_GENRE;
+
+        // when
+        final String actualUrl = builder.musicbrainz()
+                .releasesOfGenre(TEST_GENRE)
+                .build();
+
+        // then
+        assertEquals(expectedUrl, actualUrl);
+    }
+
+    @Test
+    void shouldBuildUrlForReleasesOfGenreInYears() {
+        // given
+        final String date = "2003";
+        final String expectedUrl = MUSICBRAINZ_BASE_URL + "/release/?query=date:" + date + "%20AND%20tag:" + TEST_GENRE;
+
+        // when
+        final String actualUrl = builder.musicbrainz()
+                .releasesOfGenre(TEST_GENRE, date)
+                .build();
+
+        // then
+        assertEquals(expectedUrl, actualUrl);
+    }
+
+    // Last FM url tests:
+
+    @Test
+    void shouldBuildUrlForTopGenres() {
+        // given
+        final String expectedUrl = LASTFM_BASE_URL + "?method=chart.gettoptags";
+
+        // when
+        final String actualUrl = builder.lastfm()
+                .getTopGenres()
                 .build();
 
         // then

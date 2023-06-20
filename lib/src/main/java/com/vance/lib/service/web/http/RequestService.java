@@ -40,7 +40,8 @@ public class RequestService {
             log.debug("Sending {} request to {}", request.getMethod(), url);
             return httpClient.execute(request, responseHandler);
         } catch (IOException | URISyntaxException e) {
-            log.error(e.getMessage());
+            final String[] exceptionName = e.toString().split("\\.");
+            log.error("Error with handling request, exception: {}", exceptionName[exceptionName.length - 1]);
         }
 
         if (Objects.requireNonNull(url).contains("https://api.spotify.com/v1/search")) {

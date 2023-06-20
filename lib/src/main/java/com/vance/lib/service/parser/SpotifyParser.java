@@ -31,7 +31,7 @@ public class SpotifyParser {
     private final String ITEMS = "items";
     private final String TRACKS = "tracks";
     private final String POPULARITY = "popularity";
-    private final List<String> removableParts = List.of(" (Remastered)", "(Remastered)");
+    private final List<String> removableParts = List.of(" (Remastered)", "(Remastered)", " (Remaster)", " (Deluxe Edition)");
     private final List<String> restrictedValues = List.of(" (Live at", "Mix");
     private final ElementExtractor<JsonNode, String> ID_EXTRACTOR = node -> getText(node, ID);
     private final ElementExtractor<JsonNode, Map.Entry<String, Long>> NAME_DURATION_EXTRACTOR =
@@ -172,7 +172,7 @@ public class SpotifyParser {
     private JsonNode readTree(String data) throws JsonProcessingException {
         try {
             return objectMapper.readTree(data);
-        } catch (NullPointerException e) {
+        } catch (NullPointerException | IllegalArgumentException e) {
             throw new RuntimeException("Parsing error", e);
         }
     }

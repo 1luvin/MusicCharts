@@ -15,6 +15,8 @@ import org.slf4j.LoggerFactory;
 import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicReference;
+import java.util.stream.IntStream;
 
 public class SpotifyIntegration {
     private final Logger log = LoggerFactory.getLogger(SpotifyIntegration.class);
@@ -29,6 +31,7 @@ public class SpotifyIntegration {
     private String cachedArtistId = null;
     private String cachedAlbumName = null;
     private String cachedArtistName = null;
+    private final int MAX_TRIES = 10;
 
     public SpotifyIntegration(RequestService requestService, SecretProvider secretProvider) {
         this.requestService = requestService;
@@ -120,19 +123,34 @@ public class SpotifyIntegration {
     }
 
     private String searchItem(@NotNull String itemName, @NotNull SpotifySearchTypes itemType, boolean limit) {
-        while (true) {
+        final AtomicReference<String> result = new AtomicReference<>();
+        final String searchUrl = urlBuilder.spotify().search(itemName, itemType, limit).build();
+        final long numberOfTries = IntStream.range(1, MAX_TRIES + 1)
+                .boxed()
+                .takeWhile(n -> tryToSearch(result, searchUrl, n))
+                .count();
+
+        log.debug("Number of tries: {}", numberOfTries);
+        if (numberOfTries == MAX_TRIES) {
+            log.error("Problem with searching {}, item for search: {}", itemType.name().toLowerCase(), itemName);
+            throw new IllegalStateException("Exceeded maximum number of retries");
+        }
+        return result.get();
+    }
+
+    private boolean tryToSearch(AtomicReference<String> reference, String url, int numberOfTry) {
+        try {
+            reference.set(sendRequestToSpotify(url));
+        } catch (IllegalStateException e) {
+            log.warn(e.getMessage());
+            log.warn("Trying to resend the request for positive response, number of try: {}", numberOfTry);
             try {
-                return sendRequestToSpotify(urlBuilder.spotify().search(itemName, itemType, limit).build());
-            } catch (IllegalStateException e) {
-                log.warn(e.getMessage());
-                log.warn("Trying to resend the request for positive response");
-                try {
-                    Thread.sleep(500);
-                } catch (InterruptedException ex) {
-                    throw new RuntimeException(ex);
-                }
+                Thread.sleep(500);
+            } catch (InterruptedException ex) {
+                throw new RuntimeException(ex);
             }
         }
+        return reference.get() == null;
     }
 
     private String sendRequestToSpotify(String url) {

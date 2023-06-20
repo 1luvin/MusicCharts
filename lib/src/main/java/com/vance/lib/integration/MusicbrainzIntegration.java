@@ -18,9 +18,9 @@ public class MusicbrainzIntegration {
     private final UrlBuilder urlBuilder = new UrlBuilder();
     private final MusicbrainzParser parser = new MusicbrainzParser();
     private final HttpRequestBuilder requestBuilder = new HttpRequestBuilder();
-    private final List<String> century1990 = List.of("1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999");
-    private final List<String> century2000 = List.of("2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009");
-    private final List<String> century2010 = List.of("2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019");
+    private final List<String> decade1990 = List.of("1990", "1991", "1992", "1993", "1994", "1995", "1996", "1997", "1998", "1999");
+    private final List<String> decade2000 = List.of("2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009");
+    private final List<String> decade2010 = List.of("2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019");
     private final List<String> genres = List.of("Pop", "Rock", "Jazz", "Blues", "Classical", "Rap", "Electronic");
     private final List<String> genresWithoutOne = List.of("Pop", "Rock", "Jazz", "Blues", "Classical", "Rap");
     private int waitTime = 500;
@@ -48,11 +48,11 @@ public class MusicbrainzIntegration {
 
         final Map<String, Long> result = new LinkedHashMap<>();
         if (years == YEARS_90_TO_99)
-            setNumberOfReleases(century1990, result, genre);
+            setNumberOfReleases(decade1990, result, genre);
         else if (years == YEARS_00_TO_09)
-            setNumberOfReleases(century2000, result, genre);
+            setNumberOfReleases(decade2000, result, genre);
         else if (years == YEARS_10_TO_19)
-            setNumberOfReleases(century2010, result, genre);
+            setNumberOfReleases(decade2010, result, genre);
         return result;
     }
 

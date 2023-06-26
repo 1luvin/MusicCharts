@@ -229,6 +229,7 @@ class MainActivity : AppCompatActivity() {
                         withContext(Dispatchers.Main) {
                             (chartView as LineChartView).apply {
                                 updateLineChart(years, releases)
+                                title = "Activity (${years.first()}-${years.last()})"
                             }
                         }
                     }

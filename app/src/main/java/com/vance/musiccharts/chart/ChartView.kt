@@ -20,6 +20,12 @@ abstract class ChartView(
     onSearch: (ChartView, String) -> Unit
 ) : LinearLayout(context) {
 
+    var title: String = title
+        set(value) {
+            textView.text = value
+            field = value
+        }
+
     companion object {
 
         val colors: IntArray = intArrayOf(

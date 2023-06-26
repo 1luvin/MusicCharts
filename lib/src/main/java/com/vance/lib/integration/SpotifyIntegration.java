@@ -16,7 +16,6 @@ import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
-import java.util.stream.IntStream;
 
 public class SpotifyIntegration {
     private final Logger log = LoggerFactory.getLogger(SpotifyIntegration.class);
@@ -43,7 +42,7 @@ public class SpotifyIntegration {
             final String searchResponse = searchItem("artist:" + artistName, SpotifySearchTypes.ALBUM, WITHOUT_LIMIT);
             final String albumIds = parser.parseIdOfItems(searchResponse, SpotifySearchTypes.ALBUM);
 
-            final String albums = sendRequestToSpotify(urlBuilder.spotify().album("?ids=" + albumIds).build());
+            final String albums = sendRequestToSpotify(urlBuilder.spotify().albums(albumIds).build());
             final Map<String, Integer> result = parser.parsePopularityOfAlbums(albums);
 
             log.debug("Getting popularity of albums: {}", result.toString());
@@ -125,16 +124,16 @@ public class SpotifyIntegration {
     private String searchItem(@NotNull String itemName, @NotNull SpotifySearchTypes itemType, boolean limit) {
         final AtomicReference<String> result = new AtomicReference<>();
         final String searchUrl = urlBuilder.spotify().search(itemName, itemType, limit).build();
-        final long numberOfTries = IntStream.range(1, MAX_TRIES + 1)
-                .boxed()
-                .takeWhile(n -> tryToSearch(result, searchUrl, n))
-                .count();
+        int numberOfTries = 1;
+
+        while (tryToSearch(result, searchUrl, numberOfTries) && numberOfTries != MAX_TRIES) numberOfTries++;
 
         log.debug("Number of tries: {}", numberOfTries);
         if (numberOfTries == MAX_TRIES) {
             log.error("Problem with searching {}, item for search: {}", itemType.name().toLowerCase(), itemName);
             throw new IllegalStateException("Exceeded maximum number of retries");
         }
+
         return result.get();
     }
 

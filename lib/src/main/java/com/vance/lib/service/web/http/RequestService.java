@@ -20,6 +20,7 @@ import static org.apache.hc.client5.http.impl.classic.HttpClients.createDefault;
 
 public class RequestService {
     private static final Logger log = LoggerFactory.getLogger(RequestService.class);
+    private final CloseableHttpClient httpClient = createDefault();
     private static RequestService instance = null;
     private final CustomResponseHandler responseHandler = new CustomResponseHandler();
 
@@ -34,8 +35,7 @@ public class RequestService {
 
     public String sendRequest(ClassicHttpRequest request) {
         String url = null;
-        final CloseableHttpClient httpClient = createDefault();
-        try (httpClient) {
+        try {
             url = request.getUri().toString();
             log.debug("Sending {} request to {}", request.getMethod(), url);
             return httpClient.execute(request, responseHandler);
@@ -56,19 +56,21 @@ public class RequestService {
 
         @Override
         public String handleResponse(ClassicHttpResponse response) throws HttpException, IOException {
-            final int responseCode = response.getCode();
-            log.debug("Got response with code - {}", responseCode);
+            try (response) {
+                final int responseCode = response.getCode();
+                log.debug("Got response with code - {}", responseCode);
 
-            final String responseBody = IOUtils.toString(response.getEntity().getContent(), Charset.defaultCharset());
+                final String responseBody = IOUtils.toString(response.getEntity().getContent(), Charset.defaultCharset());
 
-            if (responseCode != HttpStatus.SC_OK) {
-                log.error("Response code - {}, Response body:\n{}", responseCode, responseBody);
-                throw new HttpException("Bad response code: {}", responseCode);
-            } else {
-                log.debug("Response body:\n{}", responseBody);
+                if (responseCode != HttpStatus.SC_OK) {
+                    log.error("Response code - {}, Response body:\n{}", responseCode, responseBody);
+                    throw new HttpException("Bad response code: {}", responseCode);
+                } else {
+                    log.debug("Response body:\n{}", responseBody);
+                }
+
+                return responseBody;
             }
-
-            return responseBody;
         }
     }
 }

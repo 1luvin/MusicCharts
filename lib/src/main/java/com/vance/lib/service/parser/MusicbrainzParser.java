@@ -1,12 +1,13 @@
 package com.vance.lib.service.parser;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+
+import static com.vance.lib.util.JsonUtil.getLong;
+import static com.vance.lib.util.JsonUtil.readTree;
 
 public class MusicbrainzParser {
-    private final ObjectMapper parser = new ObjectMapper();
 
     public Long parseCountOfItems(String info) throws JsonProcessingException {
-        return parser.readTree(info).get("count").asLong();
+        return getLong(readTree(info), "count");
     }
 }

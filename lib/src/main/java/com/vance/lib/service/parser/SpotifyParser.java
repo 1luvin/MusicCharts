@@ -2,7 +2,6 @@ package com.vance.lib.service.parser;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.vance.lib.service.web.url.configuration.SpotifySearchTypes;
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.NotNull;
@@ -12,12 +11,14 @@ import org.slf4j.LoggerFactory;
 import java.util.*;
 import java.util.function.Function;
 
+import static com.vance.lib.util.JsonUtil.*;
 import static com.vance.lib.util.StringUtil.removeParts;
 import static com.vance.lib.util.StringUtil.validateString;
 import static java.lang.Integer.parseInt;
 import static java.lang.String.format;
 import static java.util.Objects.requireNonNull;
 import static java.util.Optional.ofNullable;
+import static java.util.Spliterator.ORDERED;
 import static java.util.Spliterators.spliteratorUnknownSize;
 import static java.util.stream.Collectors.joining;
 import static java.util.stream.Collectors.toMap;
@@ -40,8 +41,6 @@ public class SpotifyParser {
             node -> Map.entry(removeParts(getText(node, NAME), removableParts), getLong(node, "duration_ms"));
     private final ElementExtractor<JsonNode, Map.Entry<String, Integer>> NAME_POPULARITY_EXTRACTOR =
             node -> Map.entry(removeParts(getText(node, NAME), removableParts), getInt(node, POPULARITY));
-    private final ObjectMapper objectMapper = new ObjectMapper();
-
 
     public String parseIdOfItem(@NotNull String item, SpotifySearchTypes type, @NotNull String itemName) throws JsonProcessingException {
         final String searchType = type.name().toLowerCase();
@@ -65,13 +64,13 @@ public class SpotifyParser {
         if (!parsedItems.isArray()) throw new RuntimeException("Cannot parse ids of " + type);
 
         log.debug("Parsing id of items ({})", type.name().toLowerCase());
-        return stream(spliteratorUnknownSize(parsedItems.iterator(), Spliterator.ORDERED), true)
+        return stream(spliteratorUnknownSize(parsedItems.iterator(), ORDERED), true)
                 .map(ID_EXTRACTOR)
                 .collect(joining(","));
     }
 
     public Map<String, Long> parseDurationOfTracksFromAlbum(@NotNull String tracks) throws JsonProcessingException {
-        return stream(spliteratorUnknownSize(parseJsonArray(tracks, ITEMS).iterator(), Spliterator.ORDERED), true)
+        return stream(spliteratorUnknownSize(parseJsonArray(tracks, ITEMS).iterator(), ORDERED), true)
                 .map(NAME_DURATION_EXTRACTOR)
                 .filter(entry -> validateString(entry.getKey(), restrictedValues))
                 .collect(toMap(Map.Entry::getKey, Map.Entry::getValue));
@@ -79,41 +78,41 @@ public class SpotifyParser {
 
     public Map<String, Integer> parsePopularityOfAlbums(@NotNull String albums) throws JsonProcessingException {
         final Map<String, Integer> result = new HashMap<>();
-        stream(spliteratorUnknownSize(parseJsonArray(albums, "albums").iterator(), Spliterator.ORDERED), true)
+        stream(spliteratorUnknownSize(parseJsonArray(albums, "albums").iterator(), ORDERED), true)
                 .forEach(node -> result.put(removeParts(getText(node, NAME), removableParts), getInt(node, POPULARITY)));
         return result;
     }
 
     public Map<String, Integer> parsePopularityOfTracksOfArtist(@NotNull String tracks) throws JsonProcessingException {
-        return stream(spliteratorUnknownSize(parseJsonArray(tracks, TRACKS).iterator(), Spliterator.ORDERED), true)
+        return stream(spliteratorUnknownSize(parseJsonArray(tracks, TRACKS).iterator(), ORDERED), true)
                 .map(NAME_POPULARITY_EXTRACTOR)
                 .filter(entry -> validateString(entry.getKey(), restrictedValues))
                 .collect(toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
     public Map<String, Integer> parsePopularityOfTracksFromAlbum(String tracks) throws JsonProcessingException {
-        return stream(spliteratorUnknownSize(parseJsonArray(tracks, TRACKS).iterator(), Spliterator.ORDERED), true)
+        return stream(spliteratorUnknownSize(parseJsonArray(tracks, TRACKS).iterator(), ORDERED), true)
                 .map(NAME_POPULARITY_EXTRACTOR)
                 .filter(entry -> validateString(entry.getKey(), restrictedValues))
                 .collect(toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
 
     public String parseIdOfTracks(String tracks) throws JsonProcessingException {
-        return stream(spliteratorUnknownSize(parseJsonArray(tracks, ITEMS).iterator(), Spliterator.ORDERED), true)
+        return stream(spliteratorUnknownSize(parseJsonArray(tracks, ITEMS).iterator(), ORDERED), true)
                 .map(ID_EXTRACTOR)
                 .collect(joining(","));
     }
 
     public Map<Integer, List<String>> parseActivityOfArtist(String albums) throws JsonProcessingException {
         final Map<Integer, List<String>> result = new LinkedHashMap<>();
-        stream(spliteratorUnknownSize(parseJsonArray(albums, ITEMS).iterator(), Spliterator.ORDERED), true)
+        stream(spliteratorUnknownSize(parseJsonArray(albums, ITEMS).iterator(), ORDERED), true)
                 .forEach(node -> setArtistActivity(node, result));
         return result;
     }
 
     public Map<String, Long> parsePopularityOfArtistsOfGenre(String artists) throws JsonProcessingException {
         final String data = readTree(artists).get("artists").toString();
-        return stream(spliteratorUnknownSize(parseJsonArray(data, ITEMS).iterator(), Spliterator.ORDERED), true)
+        return stream(spliteratorUnknownSize(parseJsonArray(data, ITEMS).iterator(), ORDERED), true)
                 .map(node -> Map.entry(getText(node, NAME), getLong(node.get("followers"), TOTAL)))
                 .collect(toMap(Map.Entry::getKey, Map.Entry::getValue));
     }
@@ -144,38 +143,6 @@ public class SpotifyParser {
             List<String> list = new ArrayList<>();
             list.add(releaseNameAndType);
             result.put(year, list);
-        }
-    }
-
-    private String getText(JsonNode node, String name) {
-        try {
-            return node.get(name).asText();
-        } catch (Exception e) {
-            throw new RuntimeException("Parsing error", e);
-        }
-    }
-
-    private int getInt(JsonNode node, String name) {
-        try {
-            return node.get(name).asInt();
-        } catch (Exception e) {
-            throw new RuntimeException("Parsing error", e);
-        }
-    }
-
-    private long getLong(JsonNode node, String name) {
-        try {
-            return node.get(name).asLong();
-        } catch (Exception e) {
-            throw new RuntimeException("Parsing error", e);
-        }
-    }
-
-    private JsonNode readTree(String data) throws JsonProcessingException {
-        try {
-            return objectMapper.readTree(data);
-        } catch (NullPointerException | IllegalArgumentException e) {
-            throw new RuntimeException("Parsing error", e);
         }
     }
 }

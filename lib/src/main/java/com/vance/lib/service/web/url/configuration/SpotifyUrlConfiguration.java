@@ -40,6 +40,11 @@ public class SpotifyUrlConfiguration extends UrlConfiguration {
         return this;
     }
 
+    public SpotifyUrlConfiguration albums(@NotNull String albumIDs) {
+        resultUrl.append(String.format("/albums/?ids=%s", albumIDs));
+        return this;
+    }
+
     public SpotifyUrlConfiguration albumTracks(@NotNull String albumID) {
         resultUrl.append(String.format("/albums/%s/tracks", albumID));
         return this;

@@ -23,7 +23,7 @@ public class MusicbrainzIntegration {
     private final List<String> decade2010 = List.of("2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017", "2018", "2019");
     private final List<String> genres = List.of("Pop", "Rock", "Jazz", "Blues", "Classical", "Rap", "Electronic");
     private final List<String> genresWithoutOne = List.of("Pop", "Rock", "Jazz", "Blues", "Classical", "Rap");
-    private int waitTime = 500;
+    private int waitTime = 600;
 
     public MusicbrainzIntegration(RequestService requestService) {
         this.requestService = requestService;

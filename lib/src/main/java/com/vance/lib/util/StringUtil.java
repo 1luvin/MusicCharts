@@ -18,6 +18,7 @@ public class StringUtil {
     public static String removeParts(String data, List<String> removableParts) {
         final AtomicReference<String> result = new AtomicReference<>();
 
+        // special case for Remasters
         if (data.contains(" - ") && containsIgnoreCase(data, "Remaster"))
             result.set(data.substring(0, data.indexOf('-') - 1));
 

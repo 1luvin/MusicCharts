@@ -1,8 +1,5 @@
 package com.vance.musiccharts.cell
 
-import android.animation.Animator
-import android.animation.AnimatorListenerAdapter
-import android.animation.AnimatorSet
 import android.animation.ValueAnimator
 import android.annotation.SuppressLint
 import android.content.Context
@@ -24,22 +21,16 @@ import android.widget.LinearLayout
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.core.content.ContextCompat
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
+import com.github.luvin1.android.utils.Layout
 import com.vance.musiccharts.R
 import com.vance.musiccharts.asFloat
 import com.vance.musiccharts.dp
 import com.vance.musiccharts.extension.Log
 import com.vance.musiccharts.mixWith
 import com.vance.musiccharts.setTextSizeDp
+import com.vance.musiccharts.util.Constant
 import com.vance.musiccharts.util.Font
-import com.vance.musiccharts.util.Layout
 import com.vance.musiccharts.util.Theme
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.MainScope
-import kotlinx.coroutines.async
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.suspendCancellableCoroutine
-import kotlin.coroutines.Continuation
 
 @SuppressLint("ViewConstructor")
 class SearchCell(
@@ -50,7 +41,7 @@ class SearchCell(
 
     private val imageView: ImageView
     private val editText: EditText
-    private val runButton: RunButton
+    private val searchButton: SearchButton
 
     private val bgRect: RectF = RectF()
     private var bgRadius: Float = 0f
@@ -60,6 +51,7 @@ class SearchCell(
 
     init {
         setWillNotDraw(false)
+        gravity = Gravity.CENTER_VERTICAL
 
         imageView = ImageView(context).apply {
             scaleType = ImageView.ScaleType.CENTER
@@ -67,9 +59,8 @@ class SearchCell(
             setColorFilter(Theme.color(Theme.color_text))
         }
         addView(
-            imageView, Layout.ezLinear(
-                40, 40,
-                Gravity.CENTER_VERTICAL
+            imageView, Layout.linear(
+                40, 40
             )
         )
 
@@ -86,34 +77,37 @@ class SearchCell(
             setHintTextColor(Theme.color(Theme.color_text2))
             paintFlags = paintFlags and Paint.UNDERLINE_TEXT_FLAG.inv()
 
-            inputType = EditorInfo.TYPE_CLASS_TEXT or EditorInfo.TYPE_TEXT_FLAG_NO_SUGGESTIONS // removes the underline when typing
+            inputType = EditorInfo.TYPE_CLASS_TEXT or EditorInfo.TYPE_TEXT_FLAG_NO_SUGGESTIONS
             imeOptions = EditorInfo.IME_ACTION_DONE
             setSelectAllOnFocus(true)
         }
         addView(
             editText, Layout.linear(
                 0, Layout.WRAP_CONTENT,
-                weight = 1f,
-                Gravity.CENTER_VERTICAL
+                weight = 1f
             )
         )
 
-        runButton = RunButton().apply {
+        searchButton = SearchButton().apply {
             setOnClickListener {
-                isLoading = true
-                onSearch(editText.text.toString())
-                Log("HOW THE FUCK")
+                editText.text?.let {
+                    val trimmed = it.toString().trim()
+                    if (trimmed.isNotEmpty()) {
+                        isLoading = true
+                        onSearch(trimmed)
+                    }
+                }
             }
         }
         addView(
-            runButton, Layout.linear(
+            searchButton, Layout.linear(
                 Layout.WRAP_CONTENT, Layout.MATCH_PARENT
             )
         )
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
-        val r = w - (runButton.measuredWidth + 12.dp)
+        val r = w - (searchButton.measuredWidth + Constant.indent.dp)
         bgRect.set(0f, 0f, r + 0f, h + 0f)
         bgRadius = h / 4f
     }
@@ -123,16 +117,15 @@ class SearchCell(
     }
 
     fun stopLoading() {
-        runButton.isLoading = false
+        searchButton.isLoading = false
     }
 
-    private inner class RunButton : View(context) {
+    private inner class SearchButton : View(context) {
 
         private val bgRect: RectF = RectF()
         private var bgRadius: Float = 0f
-
-        private val bgColor: Int = 0xFF00D662.toInt()
-        private val bgColorLoading: Int = 0xFFF8C915.toInt()
+        private val bgColor: Int = Theme.color(Theme.color_positive)
+        private val bgColorLoading: Int = Theme.color(Theme.color_loading)
         private val bgPaint: Paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
             color = bgColor
         }
@@ -162,46 +155,16 @@ class SearchCell(
                 if (field == value) return
                 field = value
 
-                val fromAlpha: Int
-                val toAlpha: Int
-                if (isLoading) {
-                    fromAlpha = 0
-                    toAlpha = 255
-                } else {
-                    fromAlpha = 255
-                    toAlpha = 0
-                }
-
-                AnimatorSet().apply {
+                ValueAnimator.ofFloat((!isLoading).asFloat(), isLoading.asFloat()).apply {
                     duration = 250
 
-                    addListener(object : AnimatorListenerAdapter() {
-                        override fun onAnimationStart(animation: Animator) {
-                            isEnabled = false
-                        }
-
-                        override fun onAnimationEnd(animation: Animator) {
-                            isEnabled = !isLoading
-                        }
-                    })
-
-                    playTogether(
-                        ValueAnimator.ofFloat((!isLoading).asFloat(), isLoading.asFloat()).apply {
-                            addUpdateListener {
-                                val v = it.animatedValue as Float
-                                bgPaint.color = bgColor.mixWith(bgColorLoading, v)
-                                invalidate()
-                            }
-                        },
-                        ValueAnimator.ofInt(fromAlpha, toAlpha).apply {
-                            addUpdateListener {
-                                val v = it.animatedValue as Int
-                                runDrawable.alpha = 255 - v
-                                loadingDrawable.alpha = v
-                                invalidate()
-                            }
-                        }
-                    )
+                    addUpdateListener {
+                        val v = it.animatedValue as Float
+                        bgPaint.color = bgColor.mixWith(bgColorLoading, v)
+                        runDrawable.alpha = (255 * (1 - v)).toInt()
+                        loadingDrawable.alpha = 255 - runDrawable.alpha
+                        invalidate()
+                    }
                 }.also { it.start() }
             }
 
@@ -225,7 +188,7 @@ class SearchCell(
             bgRect.set(0f, 0f, w + 0f, h + 0f)
             bgRadius = h / 4f
 
-            var s = (h / 1.7f).toInt()
+            var s = (h * 0.6f).toInt()
             var l = (w - s) / 2
             var t = (h - s) / 2
             runDrawable.setBounds(l, t, l + s, t + s)

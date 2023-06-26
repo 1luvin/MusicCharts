@@ -5,7 +5,7 @@ import com.vance.musiccharts.MainActivity
 
 object Font {
 
-    private val fonts: HashMap<String, Typeface> = HashMap()
+    private val fonts: HashMap<String, Typeface> = hashMapOf()
 
     private fun font(style: String): Typeface {
         if (!fonts.containsKey(style)) {

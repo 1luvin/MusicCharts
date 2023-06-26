@@ -17,6 +17,7 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.view.updateLayoutParams
+import com.github.luvin1.android.utils.Layout
 import com.vance.musiccharts.R
 import com.vance.musiccharts.asFloat
 import com.vance.musiccharts.dp
@@ -24,7 +25,6 @@ import com.vance.musiccharts.heightF
 import com.vance.musiccharts.mixWith
 import com.vance.musiccharts.setTextSizeDp
 import com.vance.musiccharts.util.Font
-import com.vance.musiccharts.util.Layout
 import kotlin.math.roundToInt
 
 @SuppressLint("ViewConstructor")
@@ -37,8 +37,8 @@ class ChartItemView(
     private val imageView: ImageView
     private val textView: TextView
 
-    private val imageSize: Int = 18.dp
-    private val indent: Int = 2.dp
+    private val imageSize: Int = 18
+    private val indent: Int = 2
     private val outlineWidth: Float = 1.5f.dp
 
     var isChecked: Boolean = true
@@ -54,7 +54,7 @@ class ChartItemView(
             textView.apply {
                 setTextColor(bgColor.mixWith(Color.WHITE, value))
                 updateLayoutParams<FrameLayout.LayoutParams> {
-                    val l = (imageSize + indent) / 2
+                    val l = (imageSize + indent).dp / 2
                     leftMargin = (l + l * value).roundToInt()
                 }
             }
@@ -66,14 +66,14 @@ class ChartItemView(
 
     private val fillRect: RectF = RectF()
     private val fillPaint: Paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        this.color = bgColor
+        color = bgColor
     }
 
     private val outlineRect: RectF = RectF()
     private val outlinePaint: Paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         style = Paint.Style.STROKE
         strokeWidth = outlineWidth
-        this.color = bgColor
+        color = bgColor
     }
 
     init {
@@ -118,13 +118,13 @@ class ChartItemView(
 
         super.onMeasure(
             MeasureSpec.makeMeasureSpec(
-                paddingLeft + imageSize + indent + w + paddingRight,
+                paddingLeft + imageSize.dp + indent.dp + w + paddingRight,
                 MeasureSpec.EXACTLY
             ),
             MeasureSpec.makeMeasureSpec(36.dp, MeasureSpec.EXACTLY)
         )
 
-        val spec = MeasureSpec.makeMeasureSpec(imageSize, MeasureSpec.EXACTLY)
+        val spec = MeasureSpec.makeMeasureSpec(imageSize.dp, MeasureSpec.EXACTLY)
         imageView.measure(spec, spec)
     }
 

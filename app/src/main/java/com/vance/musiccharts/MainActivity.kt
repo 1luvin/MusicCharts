@@ -4,35 +4,27 @@ import android.annotation.SuppressLint
 import android.os.Build
 import android.os.Bundle
 import android.text.TextUtils
-import android.view.Gravity
 import android.view.View
-import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.core.widget.NestedScrollView
+import com.github.luvin1.android.utils.Layout
 import com.vance.lib.ChartDataProvider
 import com.vance.musiccharts.chart.BarChartView
 import com.vance.musiccharts.chart.ChartView
+import com.vance.musiccharts.chart.LineChartView
 import com.vance.musiccharts.chart.PieChartView
-import com.vance.musiccharts.extension.Log
 import com.vance.musiccharts.util.Font
-import com.vance.musiccharts.util.Layout
 import com.vance.musiccharts.util.Theme
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.MainScope
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
-
-    private val chartProvider: ChartDataProvider = ChartDataProvider()
-    private val mainScope: CoroutineScope = MainScope()
 
     companion object {
         @SuppressLint("StaticFieldLeak")
@@ -40,12 +32,24 @@ class MainActivity : AppCompatActivity() {
         fun getInstance(): MainActivity = Instance!!
     }
 
+    private val chartProvider: ChartDataProvider = ChartDataProvider()
+    private val mainScope: CoroutineScope = MainScope()
+
+    private val PROVIDE_ALBUM: String = "Provide album name"
+    private val ALBUM: String = "Album"
+    private val PROVIDE_GENRE: String = "Provide genre name"
+    private val GENRE: String = "Genre"
+    private val PROVIDE_ARTIST: String = "Provide artist name"
+    private val ARTIST: String = "Artist"
+
     private lateinit var scroll: NestedScrollView
     private lateinit var layout: LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Instance = this
+
+        Layout.initialize(this)
 
         setupWindow()
         createView()
@@ -82,21 +86,19 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(scroll)
 
-        addSectionView("Album")
+        addSectionView(ALBUM)
 
         addChart(
             BarChartView(
                 context = this,
-                title = "Popularity of tracks in album",
-                subtitle = "Provide album name",
-                searchHint = "Album",
-                onSearch = { chartView, query ->
+                title = "Popularity of tracks",
+                subtitle = PROVIDE_ALBUM,
+                searchHint = ALBUM,
+                onSearch = { chartView, album ->
                     mainScope.launch(Dispatchers.IO) {
-                        val data = chartProvider.popularityOfTracksInAlbum(query).toList().sortedBy { (_, value) -> -value }.toMap()
-                        val itemNames = data.keys.take(7)
-                        val itemValues = data.values.map { it.toFloat() }.take(7)
+                        val data = chartProvider.album_popularityOfTracks(album)
                         withContext(Dispatchers.Main) {
-                            chartView.updateChart(itemNames, itemValues)
+                            chartView.updateChart(data)
                         }
                     }
                 }
@@ -106,16 +108,145 @@ class MainActivity : AppCompatActivity() {
         addChart(
             PieChartView(
                 context = this,
-                title = "Duration of tracks in album",
-                subtitle = "Provide album name",
-                searchHint = "Album",
-                onSearch = { chartView, query ->
+                title = "Duration of tracks",
+                subtitle = PROVIDE_ALBUM,
+                searchHint = ALBUM,
+                onSearch = { chartView, album ->
                     mainScope.launch(Dispatchers.IO) {
-                        val data = chartProvider.durationOfTracksInAlbum(query).toList().sortedBy { (_, value) -> -value }.toMap()
-                        val itemNames = data.keys.take(7)
-                        val itemValues = data.values.map { it / 60_000f }.take(7)
+                        val data = chartProvider.album_durationOfTracks(album)
                         withContext(Dispatchers.Main) {
-                            chartView.updateChart(itemNames, itemValues)
+                            chartView.updateChart(data)
+                        }
+                    }
+                }
+            )
+        )
+
+        addSectionView(GENRE)
+
+        addChart(
+            BarChartView(
+                context = this,
+                title = "Number of releases",
+                subtitle = PROVIDE_GENRE,
+                searchHint = GENRE,
+                onSearch = { chartView, genre ->
+                    mainScope.launch(Dispatchers.IO) {
+                        val data = chartProvider.genre_numberOfReleases(genre)
+                        withContext(Dispatchers.Main) {
+                            chartView.updateChart(data)
+                        }
+                    }
+                }
+            )
+        )
+
+        addChart(
+            BarChartView(
+                context = this,
+                title = "Popularity of artists",
+                subtitle = PROVIDE_GENRE,
+                searchHint = GENRE,
+                onSearch = { chartView, genre ->
+                    mainScope.launch(Dispatchers.IO) {
+                        val data = chartProvider.genre_popularityOfArtists(genre)
+                        withContext(Dispatchers.Main) {
+                            chartView.updateChart(data)
+                        }
+                    }
+                }
+            )
+        )
+
+        addChart(
+            BarChartView(
+                context = this,
+                title = "Number of artists",
+                subtitle = PROVIDE_GENRE,
+                searchHint = GENRE,
+                onSearch = { chartView, genre ->
+                    mainScope.launch(Dispatchers.IO) {
+                        val data = chartProvider.genre_numberOfArtists(genre)
+                        withContext(Dispatchers.Main) {
+                            chartView.updateChart(data)
+                        }
+                    }
+                }
+            )
+        )
+
+        addChart(
+            LineChartView(
+                context = this,
+                title = "Number of releases (2010-2019)",
+                subtitle = PROVIDE_GENRE,
+                searchHint = GENRE,
+                onSearch = { chartView, genre ->
+                    mainScope.launch(Dispatchers.IO) {
+                        val data = chartProvider.genre_numberOfReleasesInDecade(2, genre)
+//                        val years = data.keys.take(7)
+                        val releases = data.values.map { it.toInt() }
+                        withContext(Dispatchers.Main) {
+                            (chartView as LineChartView).apply {
+                                updateLineChart(listOf(), releases)
+                            }
+                        }
+                    }
+                }
+            )
+        )
+
+        addSectionView(ARTIST)
+
+        addChart(
+            BarChartView(
+                context = this,
+                title = "Popularity of albums",
+                subtitle = PROVIDE_ARTIST,
+                searchHint = ARTIST,
+                onSearch = { chartView, artist ->
+                    mainScope.launch(Dispatchers.IO) {
+                        val data = chartProvider.artist_popularityOfAlbums(artist)
+                        withContext(Dispatchers.Main) {
+                            chartView.updateChart(data)
+                        }
+                    }
+                }
+            )
+        )
+
+        addChart(
+            LineChartView(
+                context = this,
+                title = "Activity",
+                subtitle = PROVIDE_ARTIST,
+                searchHint = ARTIST,
+                onSearch = { chartView, artist ->
+                    mainScope.launch(Dispatchers.IO) {
+                        val data = chartProvider.artist_activity(artist).toList().sortedBy { (key, _) -> key }.toMap()
+                        val years = data.keys.toList()
+                        val releases = data.values.map { it.size }
+                        withContext(Dispatchers.Main) {
+                            (chartView as LineChartView).apply {
+                                updateLineChart(years, releases)
+                            }
+                        }
+                    }
+                }
+            )
+        )
+
+        addChart(
+            BarChartView(
+                context = this,
+                title = "Popularity of tracks",
+                subtitle = PROVIDE_ARTIST,
+                searchHint = ARTIST,
+                onSearch = { chartView, artist ->
+                    mainScope.launch(Dispatchers.IO) {
+                        val data = chartProvider.artist_popularityOfTracks(artist)
+                        withContext(Dispatchers.Main) {
+                            chartView.updateChart(data)
                         }
                     }
                 }
@@ -133,7 +264,7 @@ class MainActivity : AppCompatActivity() {
             text = name
         }
         layout.addView(
-            view, Layout.ezLinear(
+            view, Layout.linear(
                 Layout.MATCH_PARENT, Layout.WRAP_CONTENT,
                 12, 24, 12, 24
             )
@@ -141,7 +272,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun addChart(chartView: ChartView) = layout.addView(
-        chartView, Layout.ezLinear(
+        chartView, Layout.linear(
             Layout.MATCH_PARENT, Layout.WRAP_CONTENT,
             0, 0, 0, 12
         )

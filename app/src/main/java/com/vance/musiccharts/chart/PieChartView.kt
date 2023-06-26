@@ -11,11 +11,11 @@ import android.view.MotionEvent
 import android.view.View
 import android.view.animation.DecelerateInterpolator
 import androidx.core.view.forEachIndexed
+import com.github.luvin1.android.utils.Layout
 import com.google.android.material.chip.ChipGroup
 import com.vance.musiccharts.asShuffled
 import com.vance.musiccharts.dp
 import com.vance.musiccharts.heightF
-import com.vance.musiccharts.util.Layout
 import com.vance.musiccharts.widthF
 
 @SuppressLint("ViewConstructor")
@@ -29,9 +29,9 @@ class PieChartView(
 
     private val chart: View
     private val itemsCheckGroup: ChipGroup
-    private val itemColors: List<Int> = colors.asShuffled().take(7)
+    private val itemColors: List<Int> = colors.asShuffled().take(6)
 
-    private val animatedPercents: MutableList<Float> = MutableList(7) { 0f }
+    private val animatedPercents: MutableList<Float> = MutableList(6) { 0f }
     private val tempRect: Rect = Rect()
     private var focusedIndex: Int = -1
 
@@ -66,7 +66,7 @@ class PieChartView(
             }
         }
         addView(
-            chart, Layout.ezLinear(
+            chart, Layout.linear(
                 Layout.WRAP_CONTENT, Layout.WRAP_CONTENT,
                 Gravity.CENTER_HORIZONTAL
             )
@@ -102,15 +102,19 @@ class PieChartView(
             }
         }
         addView(
-            itemsCheckGroup, Layout.ezLinear(
+            itemsCheckGroup, Layout.linear(
                 Layout.MATCH_PARENT, Layout.WRAP_CONTENT,
                 indent, indent, indent, indent
             )
         )
     }
     
-    override fun updateChart(itemNames: List<String>, itemValues: List<Float>) {
-        super.updateChart(itemNames, itemValues)
+    override fun updateChart(data: Map<String, Number>) {
+        super.updateChart(data)
+
+        val sortedData = data.toList().sortedBy { (_, value) -> -value.toFloat() }.toMap()
+        val itemNames = sortedData.keys.take(6)
+        val itemValues = sortedData.values.map { it.toFloat() / 60_000f }.take(6)
 
         itemsCheckGroup.removeAllViewsInLayout()
         itemNames.forEachIndexed { index, name ->

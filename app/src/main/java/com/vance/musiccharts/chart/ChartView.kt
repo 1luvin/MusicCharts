@@ -5,10 +5,11 @@ import android.text.TextUtils
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.annotation.CallSuper
+import com.github.luvin1.android.utils.Layout
 import com.vance.musiccharts.cell.SearchCell
 import com.vance.musiccharts.setTextSizeDp
+import com.vance.musiccharts.util.Constant
 import com.vance.musiccharts.util.Font
-import com.vance.musiccharts.util.Layout
 import com.vance.musiccharts.util.Theme
 
 abstract class ChartView(
@@ -36,9 +37,9 @@ abstract class ChartView(
 
     private val textView: TextView
     private val textView2: TextView
-    private val searchCell: SearchCell
+    protected val searchCell: SearchCell
 
-    protected val indent: Int = 12
+    protected val indent: Int = Constant.indent
 
     init {
         orientation = VERTICAL
@@ -52,7 +53,7 @@ abstract class ChartView(
             text = title
         }
         addView(
-            textView, Layout.ezLinear(
+            textView, Layout.linear(
                 Layout.MATCH_PARENT, Layout.WRAP_CONTENT,
                 indent, 0, indent, 0
             )
@@ -65,7 +66,7 @@ abstract class ChartView(
             text = subtitle
         }
         addView(
-            textView2, Layout.ezLinear(
+            textView2, Layout.linear(
                 Layout.MATCH_PARENT, Layout.WRAP_CONTENT,
                 indent, 0, indent, 0
             )
@@ -79,7 +80,7 @@ abstract class ChartView(
             }
         )
         addView(
-            searchCell, Layout.ezLinear(
+            searchCell, Layout.linear(
                 Layout.MATCH_PARENT, 40,
                 indent, indent, indent, indent * 2
             )
@@ -87,7 +88,7 @@ abstract class ChartView(
     }
 
     @CallSuper
-    open fun updateChart(itemNames: List<String>, itemValues: List<Float>) {
+    open fun updateChart(data: Map<String, Number>) {
         searchCell.stopLoading()
     }
 }

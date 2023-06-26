@@ -10,15 +10,19 @@ import android.graphics.Paint
 import android.graphics.RectF
 import android.view.View
 import android.view.animation.DecelerateInterpolator
+import com.github.luvin1.android.utils.Layout
 import com.google.android.material.chip.ChipGroup
 import com.vance.musiccharts.alpha
 import com.vance.musiccharts.asShuffled
 import com.vance.musiccharts.dp
+import com.vance.musiccharts.extension.Log
 import com.vance.musiccharts.heightF
+import com.vance.musiccharts.util.Constant
 import com.vance.musiccharts.util.Font
-import com.vance.musiccharts.util.Layout
 import com.vance.musiccharts.util.Theme
 import com.vance.musiccharts.widthF
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 @SuppressLint("ViewConstructor")
 class BarChartView(
@@ -29,28 +33,23 @@ class BarChartView(
     onSearch: (ChartView, String) -> Unit
 ) : ChartView(context, title, subtitle, searchHint, onSearch) {
 
-    companion object {
-
-        private val barHeight: Int = 250.dp
-        private const val linesSize: Int = 6
-    }
-
     private val chart: View
     private val itemsCheckGroup: ChipGroup
     private val itemChecks: MutableList<ChartItemView> = mutableListOf()
 
-    private var itemValues: List<Float> = listOf()
+    private val BAR_HEIGHT: Int = 250.dp
+    private val LINES: Int = 6
 
-    private var values: MutableList<Float> = MutableList(linesSize) { 0f }
-    private var animValues: MutableList<Float> = values.toMutableList()
-    private var rects: List<RectF> = List(7) { RectF() }
-    private var animRects: List<RectF> = rects.toList()
+    private val values: MutableList<Float> = MutableList(LINES) { 0f }
+    private val animValues: MutableList<Float> = values.toMutableList()
+    private var valuesTranslateX: Float = 0f
+    private var rects: List<RectF> = List(Constant.N) { RectF() }
+    private val animRects: MutableList<RectF> = rects.toMutableList()
 
     private val rectPaint: Paint = Paint(Paint.ANTI_ALIAS_FLAG)
     private var animator: ValueAnimator? = null
-    private var rectPercents: List<Float> = listOf()
 
-    private val itemColors: List<Int> = colors.asShuffled().take(7)
+    private val itemColors: List<Int> = colors.asShuffled().take(Constant.N)
 
     private var textPaint: Paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         typeface = Font.Regular
@@ -63,47 +62,40 @@ class BarChartView(
         color = Theme.color(Theme.color_text2).alpha(0.3f)
     }
 
-    private var valuesTranslateX: Float = 0f
-
     init {
         chart = object : View(context) {
 
             override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
                 super.onMeasure(
                     MeasureSpec.makeMeasureSpec(MeasureSpec.getSize(widthMeasureSpec), MeasureSpec.EXACTLY),
-                    MeasureSpec.makeMeasureSpec(barHeight, MeasureSpec.EXACTLY)
+                    MeasureSpec.makeMeasureSpec(BAR_HEIGHT, MeasureSpec.EXACTLY)
                 )
+
+                textPaint.textSize = measuredHeight / LINES.toFloat() * 0.37f
             }
 
             override fun draw(canvas: Canvas) {
                 super.draw(canvas)
 
-                val h = heightF / linesSize
-                if (animValues.isNotEmpty()) {
-                    textPaint.textSize = h * 0.37f
-                    var t = h
-                    repeat(linesSize) {
-                        canvas.apply {
-                            drawText("%.1f".format(animValues[it]), 0f, t - h * 0.2f, textPaint)
-                            drawLine(0f, t, widthF, t, linePaint)
-                        }
-                        t += h
+                val h = heightF / LINES
+                var t = h
+                repeat(LINES) {
+                    canvas.apply {
+                        drawText("%.1f".format(animValues[it]), 0f, t - h * 0.2f, textPaint)
+                        drawLine(0f, t, widthF, t, linePaint)
                     }
+                    t += h
                 }
 
-                canvas.apply {
-                    save()
-                    translate(valuesTranslateX + indent.dp, h)
-                }
+                canvas.translate(valuesTranslateX + indent.dp, h)
                 animRects.forEachIndexed { i, rect ->
                     rectPaint.color = itemColors[i]
                     canvas.drawRect(rect, rectPaint)
                 }
-                canvas.restore()
             }
         }
         addView(
-            chart, Layout.ezLinear(
+            chart, Layout.linear(
                 Layout.MATCH_PARENT, Layout.WRAP_CONTENT,
                 indent, 0, indent, 0
             )
@@ -114,20 +106,22 @@ class BarChartView(
             chipSpacingVertical = 6.dp
         }
         addView(
-            itemsCheckGroup, Layout.ezLinear(
+            itemsCheckGroup, Layout.linear(
                 Layout.MATCH_PARENT, Layout.WRAP_CONTENT,
                 indent, indent, indent, indent
             )
         )
     }
 
-    override fun updateChart(itemNames: List<String>, itemValues: List<Float>) {
-        super.updateChart(itemNames, itemValues)
+    override fun updateChart(data: Map<String, Number>) {
+        super.updateChart(data)
+
+        val sortedData = data.toList().sortedBy { (_, value) -> -value.toFloat() }.toMap()
+        val itemNames = sortedData.keys.take(7)
+        val itemValues = sortedData.values.map { it.toFloat() }.take(7)
 
         itemsCheckGroup.removeAllViewsInLayout()
         itemChecks.clear()
-
-        this.itemValues = itemValues
 
         itemNames.forEachIndexed { index, name ->
             ChartItemView(
@@ -137,8 +131,8 @@ class BarChartView(
             ).apply {
                 setOnClickListener {
                     if (!isChecked || (isChecked && itemChecks.count { it.isChecked } > 2)) {
-                        setChecked(!isChecked, animated = true)
-                        redrawChart()
+                        setChecked(checked = !isChecked, animated = true)
+                        redrawChart(itemValues)
                     }
                 }
             }.also {
@@ -147,60 +141,50 @@ class BarChartView(
             }
         }
 
-        redrawChart()
+        redrawChart(itemValues)
     }
 
-    private fun redrawChart() {
-        val Values = itemValues.filterIndexed { i, _ -> itemChecks[i].isChecked }
-        val max = Values.maxOf { it }
-        val min = Values.minOf { it }
-        val heightPercents = Values.map { (it - min) * (1f - 0.2f) / (max - min) + 0.2f }
+    private fun redrawChart(itemValues: List<Float>) {
+        val checkedValues = itemValues.filterIndexed { i, _ -> itemChecks[i].isChecked }
+        val max = checkedValues.maxOf { it }
+        val min = checkedValues.minOf { it }
+        val heightPercents = checkedValues.map { (it - min) * (1f - 0.2f) / (max - min) + 0.2f }
 
-        var fromValues: List<Float> = listOf()
-        var fromRects: List<RectF> = listOf()
-        animator?.let {
-            it.cancel()
+        val fromValues: List<Float>
+        val fromRects: List<RectF>
+        if (animator != null) {
+            animator!!.cancel()
             fromValues = animValues.toList()
-            fromRects = animRects.toList()
-        } ?: run {
+            fromRects = animRects.map { RectF(it) }
+        } else {
             fromValues = values.toList()
-            fromRects = rects.toList()
+            fromRects = rects
         }
 
-        val xx = (max - min) / (linesSize - 2)
-        var p = max
-        repeat(linesSize - 1) {
-            values[it] = p
-            p -= xx
+        var tmp = (max - min) / (LINES - 2)
+        var tmp2 = max
+        repeat(LINES - 1) {
+            values[it] = tmp2
+            tmp2 -= tmp
         }
 
         valuesTranslateX = values.maxOf {
             val t = "%.1f".format(it)
             textPaint.measureText(t)
         }
-        val w = (chart.width - (valuesTranslateX + indent.dp)) / Values.size
 
-        val Height = barHeight - barHeight.toFloat() / linesSize
+        val barWidth = (chart.width - (valuesTranslateX + indent.dp)) / checkedValues.size
+        val lineHeight = BAR_HEIGHT - BAR_HEIGHT / LINES.toFloat()
 
         var ii = 0
-        var left = 0f
+        tmp = 0f
         rects = itemValues.mapIndexed { i, v ->
             if (itemChecks[i].isChecked) {
-                val rect = RectF(left, Height * (1 - heightPercents[ii++]), left + w, Height)
-                left += w
+                val rect = RectF(tmp, lineHeight * (1 - heightPercents[ii++]), tmp + barWidth, lineHeight)
+                tmp += barWidth
                 rect
             } else {
-                RectF(left, Height, left, Height)
-            }
-        }
-
-        ii = 0
-        val sum = Values.sum()
-        rectPercents = itemValues.mapIndexed { i, v ->
-            if (itemChecks[i].isChecked) {
-                Values[ii++] / sum
-            } else {
-                0f
+                RectF(tmp, lineHeight, tmp, lineHeight)
             }
         }
 
@@ -217,7 +201,7 @@ class BarChartView(
             addUpdateListener {
                 val v = it.animatedValue as Float
 
-                for (i in 0 until linesSize) {
+                for (i in 0 until LINES) {
                     animValues[i] = fromValues[i] + (this@BarChartView.values[i] - fromValues[i]) * v
                 }
 

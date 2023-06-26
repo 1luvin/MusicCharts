@@ -70,6 +70,10 @@ public class ChartDataProvider {
         return spotify.getPopularArtistsOfGenre(genre);
     }
 
+    public void closeHttpClient() {
+        requestService.closeHttpClient();
+    }
+
     public static void main(String[] args) {
         final RequestService requestServiceInstance = RequestService.getInstance();
         final SecretProvider secretProviderInstance = SecretProvider.getInstance(requestServiceInstance);

@@ -7,6 +7,7 @@ import org.apache.hc.core5.http.ClassicHttpResponse;
 import org.apache.hc.core5.http.HttpException;
 import org.apache.hc.core5.http.HttpStatus;
 import org.apache.hc.core5.http.io.HttpClientResponseHandler;
+import org.apache.hc.core5.io.CloseMode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,6 +50,11 @@ public class RequestService {
         }
 
         throw new RuntimeException(format("Error with proceeding request to %s", request.getRequestUri()));
+    }
+
+    public void closeHttpClient() {
+        log.info("Closing http client");
+        httpClient.close(CloseMode.GRACEFUL);
     }
 
     private static class CustomResponseHandler implements HttpClientResponseHandler<String> {

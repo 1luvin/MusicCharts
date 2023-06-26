@@ -25,6 +25,7 @@ import com.vance.musiccharts.heightF
 import com.vance.musiccharts.mixWith
 import com.vance.musiccharts.setTextSizeDp
 import com.vance.musiccharts.util.Font
+import kotlin.math.min
 import kotlin.math.roundToInt
 
 @SuppressLint("ViewConstructor")
@@ -114,13 +115,12 @@ class ChartItemView(
     }
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
-        val w = textView.paint.measureText(textView.text.toString()).roundToInt()
+        val maxWidth = MeasureSpec.getSize(widthMeasureSpec)
+        val textWidth = textView.paint.measureText(textView.text.toString()).roundToInt()
+        val desiredWidth = paddingLeft + imageSize.dp + indent.dp + textWidth + paddingRight
 
         super.onMeasure(
-            MeasureSpec.makeMeasureSpec(
-                paddingLeft + imageSize.dp + indent.dp + w + paddingRight,
-                MeasureSpec.EXACTLY
-            ),
+            MeasureSpec.makeMeasureSpec(min(desiredWidth, maxWidth), MeasureSpec.EXACTLY),
             MeasureSpec.makeMeasureSpec(36.dp, MeasureSpec.EXACTLY)
         )
 

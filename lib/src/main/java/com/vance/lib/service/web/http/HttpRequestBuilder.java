@@ -51,9 +51,8 @@ public class HttpRequestBuilder {
 
     public HttpRequestBuilder body(@NotNull String body) {
         Optional.ofNullable(request).orElseThrow(() -> new IllegalStateException("Adding body to uninitialized request"));
-        if (request instanceof HttpGet) {
+        if (request instanceof HttpGet)
             throw new IllegalStateException("Adding body to GET Http request is not allowed");
-        }
         request.setEntity(HttpEntities.create(body));
         return this;
     }

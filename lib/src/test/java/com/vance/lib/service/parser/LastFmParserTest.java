@@ -12,7 +12,7 @@ class LastFmParserTest {
     private final LastFmParser parser = new LastFmParser();
 
     @Test
-    void shouldParsePopularityOfGenres() throws JsonProcessingException {
+    void shouldParsePopularityOfGenres() throws JsonProcessingException, ParsingException {
         // given
         final String jsonInput = "{ \"tags\": { \"tag\": [{\"name\":\"rock\", \"reach\":\"10\"}] }}";
         final int expectedSize = 1;
@@ -50,6 +50,6 @@ class LastFmParserTest {
         final String jsonInput = "{ \"tags\": { \"tag\": {} }}";
 
         // when and then
-        assertThrows(RuntimeException.class, () -> parser.parsePopularityOfGenres(jsonInput));
+        assertThrows(ParsingException.class, () -> parser.parsePopularityOfGenres(jsonInput));
     }
 }

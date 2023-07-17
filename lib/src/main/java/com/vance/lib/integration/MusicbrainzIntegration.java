@@ -8,7 +8,12 @@ import com.vance.lib.service.web.url.UrlBuilder;
 import org.jetbrains.annotations.TestOnly;
 
 import java.net.URISyntaxException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import static com.vance.lib.util.LambdaExceptionUtil.rethrowConsumer;
 
 public class MusicbrainzIntegration {
     public static final int YEARS_90_TO_99 = 0;
@@ -29,43 +34,41 @@ public class MusicbrainzIntegration {
         this.requestService = requestService;
     }
 
-    public Map<String, Long> getNumberOfArtistsOfGenres(String genre) {
+    public Map<String, Long> getNumberOfArtistsOfGenres(String genre) throws IntegrationException {
         final Map<String, Long> result = new LinkedHashMap<>();
-        getGenres(genre).forEach(value ->
-                addCountToMap(result, value, urlBuilder.musicbrainz().numberOfArtistsOfGenre(value).build()));
+        getGenres(genre).forEach(rethrowConsumer(value ->
+                addCountToMap(result, value, urlBuilder.musicbrainz().numberOfArtistsOfGenre(value).build())));
         return result;
     }
 
-    public Map<String, Long> getNumberOfReleasesOfGenres(String genre) {
+    public Map<String, Long> getNumberOfReleasesOfGenres(String genre) throws IntegrationException {
         final Map<String, Long> result = new LinkedHashMap<>();
-        getGenres(genre).forEach(value ->
-                addCountToMap(result, value, urlBuilder.musicbrainz().releasesOfGenre(value ).build()));
+        getGenres(genre).forEach(rethrowConsumer(value ->
+                addCountToMap(result, value, urlBuilder.musicbrainz().releasesOfGenre(value).build())));
         return result;
     }
 
-    public Map<String, Long> getNumberOfReleasesOfGenreInYears(int years, String genre) {
+    public Map<String, Long> getNumberOfReleasesOfGenreInYears(int years, String genre) throws IntegrationException {
         validateYears(years);
 
         final Map<String, Long> result = new LinkedHashMap<>();
+
         if (years == YEARS_90_TO_99)
             setNumberOfReleases(decade1990, result, genre);
         else if (years == YEARS_00_TO_09)
             setNumberOfReleases(decade2000, result, genre);
         else if (years == YEARS_10_TO_19)
             setNumberOfReleases(decade2010, result, genre);
+
         return result;
     }
 
     @TestOnly
-    public void setWaitTime(int value) {
-        this.waitTime = value;
+    public void setWaitTime(int millis) {
+        this.waitTime = millis;
     }
 
-    private void setNumberOfReleases(List<String> years, Map<String, Long> map, String genre) {
-        years.forEach(year -> addCountToMap(map, year, urlBuilder.musicbrainz().releasesOfGenre(genre, year).build()));
-    }
-
-    public String getYearsFormatted(int years) {
+    public String getYearsFormatted(int years) throws MusicbrainzIntegrationException {
         validateYears(years);
         if (years == YEARS_00_TO_09)
             return "2000 - 2009";
@@ -75,13 +78,18 @@ public class MusicbrainzIntegration {
             return "2010 - 2019";
     }
 
-    private void validateYears(int years) {
+    private void validateYears(int years) throws MusicbrainzIntegrationException {
         if (years != YEARS_00_TO_09 && years != YEARS_90_TO_99 && years != YEARS_10_TO_19) {
             throw new MusicbrainzIntegrationException("Unsupported years");
         }
     }
 
-    private void addCountToMap(Map<String, Long> map, String item, String url) {
+    private void setNumberOfReleases(List<String> years, Map<String, Long> map, String genre) throws IntegrationException {
+        years.forEach(rethrowConsumer(year ->
+                addCountToMap(map, year, urlBuilder.musicbrainz().releasesOfGenre(genre, year).build())));
+    }
+
+    private void addCountToMap(Map<String, Long> map, String item, String url) throws MusicbrainzIntegrationException {
         final String finalUrl = String.format("%s&fmt=json", url);
 
         try {
@@ -90,29 +98,29 @@ public class MusicbrainzIntegration {
             map.put(item, parser.parseCountOfItems(response));
 
         } catch (JsonProcessingException | InterruptedException e) {
-            throw new MusicbrainzIntegrationException("Error occurred: " + e.getMessage(), e);
+            throw new MusicbrainzIntegrationException(e.getMessage(), e);
         } catch (URISyntaxException e) {
-            throw new IllegalArgumentException(String.format("Bad url created: %s", finalUrl));
+            throw new MusicbrainzIntegrationException(String.format("Bad url created: %s", finalUrl), e);
         }
     }
 
     private List<String> getGenres(String genre) {
-        return genres.contains(genre) ? genres : createUniqueListWithGenres(genre);
+        return genres.contains(genre) ? genres : createUniqueGenreList(genre);
     }
 
-    private List<String> createUniqueListWithGenres(String genre) {
+    private List<String> createUniqueGenreList(String genre) {
         final List<String> result = new ArrayList<>(genresWithoutOne);
         result.add(genre);
         return result;
     }
 
-    static class MusicbrainzIntegrationException extends RuntimeException {
-        public MusicbrainzIntegrationException(String message) {
-            super(message);
+    static class MusicbrainzIntegrationException extends IntegrationException {
+        public MusicbrainzIntegrationException(String message, Exception throwable) {
+            super(message, throwable);
         }
 
-        public MusicbrainzIntegrationException(String message, Throwable throwable) {
-            super(message, throwable);
+        public MusicbrainzIntegrationException(String message) {
+            super(message);
         }
     }
 }

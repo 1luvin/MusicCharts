@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -13,7 +14,7 @@ class SpotifyParserTest {
     private final SpotifyParser parser = new SpotifyParser();
 
     @Test
-    void shouldParseIdOfItem() throws JsonProcessingException {
+    void shouldParseIdOfItem() throws JsonProcessingException, ParsingException {
         // given
         final String json = "{ \"artists\": { \"items\" : [{ \"id\":\"TEST_ID\", \"name\":\"TEST_NAME\" }], \"total\" : \"1\" } }";
         final String expectedID = "TEST_ID";
@@ -26,7 +27,7 @@ class SpotifyParserTest {
     }
 
     @Test
-    void shouldParseIdOfItems() throws JsonProcessingException {
+    void shouldParseIdOfItems() throws JsonProcessingException, ParsingException {
         // given
         final String json = "{ \"albums\": { \"items\" : [{ \"id\" : \"TEST_ID_1\" }, {\"id\" : \"TEST_ID_2\"}] } }";
         final String expectedIDs = "TEST_ID_1,TEST_ID_2";
@@ -69,8 +70,8 @@ class SpotifyParserTest {
         assertEquals(expectedSize, actualActivity.size());
         assertNotNull(actualActivity.get(2000));
         assertNotNull(actualActivity.get(2001));
-        assertEquals(firstList.get(0), actualActivity.get(2000).get(0));
-        assertEquals(secondList.get(0), actualActivity.get(2001).get(0));
+        assertEquals(firstList.get(0), Objects.requireNonNull(actualActivity.get(2000)).get(0));
+        assertEquals(secondList.get(0), Objects.requireNonNull(actualActivity.get(2001)).get(0));
     }
 
     @Test

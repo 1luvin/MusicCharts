@@ -1,5 +1,6 @@
 package com.vance.lib;
 
+import com.vance.lib.integration.IntegrationException;
 import com.vance.lib.integration.LastFmIntegration;
 import com.vance.lib.integration.MusicbrainzIntegration;
 import com.vance.lib.integration.SpotifyIntegration;
@@ -20,52 +21,52 @@ public class ChartDataProvider {
     private final LastFmIntegration lastFM = new LastFmIntegration(requestService, secretProvider);
     private final SpotifyIntegration spotify = new SpotifyIntegration(requestService, secretProvider);
 
-    public Map<String, Long> genre_numberOfArtists(@NotNull String genre) {
+    public Map<String, Long> genre_numberOfArtists(@NotNull String genre) throws IntegrationException {
         log.info("Getting number of artists of genres, genres: {}", genre);
         return musicbrainz.getNumberOfArtistsOfGenres(genre);
     }
 
-    public Map<String, Long> genre_numberOfReleases(@NotNull String genre) {
+    public Map<String, Long> genre_numberOfReleases(@NotNull String genre) throws IntegrationException {
         log.info("Getting number of releases of genres, genres: {}", genre);
         return musicbrainz.getNumberOfReleasesOfGenres(genre);
     }
 
-    public Map<String, Long> genre_numberOfReleasesInDecade(int years, @NotNull String genre) {
+    public Map<String, Long> genre_numberOfReleasesInDecade(int years, @NotNull String genre) throws IntegrationException {
         log.info("Getting releases of genre ({}) released in years ({})", genre, musicbrainz.getYearsFormatted(years));
         return musicbrainz.getNumberOfReleasesOfGenreInYears(years, genre);
     }
 
-    public Map<String, Long> popularityOfGenres() {
+    public Map<String, Long> popularityOfGenres() throws IntegrationException {
         log.info("Getting popularity of genres");
         return lastFM.getPopularityOfGenres();
     }
 
-    public Map<String, Integer> artist_popularityOfAlbums(@NotNull String artist) {
+    public Map<String, Integer> artist_popularityOfAlbums(@NotNull String artist) throws IntegrationException {
         log.info("Getting popularity of albums of artist {}", artist);
         return spotify.getPopularityOfAlbums(artist);
     }
 
-    public Map<String, Integer> artist_popularityOfTracks(@NotNull String artist) {
+    public Map<String, Integer> artist_popularityOfTracks(@NotNull String artist) throws IntegrationException {
         log.info("Getting popularity of tracks of artist {}", artist);
         return spotify.getPopularityOfTracksOfArtist(artist);
     }
 
-    public Map<String, Long> album_durationOfTracks(@NotNull String album) {
+    public Map<String, Long> album_durationOfTracks(@NotNull String album) throws IntegrationException {
         log.info("Getting duration of tracks of album {}", album);
         return spotify.getDurationOfTracksInAlbum(album);
     }
 
-    public Map<String, Integer> album_popularityOfTracks(@NotNull String album) {
+    public Map<String, Integer> album_popularityOfTracks(@NotNull String album) throws IntegrationException {
         log.info("Getting popularity of tracks from album {}", album);
         return spotify.getPopularityOfTracksInAlbum(album);
     }
 
-    public Map<Integer, List<String>> artist_activity(@NotNull String artist) {
+    public Map<Integer, List<String>> artist_activity(@NotNull String artist) throws IntegrationException {
         log.info("Getting activity of artist {}", artist);
         return spotify.getActivityOfArtist(artist);
     }
 
-    public Map<String, Long> genre_popularityOfArtists(@NotNull String genre) {
+    public Map<String, Long> genre_popularityOfArtists(@NotNull String genre) throws IntegrationException {
         log.info("Getting popular artists of genre {}", genre);
         return spotify.getPopularArtistsOfGenre(genre);
     }
@@ -74,7 +75,7 @@ public class ChartDataProvider {
         requestService.closeHttpClient();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IntegrationException {
         final RequestService requestServiceInstance = RequestService.getInstance();
         final SecretProvider secretProviderInstance = SecretProvider.getInstance(requestServiceInstance);
         SpotifyIntegration integration = new SpotifyIntegration(requestServiceInstance, secretProviderInstance);

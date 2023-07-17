@@ -1,5 +1,6 @@
 package com.vance.lib.integration;
 
+import com.vance.lib.integration.SpotifyIntegration.SpotifyIntegrationException;
 import com.vance.lib.service.parser.SpotifyParser;
 import com.vance.lib.service.web.http.RequestService;
 import com.vance.lib.service.web.secrets.SecretProvider;
@@ -10,7 +11,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.util.List;
 import java.util.Map;
 
@@ -36,7 +36,7 @@ public class SpotifyIntegrationTest {
     }
 
     @Test
-    void shouldGetPopularityOfAlbums() throws IOException, URISyntaxException {
+    void shouldGetPopularityOfAlbums() throws IOException, IntegrationException {
         // given
         final String albums = readFile("spotify/albumsSearch.json", SpotifyIntegrationTest.class);
         final String popularity = readFile("spotify/albumsPopularity.json", SpotifyIntegration.class);
@@ -62,7 +62,7 @@ public class SpotifyIntegrationTest {
     }
 
     @Test
-    void shouldNotGetPopularityOfAlbumsAsAlbumsPopularityResponseIsEmpty() throws IOException, URISyntaxException {
+    void shouldNotGetPopularityOfAlbumsAsAlbumsPopularityResponseIsEmpty() throws IOException {
         // given
         final String albums = readFile("spotify/albumsSearch.json", SpotifyIntegrationTest.class);
         final String popularity = "{}";
@@ -80,24 +80,24 @@ public class SpotifyIntegrationTest {
         given(requestService.sendRequest(any(ClassicHttpRequest.class))).willReturn(albums);
 
         // when & then
-        assertThrows(SpotifyIntegration.SpotifyIntegrationException.class,
+        assertThrows(SpotifyIntegrationException.class,
                 () -> spotifyIntegration.getPopularityOfAlbums("TEST"));
     }
 
     @Test
-    void shouldNotGetPopularityOfAlbumsAsAlbumPopularityIsBad() throws IOException, URISyntaxException {
+    void shouldNotGetPopularityOfAlbumsAsAlbumPopularityIsBad() throws IOException {
         // given
         final String albums = readFile("spotify/albumsSearch.json", SpotifyIntegrationTest.class);
         final String popularity = "{---}";
         given(requestService.sendRequest(any(ClassicHttpRequest.class))).willReturn(albums, popularity);
 
         // when & then
-        assertThrows(SpotifyIntegration.SpotifyIntegrationException.class,
+        assertThrows(SpotifyIntegrationException.class,
                 () -> spotifyIntegration.getPopularityOfAlbums("TEST"));
     }
 
     @Test
-    void shouldGetActivityOfArtist() throws IOException, URISyntaxException {
+    void shouldGetActivityOfArtist() throws IOException, IntegrationException {
         // given
         final String artist = readFile("spotify/artistSearch.json", SpotifyIntegrationTest.class);
         final String albums = readFile("spotify/albumsOfArtist.json", SpotifyIntegrationTest.class);
@@ -112,18 +112,18 @@ public class SpotifyIntegrationTest {
     }
 
     @Test
-    void shouldNotGetActivityOfArtistAsArtistNameIsWrong() throws IOException, URISyntaxException {
+    void shouldNotGetActivityOfArtistAsArtistNameIsWrong() throws IOException {
         // given
         final String artist = readFile("spotify/artistSearch.json", SpotifyIntegrationTest.class);
         final String albums = readFile("spotify/albumsOfArtist.json", SpotifyIntegrationTest.class);
         given(requestService.sendRequest(any(ClassicHttpRequest.class))).willReturn(artist, albums);
 
         // when & then
-        assertThrows(IllegalStateException.class, () -> spotifyIntegration.getActivityOfArtist("WRONG_NAME"));
+        assertThrows(IntegrationException.class, () -> spotifyIntegration.getActivityOfArtist("WRONG_NAME"));
     }
 
     @Test
-    void shouldGetDurationOfTracksInAlbum() throws IOException, URISyntaxException {
+    void shouldGetDurationOfTracksInAlbum() throws IOException, IntegrationException {
         // given
         final String album = readFile("spotify/albumSearch.json", SpotifyIntegrationTest.class);
         final String tracks = readFile("spotify/tracksOfAlbum.json", SpotifyIntegrationTest.class);
@@ -139,7 +139,7 @@ public class SpotifyIntegrationTest {
     }
 
     @Test
-    void shouldGetPopularityOfTracksInAlbum() throws IOException, URISyntaxException {
+    void shouldGetPopularityOfTracksInAlbum() throws IOException, IntegrationException {
         // given
         final String album = readFile("spotify/albumSearch.json", SpotifyIntegrationTest.class);
         final String tracks = readFile("spotify/tracksOfAlbum.json", SpotifyIntegrationTest.class);
@@ -156,7 +156,7 @@ public class SpotifyIntegrationTest {
     }
 
     @Test
-    void shouldGet() throws IOException, URISyntaxException {
+    void shouldGetPopularTracksOfArtist() throws IOException, IntegrationException {
         // given
         final String artist = readFile("spotify/artistSearch.json", SpotifyIntegrationTest.class);
         final String tracks = readFile("spotify/tracksOfArtist.json", SpotifyIntegrationTest.class);
@@ -172,7 +172,7 @@ public class SpotifyIntegrationTest {
     }
 
     @Test
-    void shouldGetPopularArtistsOfGenre() throws IOException, URISyntaxException {
+    void shouldGetPopularArtistsOfGenre() throws IOException, IntegrationException {
         // given
         final String artists = readFile("spotify/popularArtists.json", SpotifyIntegrationTest.class);
         final Map<String, Long> expected = parser.parsePopularityOfArtistsOfGenre(artists);
@@ -193,17 +193,17 @@ public class SpotifyIntegrationTest {
 
 
         // when & then
-        assertThrows(SpotifyIntegration.SpotifyIntegrationException.class,
+        assertThrows(SpotifyIntegrationException.class,
                 () -> spotifyIntegration.getActivityOfArtist(testArgument));
-        assertThrows(SpotifyIntegration.SpotifyIntegrationException.class,
+        assertThrows(SpotifyIntegrationException.class,
                 () -> spotifyIntegration.getPopularityOfAlbums(testArgument));
-        assertThrows(SpotifyIntegration.SpotifyIntegrationException.class,
+        assertThrows(SpotifyIntegrationException.class,
                 () -> spotifyIntegration.getPopularArtistsOfGenre(testArgument));
-        assertThrows(SpotifyIntegration.SpotifyIntegrationException.class,
+        assertThrows(SpotifyIntegrationException.class,
                 () -> spotifyIntegration.getDurationOfTracksInAlbum(testArgument));
-        assertThrows(SpotifyIntegration.SpotifyIntegrationException.class,
+        assertThrows(SpotifyIntegrationException.class,
                 () -> spotifyIntegration.getPopularityOfTracksInAlbum(testArgument));
-        assertThrows(SpotifyIntegration.SpotifyIntegrationException.class,
+        assertThrows(SpotifyIntegrationException.class,
                 () -> spotifyIntegration.getPopularityOfTracksOfArtist(testArgument));
     }
 }

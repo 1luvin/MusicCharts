@@ -1,6 +1,7 @@
 package com.vance.lib.integration;
 
 import com.vance.lib.service.parser.LastFmParser;
+import com.vance.lib.service.parser.ParsingException;
 import com.vance.lib.service.web.http.RequestService;
 import com.vance.lib.service.web.secrets.SecretProvider;
 import org.apache.hc.core5.http.ClassicHttpRequest;
@@ -9,7 +10,6 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.io.IOException;
-import java.net.URISyntaxException;
 import java.util.Map;
 
 import static com.vance.lib.util.FileUtil.readFile;
@@ -29,7 +29,7 @@ public class LastFmIntegrationTest {
     private final LastFmIntegration lastFmIntegration = new LastFmIntegration(requestService, secretProvider);
 
     @Test
-    void shouldGetPopularityOfGenres() throws IOException, URISyntaxException {
+    void shouldGetPopularityOfGenres() throws IOException, ParsingException, IntegrationException {
         // given
         final String testResponse = readFile("lastfm/PopularityOfGenres.json", LastFmIntegrationTest.class);
         final Map<String, Long> expected = parser.parsePopularityOfGenres(testResponse);
@@ -63,6 +63,6 @@ public class LastFmIntegrationTest {
         given(secretProvider.getLastFMToken()).willReturn(badToken);
 
         // when & then
-        assertThrows(IllegalArgumentException.class, lastFmIntegration::getPopularityOfGenres);
+        assertThrows(LastFmIntegration.LastFmIntegrationException.class, lastFmIntegration::getPopularityOfGenres);
     }
 }

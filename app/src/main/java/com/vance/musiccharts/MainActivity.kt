@@ -7,6 +7,7 @@ import android.text.TextUtils
 import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.WindowCompat
 import androidx.core.widget.NestedScrollView
@@ -16,8 +17,8 @@ import com.vance.musiccharts.chart.BarChartView
 import com.vance.musiccharts.chart.ChartView
 import com.vance.musiccharts.chart.LineChartView
 import com.vance.musiccharts.chart.PieChartView
-import com.vance.musiccharts.util.Font
-import com.vance.musiccharts.util.Theme
+import com.vance.musiccharts.extension.Log
+import com.vance.musiccharts.util.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope
@@ -44,6 +45,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var scroll: NestedScrollView
     private lateinit var layout: LinearLayout
+    private lateinit var errorAlert: AlertDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -53,6 +55,13 @@ class MainActivity : AppCompatActivity() {
 
         setupWindow()
         createView()
+
+        errorAlert = createAlert("Oops...", "", this)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        chartProvider.closeHttpClient()
     }
 
     private fun setupWindow() {
@@ -96,9 +105,13 @@ class MainActivity : AppCompatActivity() {
                 searchHint = ALBUM,
                 onSearch = { chartView, album ->
                     mainScope.launch(Dispatchers.IO) {
-                        val data = chartProvider.album_popularityOfTracks(album)
-                        withContext(Dispatchers.Main) {
-                            chartView.updateChart(data)
+                        try {
+                            val data = chartProvider.album_popularityOfTracks(album)
+                            withContext(Dispatchers.Main) {
+                                chartView.updateChart(data)
+                            }
+                        } catch (t: Throwable) {
+                            handleError(t, chartView)
                         }
                     }
                 }
@@ -113,9 +126,13 @@ class MainActivity : AppCompatActivity() {
                 searchHint = ALBUM,
                 onSearch = { chartView, album ->
                     mainScope.launch(Dispatchers.IO) {
-                        val data = chartProvider.album_durationOfTracks(album)
-                        withContext(Dispatchers.Main) {
-                            chartView.updateChart(data)
+                        try {
+                            val data = chartProvider.album_durationOfTracks(album)
+                            withContext(Dispatchers.Main) {
+                                chartView.updateChart(data)
+                            }
+                        } catch (t: Throwable) {
+                            handleError(t, chartView)
                         }
                     }
                 }
@@ -127,14 +144,39 @@ class MainActivity : AppCompatActivity() {
         addChart(
             BarChartView(
                 context = this,
+                title = "Popularity of genres",
+                subtitle = PROVIDE_ALBUM,
+                searchHint = ALBUM,
+                onSearch = { chartView, _ ->
+                    mainScope.launch(Dispatchers.IO) {
+                        try {
+                            val data = chartProvider.popularityOfGenres()
+                            withContext(Dispatchers.Main) {
+                                chartView.updateChart(data)
+                            }
+                        } catch (t: Throwable) {
+                            handleError(t, chartView)
+                        }
+                    }
+                }
+            )
+        )
+
+        addChart(
+            BarChartView(
+                context = this,
                 title = "Number of releases",
                 subtitle = PROVIDE_GENRE,
                 searchHint = GENRE,
                 onSearch = { chartView, genre ->
                     mainScope.launch(Dispatchers.IO) {
-                        val data = chartProvider.genre_numberOfReleases(genre)
-                        withContext(Dispatchers.Main) {
-                            chartView.updateChart(data)
+                        try {
+                            val data = chartProvider.genre_numberOfReleases(genre)
+                            withContext(Dispatchers.Main) {
+                                chartView.updateChart(data)
+                            }
+                        } catch (t: Throwable) {
+                            handleError(t, chartView)
                         }
                     }
                 }
@@ -149,9 +191,13 @@ class MainActivity : AppCompatActivity() {
                 searchHint = GENRE,
                 onSearch = { chartView, genre ->
                     mainScope.launch(Dispatchers.IO) {
-                        val data = chartProvider.genre_popularityOfArtists(genre)
-                        withContext(Dispatchers.Main) {
-                            chartView.updateChart(data)
+                        try {
+                            val data = chartProvider.genre_popularityOfArtists(genre)
+                            withContext(Dispatchers.Main) {
+                                chartView.updateChart(data)
+                            }
+                        } catch (t: Throwable) {
+                            handleError(t, chartView)
                         }
                     }
                 }
@@ -166,9 +212,61 @@ class MainActivity : AppCompatActivity() {
                 searchHint = GENRE,
                 onSearch = { chartView, genre ->
                     mainScope.launch(Dispatchers.IO) {
-                        val data = chartProvider.genre_numberOfArtists(genre)
-                        withContext(Dispatchers.Main) {
-                            chartView.updateChart(data)
+                        try {
+                            val data = chartProvider.genre_numberOfArtists(genre)
+                            withContext(Dispatchers.Main) {
+                                chartView.updateChart(data)
+                            }
+                        } catch (t: Throwable) {
+                            handleError(t, chartView)
+                        }
+                    }
+                }
+            )
+        )
+
+        addChart(
+            LineChartView(
+                context = this,
+                title = "Number of releases (1990-1999)",
+                subtitle = PROVIDE_GENRE,
+                searchHint = GENRE,
+                onSearch = { chartView, genre ->
+                    mainScope.launch(Dispatchers.IO) {
+                        try {
+                            val data = chartProvider.genre_numberOfReleasesInDecade(0, genre)
+                            val releases = data.values.map { it.toInt() }
+                            withContext(Dispatchers.Main) {
+                                (chartView as LineChartView).apply {
+                                    updateLineChart(listOf(), releases)
+                                }
+                            }
+                        } catch (t: Throwable) {
+                            handleError(t, chartView)
+                        }
+                    }
+                }
+            )
+        )
+
+        addChart(
+            LineChartView(
+                context = this,
+                title = "Number of releases (2000-2009)",
+                subtitle = PROVIDE_GENRE,
+                searchHint = GENRE,
+                onSearch = { chartView, genre ->
+                    mainScope.launch(Dispatchers.IO) {
+                        try {
+                            val data = chartProvider.genre_numberOfReleasesInDecade(1, genre)
+                            val releases = data.values.map { it.toInt() }
+                            withContext(Dispatchers.Main) {
+                                (chartView as LineChartView).apply {
+                                    updateLineChart(listOf(), releases)
+                                }
+                            }
+                        } catch (t: Throwable) {
+                            handleError(t, chartView)
                         }
                     }
                 }
@@ -183,13 +281,16 @@ class MainActivity : AppCompatActivity() {
                 searchHint = GENRE,
                 onSearch = { chartView, genre ->
                     mainScope.launch(Dispatchers.IO) {
-                        val data = chartProvider.genre_numberOfReleasesInDecade(2, genre)
-//                        val years = data.keys.take(7)
-                        val releases = data.values.map { it.toInt() }
-                        withContext(Dispatchers.Main) {
-                            (chartView as LineChartView).apply {
-                                updateLineChart(listOf(), releases)
+                        try {
+                            val data = chartProvider.genre_numberOfReleasesInDecade(2, genre)
+                            val releases = data.values.map { it.toInt() }
+                            withContext(Dispatchers.Main) {
+                                (chartView as LineChartView).apply {
+                                    updateLineChart(listOf(), releases)
+                                }
                             }
+                        } catch (t: Throwable) {
+                            handleError(t, chartView)
                         }
                     }
                 }
@@ -206,9 +307,13 @@ class MainActivity : AppCompatActivity() {
                 searchHint = ARTIST,
                 onSearch = { chartView, artist ->
                     mainScope.launch(Dispatchers.IO) {
-                        val data = chartProvider.artist_popularityOfAlbums(artist)
-                        withContext(Dispatchers.Main) {
-                            chartView.updateChart(data)
+                        try {
+                            val data = chartProvider.artist_popularityOfAlbums(artist)
+                            withContext(Dispatchers.Main) {
+                                chartView.updateChart(data)
+                            }
+                        } catch (t: Throwable) {
+                            handleError(t, chartView)
                         }
                     }
                 }
@@ -223,14 +328,19 @@ class MainActivity : AppCompatActivity() {
                 searchHint = ARTIST,
                 onSearch = { chartView, artist ->
                     mainScope.launch(Dispatchers.IO) {
-                        val data = chartProvider.artist_activity(artist).toList().sortedBy { (key, _) -> key }.toMap()
-                        val years = data.keys.toList()
-                        val releases = data.values.map { it.size }
-                        withContext(Dispatchers.Main) {
-                            (chartView as LineChartView).apply {
-                                updateLineChart(years, releases)
-                                title = "Activity (${years.first()}-${years.last()})"
+                        try {
+                            val data =
+                                chartProvider.artist_activity(artist).toList().sortedBy { (key, _) -> key }.toMap()
+                            val years = data.keys.toList()
+                            val releases = data.values.map { it.size }
+                            withContext(Dispatchers.Main) {
+                                (chartView as LineChartView).apply {
+                                    updateLineChart(years, releases)
+                                    title = "Activity (${years.first()}-${years.last()})"
+                                }
                             }
+                        } catch (t: Throwable) {
+                            handleError(t, chartView)
                         }
                     }
                 }
@@ -245,9 +355,13 @@ class MainActivity : AppCompatActivity() {
                 searchHint = ARTIST,
                 onSearch = { chartView, artist ->
                     mainScope.launch(Dispatchers.IO) {
-                        val data = chartProvider.artist_popularityOfTracks(artist)
-                        withContext(Dispatchers.Main) {
-                            chartView.updateChart(data)
+                        try {
+                            val data = chartProvider.artist_popularityOfTracks(artist)
+                            withContext(Dispatchers.Main) {
+                                chartView.updateChart(data)
+                            }
+                        } catch (t: Throwable) {
+                            handleError(t, chartView)
                         }
                     }
                 }
@@ -278,4 +392,14 @@ class MainActivity : AppCompatActivity() {
             0, 0, 0, 12
         )
     )
+
+    private suspend fun handleError(t: Throwable, chartView: ChartView) {
+        Log("Error: ${t.message}\n${t.printStackTrace()}")
+        t.message?.let { value -> updateAlertMessage(errorAlert, value) }
+        withContext(Dispatchers.Main) {
+            chartView.stopLoading()
+            errorAlert.show()
+            Log("Alert Was shown")
+        }
+    }
 }

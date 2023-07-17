@@ -15,11 +15,10 @@ import static java.util.stream.StreamSupport.stream;
 
 public class LastFmParser {
 
-    public Map<String, Long> parsePopularityOfGenres(@NotNull String genres) throws JsonProcessingException {
+    public Map<String, Long> parsePopularityOfGenres(@NotNull String genres) throws JsonProcessingException, ParsingException {
         final JsonNode parsedGenres = readTree(genres).get("tags").get("tag");
 
-        if (!parsedGenres.isArray())
-            throw new RuntimeException("Cannot parse genres");
+        if (!parsedGenres.isArray()) throw new ParsingException("Cannot parse genres");
 
         return stream(spliteratorUnknownSize(parsedGenres.iterator(), Spliterator.ORDERED), true)
                 .map(node -> entry(getText(node, "name"), getLong(node, "reach")))

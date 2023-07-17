@@ -47,9 +47,8 @@ public class FileUtil {
      * @throws SecurityException  In the case of the default provider, and a security manager is
      *                            installed, the {@link SecurityManager#checkRead(String) checkRead}
      *                            method is invoked to check read access to the file.
-     * @throws URISyntaxException if this URL is not formatted strictly according to RFC2396 and cannot be converted to a URI
      */
-    public static String readFile(@NotNull String name, Class<?> clazz) throws IOException, URISyntaxException {
+    public static String readFile(@NotNull String name, Class<?> clazz) throws IOException {
         log.info("Reading file {}", name);
 
         final InputStream inputStream = ofNullable(clazz.getResourceAsStream(name))

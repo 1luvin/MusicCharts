@@ -97,4 +97,9 @@ abstract class ChartView(
     open fun updateChart(data: Map<String, Number>) {
         searchCell.stopLoading()
     }
+
+    @CallSuper
+    open fun stopLoading() {
+        searchCell.stopLoading()
+    }
 }

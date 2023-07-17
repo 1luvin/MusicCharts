@@ -28,6 +28,6 @@ class MusicbrainzParserTest {
         final String json = "";
 
         // when & then
-        assertThrows(NullPointerException.class, () -> parser.parseCountOfItems(json));
+        assertThrows(RuntimeException.class, () -> parser.parseCountOfItems(json));
     }
 }

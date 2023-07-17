@@ -2,6 +2,7 @@ package com.vance.lib.integration;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.vance.lib.service.parser.LastFmParser;
+import com.vance.lib.service.parser.ParsingException;
 import com.vance.lib.service.web.http.HttpRequestBuilder;
 import com.vance.lib.service.web.http.RequestService;
 import com.vance.lib.service.web.secrets.SecretProvider;
@@ -23,21 +24,21 @@ public class LastFmIntegration {
         this.secretProvider = secretProvider;
     }
 
-    public Map<String, Long> getPopularityOfGenres() {
+    public Map<String, Long> getPopularityOfGenres() throws IntegrationException {
         final String baseUrl = urlBuilder.lastfm().getTopGenres().build() + "&api_key=%s&format=json";
         final String url = String.format(baseUrl, secretProvider.getLastFMToken());
 
         try {
             return parser.parsePopularityOfGenres(requestService.sendRequest(requestBuilder.get().url(url).build()));
-        } catch (JsonProcessingException e) {
-            throw new LastFmIntegrationException("Error occurred: " + e.getMessage(), e);
+        } catch (JsonProcessingException | ParsingException e) {
+            throw new LastFmIntegrationException(e.getMessage(), e);
         } catch (URISyntaxException e) {
-            throw new IllegalArgumentException(String.format("Bad url created: %s", url));
+            throw new LastFmIntegrationException(String.format("Bad url created: %s", url), e);
         }
     }
 
-    static class LastFmIntegrationException extends RuntimeException {
-        public LastFmIntegrationException(String message, Throwable throwable) {
+    static class LastFmIntegrationException extends IntegrationException {
+        public LastFmIntegrationException(String message, Exception throwable) {
             super(message, throwable);
         }
     }

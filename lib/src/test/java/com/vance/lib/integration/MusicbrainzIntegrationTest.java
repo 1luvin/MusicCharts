@@ -27,7 +27,7 @@ public class MusicbrainzIntegrationTest {
     private final MusicbrainzIntegration musicbrainzIntegration = new MusicbrainzIntegration(requestService);
 
 //    @Test
-    void shouldGetNumberOfArtistsOfGenres() throws IOException, URISyntaxException {
+    void shouldGetNumberOfArtistsOfGenres() throws IOException, IntegrationException {
         // given
         final String rock = "rock";
         final String hipHop = "hip-hop";
@@ -58,7 +58,7 @@ public class MusicbrainzIntegrationTest {
     }
 
 //    @Test
-    void shouldGetNumberOfReleasesOfGenres() throws IOException, URISyntaxException {
+    void shouldGetNumberOfReleasesOfGenres() throws IOException, IntegrationException {
         // given
         final String rock = "rock";
         final String hipHop = "hip-hop";
@@ -88,7 +88,7 @@ public class MusicbrainzIntegrationTest {
     }
 
     @Test
-    void shouldGetNumberOfReleasesOfGenreInYears() {
+    void shouldGetNumberOfReleasesOfGenreInYears() throws IntegrationException {
         // given
         final int expectedSize = 10;
         final long expectedValue = 1234;
@@ -150,7 +150,7 @@ public class MusicbrainzIntegrationTest {
         assertThrows(IllegalArgumentException.class, () -> musicbrainzIntegration.getNumberOfArtistsOfGenres(badGenre));
     }
 
-    private String readFile(String fileName) throws IOException, URISyntaxException {
+    private String readFile(String fileName) throws IOException {
         return FileUtil.readFile(fileName, MusicbrainzIntegrationTest.class);
     }
 }

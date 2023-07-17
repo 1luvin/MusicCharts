@@ -12,7 +12,7 @@ public class JsonUtil {
         try {
             return node.get(name).asText();
         } catch (Exception e) {
-            throw new RuntimeException("Parsing error", e);
+            throw new RuntimeException(String.format("Cannot parse text from node (%s)", name), e);
         }
     }
 
@@ -20,7 +20,7 @@ public class JsonUtil {
         try {
             return node.get(name).asInt();
         } catch (Exception e) {
-            throw new RuntimeException("Parsing error", e);
+            throw new RuntimeException(String.format("Cannot parse number from node (%s)", name), e);
         }
     }
 
@@ -28,7 +28,7 @@ public class JsonUtil {
         try {
             return node.get(name).asLong();
         } catch (Exception e) {
-            throw new RuntimeException("Parsing error", e);
+            throw new RuntimeException(String.format("Cannot parse long number from node (%s)", name), e);
         }
     }
 
@@ -36,7 +36,7 @@ public class JsonUtil {
         try {
             return objectMapper.readTree(data);
         } catch (NullPointerException | IllegalArgumentException e) {
-            throw new RuntimeException("Parsing error", e);
+            throw new IllegalArgumentException("Parsing error", e);
         }
     }
 }

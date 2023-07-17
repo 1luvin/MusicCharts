@@ -42,26 +42,26 @@ public class SpotifyParser {
     private final ElementExtractor<JsonNode, Map.Entry<String, Integer>> NAME_POPULARITY_EXTRACTOR =
             node -> Map.entry(removeParts(getText(node, NAME), removableParts), getInt(node, POPULARITY));
 
-    public String parseIdOfItem(@NotNull String item, SpotifySearchTypes type, @NotNull String itemName) throws JsonProcessingException {
+    public String parseIdOfItem(@NotNull String item, SpotifySearchTypes type, @NotNull String itemName) throws JsonProcessingException, ParsingException {
         final String searchType = type.name().toLowerCase();
         final JsonNode parsedSearch = readTree(item);
 
         final int total = getInt(parsedSearch.get(searchType + "s"), TOTAL);
-        if (total == 0) throw new IllegalStateException(format("No %s to parse", searchType + "s"));
+        if (total == 0) throw new ParsingException(format("No %s to parse", searchType + "s"));
 
         final JsonNode parsedItem = parsedSearch.get(searchType + "s").get(ITEMS).get(0);
         if (!StringUtils.containsIgnoreCase(getText(parsedItem, NAME), itemName))
-            throw new IllegalStateException(format("Cannot find expected %s %s, found: %s", searchType, itemName, getText(parsedItem, NAME)));
+            throw new ParsingException(format("Cannot find expected %s %s, found: %s", searchType, itemName, getText(parsedItem, NAME)));
 
         final String id = getText(parsedItem, ID);
         log.debug("Parsed id of {} : {}", searchType, id);
         return id;
     }
 
-    public String parseIdOfItems(@NotNull String items, SpotifySearchTypes type) throws JsonProcessingException {
+    public String parseIdOfItems(@NotNull String items, SpotifySearchTypes type) throws JsonProcessingException, ParsingException {
         final JsonNode parsedItems = readTree(items).get(type.name().toLowerCase() + "s").get(ITEMS);
 
-        if (!parsedItems.isArray()) throw new RuntimeException("Cannot parse ids of " + type);
+        if (!parsedItems.isArray()) throw new ParsingException("Cannot parse ids of " + type);
 
         log.debug("Parsing id of items ({})", type.name().toLowerCase());
         return stream(spliteratorUnknownSize(parsedItems.iterator(), ORDERED), true)

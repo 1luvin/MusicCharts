@@ -1,6 +1,7 @@
 package com.vance.lib.integration;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.vance.lib.service.parser.ParsingException;
 import com.vance.lib.service.parser.SpotifyParser;
 import com.vance.lib.service.web.http.HttpRequestBuilder;
 import com.vance.lib.service.web.http.RequestService;
@@ -17,107 +18,114 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicReference;
 
+import static java.lang.String.format;
+
 public class SpotifyIntegration {
     private final Logger log = LoggerFactory.getLogger(SpotifyIntegration.class);
-    private final RequestService requestService;
-    private final SecretProvider secretProvider;
     private final HttpRequestBuilder requestBuilder = new HttpRequestBuilder();
     private final SpotifyParser parser = new SpotifyParser();
     private final UrlBuilder urlBuilder = new UrlBuilder();
-    private final boolean WITH_LIMIT = true;
+
+    private final RequestService requestService;
+    private final SecretProvider secretProvider;
+
     private final boolean WITHOUT_LIMIT = false;
-    private String cachedAlbumId = null;
-    private String cachedArtistId = null;
-    private String cachedAlbumName = null;
+    private final boolean WITH_LIMIT = true;
+
     private String cachedArtistName = null;
+    private String cachedAlbumName = null;
+    private String cachedArtistId = null;
+    private String cachedAlbumId = null;
+
     private final int MAX_TRIES = 10;
+    private final int WAIT_TIME = 600;
 
     public SpotifyIntegration(RequestService requestService, SecretProvider secretProvider) {
         this.requestService = requestService;
         this.secretProvider = secretProvider;
     }
 
-    public Map<String, Integer> getPopularityOfAlbums(@NotNull String artistName) {
+    public Map<String, Integer> getPopularityOfAlbums(@NotNull String artistName) throws IntegrationException {
         try {
-            final String searchResponse = searchItem("artist:" + artistName, SpotifySearchTypes.ALBUM, WITHOUT_LIMIT);
+            final String searchResponse = searchItem(format("artist:%s", artistName), SpotifySearchTypes.ALBUM, WITHOUT_LIMIT);
             final String albumIds = parser.parseIdOfItems(searchResponse, SpotifySearchTypes.ALBUM);
 
             final String albums = sendRequestToSpotify(urlBuilder.spotify().albums(albumIds).build());
             final Map<String, Integer> result = parser.parsePopularityOfAlbums(albums);
 
             log.debug("Getting popularity of albums: {}", result.toString());
-
+            validateResult(result);
             return result;
-        } catch (JsonProcessingException e) {
-            throw new SpotifyIntegrationException("Error occurred: " + e.getMessage(), e);
+        } catch (JsonProcessingException | ParsingException e) {
+            throw new SpotifyIntegrationException(e.getMessage(), e);
         }
     }
 
-    public Map<String, Integer> getPopularityOfTracksOfArtist(@NotNull String artist) {
+    public Map<String, Integer> getPopularityOfTracksOfArtist(@NotNull String artist) throws IntegrationException {
         try {
             final String tracks = sendRequestToSpotify(urlBuilder.spotify().topTracksOfArtist(getArtistID(artist)).build());
             final Map<String, Integer> result = parser.parsePopularityOfTracksOfArtist(tracks);
 
             log.debug("Result of getting popularity of tracks of artist: {}", result.toString());
-
+            validateResult(result);
             return result;
-        } catch (JsonProcessingException e) {
-            throw new SpotifyIntegrationException("Error occurred: " + e.getMessage(), e);
+        } catch (JsonProcessingException | ParsingException e) {
+            throw new SpotifyIntegrationException(e.getMessage(), e);
         }
     }
 
-    public Map<String, Long> getDurationOfTracksInAlbum(@NotNull String album) {
+    public Map<String, Long> getDurationOfTracksInAlbum(@NotNull String album) throws IntegrationException {
         try {
             final String tracks = sendRequestToSpotify(urlBuilder.spotify().albumTracks(getAlbumID(album)).build());
             final Map<String, Long> result = parser.parseDurationOfTracksFromAlbum(tracks);
 
             log.debug("Result of getting duration of tracks in album: {}", result.toString());
-
+            validateResult(result);
             return result;
-        } catch (JsonProcessingException e) {
-            throw new SpotifyIntegrationException("Error occurred: " + e.getMessage(), e);
+        } catch (JsonProcessingException | ParsingException e) {
+            throw new SpotifyIntegrationException(e.getMessage(), e);
         }
     }
 
-    public Map<String, Integer> getPopularityOfTracksInAlbum(@NotNull String album) {
+    public Map<String, Integer> getPopularityOfTracksInAlbum(@NotNull String album) throws IntegrationException {
         try {
             final String tracksOfAlbum = sendRequestToSpotify(urlBuilder.spotify().albumTracks(getAlbumID(album)).build());
             final String parsedIdOfTracks = parser.parseIdOfTracks(tracksOfAlbum);
 
-            final String tracks = sendRequestToSpotify(urlBuilder.spotify().track("?ids=" + parsedIdOfTracks).build());
+            final String tracks = sendRequestToSpotify(urlBuilder.spotify().track(format("?ids=%s", parsedIdOfTracks)).build());
             final Map<String, Integer> result = parser.parsePopularityOfTracksFromAlbum(tracks);
 
             log.debug("Result of getting popularity of tracks in album: {}", result.toString());
-
+            validateResult(result);
             return result;
-        } catch (JsonProcessingException e) {
-            throw new SpotifyIntegrationException("Error occurred: " + e.getMessage(), e);
+        } catch (JsonProcessingException | ParsingException e) {
+            throw new SpotifyIntegrationException(e.getMessage(), e);
         }
     }
 
-    public Map<Integer, List<String>> getActivityOfArtist(@NotNull String artistName) {
+    public Map<Integer, List<String>> getActivityOfArtist(@NotNull String artistName) throws IntegrationException {
         try {
             final String albums = sendRequestToSpotify(urlBuilder.spotify().albumsOfArtist(getArtistID(artistName), false).build());
             final Map<Integer, List<String>> result = parser.parseActivityOfArtist(albums);
 
             log.debug("Result of getting activity of artist: {}", result.toString());
-
+            validateResult(result);
             return result;
-        } catch (JsonProcessingException e) {
-            throw new SpotifyIntegrationException("Error occurred: " + e.getMessage(), e);
+        } catch (JsonProcessingException | ParsingException e) {
+            throw new SpotifyIntegrationException(e.getMessage(), e);
         }
     }
 
-    public Map<String, Long> getPopularArtistsOfGenre(@NotNull String genreName) {
+    public Map<String, Long> getPopularArtistsOfGenre(@NotNull String genreName) throws IntegrationException {
         try {
-            final String searchResponse = searchItem(String.format("genre:%s", genreName), SpotifySearchTypes.ARTIST, WITH_LIMIT);
+            final String searchResponse = searchItem(format("genre:%s", genreName), SpotifySearchTypes.ARTIST, WITH_LIMIT);
             final Map<String, Long> result = parser.parsePopularityOfArtistsOfGenre(searchResponse);
 
             log.debug("Popularity of {} artists: {}", genreName, result.toString());
-
+            validateResult(result);
             return result;
         } catch (JsonProcessingException e) {
-            throw new SpotifyIntegrationException("Error occurred: " + e.getMessage(), e);
+            throw new SpotifyIntegrationException(e.getMessage(), e);
         }
     }
 
@@ -141,30 +149,36 @@ public class SpotifyIntegration {
         try {
             reference.set(sendRequestToSpotify(url));
         } catch (IllegalStateException e) {
-            log.warn(e.getMessage());
-            log.warn("Trying to resend the request for positive response, number of try: {}", numberOfTry);
-            try {
-                Thread.sleep(500);
-            } catch (InterruptedException ex) {
-                throw new RuntimeException(ex);
-            }
+            warnAndWait(e.getMessage(), numberOfTry);
         }
         return reference.get() == null;
+    }
+
+    private void warnAndWait(String warnMessage, int numberOfTry) {
+        log.warn(warnMessage);
+        log.warn("Trying to resend the request for positive response, number of try: {}", numberOfTry);
+        try {
+            Thread.sleep(WAIT_TIME);
+        } catch (InterruptedException ex) {
+            throw new RuntimeException(ex);
+        }
     }
 
     private String sendRequestToSpotify(String url) {
         try {
             return requestService.sendRequest(requestBuilder.get()
                     .url(url)
-                    .addHeader("Authorization", "Bearer " + secretProvider.getSpotifyToken())
+                    .addHeader("Authorization", format("Bearer %s", secretProvider.getSpotifyToken()))
                     .build());
         } catch (URISyntaxException e) {
-            throw new IllegalArgumentException(String.format("Bad url created: %s", url));
+            throw new IllegalArgumentException(format("Bad url created: %s", url));
         }
     }
 
-    private String getAlbumID(String albumName) throws JsonProcessingException {
+    private String getAlbumID(String albumName) throws JsonProcessingException, ParsingException {
         if (!StringUtils.equals(albumName, cachedAlbumName)) {
+            log.debug("Updating cached album from {} to {}", cachedAlbumName, albumName);
+
             final String searchResponse = searchItem(albumName, SpotifySearchTypes.ALBUM, WITHOUT_LIMIT);
             cachedAlbumName = albumName;
             cachedAlbumId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ALBUM, albumName);
@@ -173,18 +187,23 @@ public class SpotifyIntegration {
         return cachedAlbumId;
     }
 
-    private String getArtistID(String artistName) throws JsonProcessingException {
+    private String getArtistID(String artistName) throws JsonProcessingException, ParsingException {
         if (!StringUtils.equals(artistName, cachedArtistName)) {
+            log.debug("Updating cached artist from {} to {}", cachedArtistName, artistName);
+
             final String searchResponse = searchItem(artistName, SpotifySearchTypes.ARTIST, WITHOUT_LIMIT);
             cachedArtistName = artistName;
             cachedArtistId = parser.parseIdOfItem(searchResponse, SpotifySearchTypes.ARTIST, artistName);
         }
-
         return cachedArtistId;
     }
 
-    static class SpotifyIntegrationException extends RuntimeException {
-        public SpotifyIntegrationException(String message, Throwable throwable) {
+    private <K, V> void validateResult(Map<K, V> result) throws IntegrationException {
+        if (result.size() < 3) throw new IntegrationException("Bad data found, try something else");
+    }
+
+    static class SpotifyIntegrationException extends IntegrationException {
+        public SpotifyIntegrationException(String message, Exception throwable) {
             super(message, throwable);
         }
     }
